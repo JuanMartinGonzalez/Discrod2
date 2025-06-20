@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto Discrod 2", "Proyecto Discrod 2.csproj", "{86284AD7-DA20-4F10-8246-9621B835DFAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86284AD7-DA20-4F10-8246-9621B835DFAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86284AD7-DA20-4F10-8246-9621B835DFAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86284AD7-DA20-4F10-8246-9621B835DFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86284AD7-DA20-4F10-8246-9621B835DFAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {71419C5F-F9E8-41FA-841B-524410BF66B4}
+	EndGlobalSection
+EndGlobal
