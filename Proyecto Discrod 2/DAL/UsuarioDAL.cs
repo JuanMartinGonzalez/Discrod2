@@ -9,6 +9,7 @@ namespace Proyecto_Discrod_2.DAL
 {
     public class UsuarioDAL
     {
+        public string error { get; set; }
         public int AgregarUsuario(BE.Usuarios usuario)
         {
             int retorna = 0;
@@ -26,7 +27,11 @@ namespace Proyecto_Discrod_2.DAL
                 }
                 return retorna;
             }
-            catch (Exception ex) { throw ex; }
+            catch (Exception ex) 
+            {
+                error = "Error en la base de datos.";
+                throw ex;//error; 
+            }
            
         }
     }

@@ -18,8 +18,8 @@ namespace Proyecto_Discrod_2
         {
             InitializeComponent();
         }
-
-        static SqlConnection conexion = new SqlConnection("Server=JUANPC\\SQLEXPRESS;Database=Discrod 2;Trusted_Connection=True;TrustServerCertificate=True;");
+        static string cadena = "Server=SAM\\SQLEXPRESS;Database=Discrod 2;Trusted_Connection=True;TrustServerCertificate=True";
+        static SqlConnection conexion = new SqlConnection(cadena);
         private void btnRegistro_Click(object sender, EventArgs e)
         {
             FormRegistro lForm = new FormRegistro();
@@ -44,6 +44,13 @@ namespace Proyecto_Discrod_2
         private void FormPadre_Load(object sender, EventArgs e)
         {
             ObtenerConexion();
+        }
+
+        private void registroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRegistro lForm = new FormRegistro();
+            lForm.MdiParent = this;
+            lForm.Show();
         }
     }
 }
