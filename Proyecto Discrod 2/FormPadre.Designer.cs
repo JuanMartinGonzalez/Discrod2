@@ -28,34 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnRegistro = new Button();
+            menuStrip1 = new MenuStrip();
+            registroToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // btnRegistro
+            // menuStrip1
             // 
-            btnRegistro.Location = new Point(27, 23);
-            btnRegistro.Name = "btnRegistro";
-            btnRegistro.Size = new Size(94, 29);
-            btnRegistro.TabIndex = 1;
-            btnRegistro.Text = "Registro Usuarios";
-            btnRegistro.UseVisualStyleBackColor = true;
-            btnRegistro.Click += btnRegistro_Click;
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { registroToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(800, 28);
+            menuStrip1.TabIndex = 3;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // registroToolStripMenuItem
+            // 
+            registroToolStripMenuItem.Name = "registroToolStripMenuItem";
+            registroToolStripMenuItem.Size = new Size(78, 24);
+            registroToolStripMenuItem.Text = "Registro";
+            registroToolStripMenuItem.Click += registroToolStripMenuItem_Click;
             // 
             // FormPadre
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnRegistro);
+            Controls.Add(menuStrip1);
             IsMdiContainer = true;
+            MainMenuStrip = menuStrip1;
             Name = "FormPadre";
             Text = "FormPadre";
             Load += FormPadre_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button btnRegistro;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem registroToolStripMenuItem;
     }
 }

@@ -64,3 +64,73 @@ C:\Users\juanm\OneDrive\Desktop\Proyecto Discrod 2\Proyecto Discrod 2\obj\Debug\
 C:\Users\juanm\OneDrive\Desktop\Proyecto Discrod 2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.pdb
 C:\Users\juanm\OneDrive\Desktop\Proyecto Discrod 2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.genruntimeconfig.cache
 C:\Users\juanm\OneDrive\Desktop\Proyecto Discrod 2\Proyecto Discrod 2\obj\Debug\net9.0-windows\ref\Proyecto Discrod 2.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Proyecto Discrod 2.exe
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Proyecto Discrod 2.deps.json
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Proyecto Discrod 2.runtimeconfig.json
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Proyecto Discrod 2.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Proyecto Discrod 2.pdb
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Azure.Core.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Azure.Identity.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Bcl.Cryptography.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Data.SqlClient.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Extensions.Options.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Identity.Client.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.SqlServer.Server.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\System.ClientModel.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\System.Diagnostics.EventLog.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\System.Memory.Data.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\System.Security.Cryptography.ProtectedData.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.csproj.AssemblyReference.cache
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.FE.FormChat.resources
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.FE.FormIngreso.resources
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.FE.FormRegistro.resources
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.FormPadre.resources
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.csproj.GenerateResource.cache
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.AssemblyInfoInputs.cache
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.AssemblyInfo.cs
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.csproj.CoreCompileInputs.cache
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.sourcelink.json
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto.83BA601E.Up2Date
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\refint\Proyecto Discrod 2.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.pdb
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.genruntimeconfig.cache
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\ref\Proyecto Discrod 2.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.Properties.Resources.resources

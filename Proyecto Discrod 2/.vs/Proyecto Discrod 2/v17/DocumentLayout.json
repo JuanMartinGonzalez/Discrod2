@@ -1,30 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\juanm\\OneDrive\\Desktop\\Proyecto Discrod 2\\Proyecto Discrod 2\\",
+  "WorkspaceRootPath": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\juanm\\onedrive\\desktop\\proyecto discrod 2\\proyecto discrod 2\\fe\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:fe\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\instituto80\\proyecto discrod2\\discrod2\\proyecto discrod 2\\be\\beusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:be\\beusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\juanm\\onedrive\\desktop\\proyecto discrod 2\\proyecto discrod 2\\fe\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:fe\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\juanm\\onedrive\\desktop\\proyecto discrod 2\\proyecto discrod 2\\be\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:be\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\juanm\\onedrive\\desktop\\proyecto discrod 2\\proyecto discrod 2\\dal\\usuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\instituto80\\proyecto discrod2\\discrod2\\proyecto discrod 2\\dal\\usuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:dal\\usuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\juanm\\onedrive\\desktop\\proyecto discrod 2\\proyecto discrod 2\\be\\verificadorusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:be\\verificadorusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\instituto80\\proyecto discrod2\\discrod2\\proyecto discrod 2\\fe\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:fe\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\juanm\\onedrive\\desktop\\proyecto discrod 2\\proyecto discrod 2\\be\\beusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:be\\beusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\instituto80\\proyecto discrod2\\discrod2\\proyecto discrod 2\\be\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:be\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\instituto80\\proyecto discrod2\\discrod2\\proyecto discrod 2\\fe\\formingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:fe\\formingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\instituto80\\proyecto discrod2\\discrod2\\proyecto discrod 2\\fe\\formchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:fe\\formchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\instituto80\\proyecto discrod2\\discrod2\\proyecto discrod 2\\fe\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:fe\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\instituto80\\proyecto discrod2\\discrod2\\proyecto discrod 2\\fe\\formchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:fe\\formchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\instituto80\\proyecto discrod2\\discrod2\\proyecto discrod 2\\fe\\formingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:fe\\formingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\instituto80\\proyecto discrod2\\discrod2\\proyecto discrod 2\\formpadre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:formpadre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\instituto80\\proyecto discrod2\\discrod2\\proyecto discrod 2\\formpadre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:formpadre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,71 +54,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "VerificadorUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\juanm\\OneDrive\\Desktop\\Proyecto Discrod 2\\Proyecto Discrod 2\\BE\\VerificadorUsuario.cs",
-              "RelativeDocumentMoniker": "BE\\VerificadorUsuario.cs",
-              "ToolTip": "C:\\Users\\juanm\\OneDrive\\Desktop\\Proyecto Discrod 2\\Proyecto Discrod 2\\BE\\VerificadorUsuario.cs",
-              "RelativeToolTip": "BE\\VerificadorUsuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T23:53:14.959Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "BEUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\juanm\\OneDrive\\Desktop\\Proyecto Discrod 2\\Proyecto Discrod 2\\BE\\BEUsuario.cs",
-              "RelativeDocumentMoniker": "BE\\BEUsuario.cs",
-              "ToolTip": "C:\\Users\\juanm\\OneDrive\\Desktop\\Proyecto Discrod 2\\Proyecto Discrod 2\\BE\\BEUsuario.cs",
-              "RelativeToolTip": "BE\\BEUsuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Title": "FormChat.cs",
+              "DocumentMoniker": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormChat.cs",
+              "RelativeDocumentMoniker": "FE\\FormChat.cs",
+              "ToolTip": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormChat.cs",
+              "RelativeToolTip": "FE\\FormChat.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T23:47:55.944Z",
+              "WhenOpened": "2025-06-23T22:58:05.345Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsuarioDAL.cs",
-              "DocumentMoniker": "C:\\Users\\juanm\\OneDrive\\Desktop\\Proyecto Discrod 2\\Proyecto Discrod 2\\DAL\\UsuarioDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\UsuarioDAL.cs",
-              "ToolTip": "C:\\Users\\juanm\\OneDrive\\Desktop\\Proyecto Discrod 2\\Proyecto Discrod 2\\DAL\\UsuarioDAL.cs",
-              "RelativeToolTip": "DAL\\UsuarioDAL.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T23:26:49.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Usuarios.cs",
-              "DocumentMoniker": "C:\\Users\\juanm\\OneDrive\\Desktop\\Proyecto Discrod 2\\Proyecto Discrod 2\\BE\\Usuarios.cs",
-              "RelativeDocumentMoniker": "BE\\Usuarios.cs",
-              "ToolTip": "C:\\Users\\juanm\\OneDrive\\Desktop\\Proyecto Discrod 2\\Proyecto Discrod 2\\BE\\Usuarios.cs",
-              "RelativeToolTip": "BE\\Usuarios.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T23:19:11.663Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "FormRegistro.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\juanm\\OneDrive\\Desktop\\Proyecto Discrod 2\\Proyecto Discrod 2\\FE\\FormRegistro.cs",
+              "DocumentMoniker": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormRegistro.cs",
               "RelativeDocumentMoniker": "FE\\FormRegistro.cs",
-              "ToolTip": "C:\\Users\\juanm\\OneDrive\\Desktop\\Proyecto Discrod 2\\Proyecto Discrod 2\\FE\\FormRegistro.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormRegistro.cs [Dise\u00F1o]",
               "RelativeToolTip": "FE\\FormRegistro.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-19T22:56:21.643Z",
@@ -106,15 +87,116 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
+              "Title": "FormIngreso.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormIngreso.cs",
+              "RelativeDocumentMoniker": "FE\\FormIngreso.cs",
+              "ToolTip": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormIngreso.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FE\\FormIngreso.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T22:42:31.906Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormChat.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormChat.cs",
+              "RelativeDocumentMoniker": "FE\\FormChat.cs",
+              "ToolTip": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormChat.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FE\\FormChat.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T22:42:47.989Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormPadre.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FormPadre.cs",
+              "RelativeDocumentMoniker": "FormPadre.cs",
+              "ToolTip": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FormPadre.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FormPadre.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T22:06:40.031Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormPadre.cs",
+              "DocumentMoniker": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FormPadre.cs",
+              "RelativeDocumentMoniker": "FormPadre.cs",
+              "ToolTip": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FormPadre.cs",
+              "RelativeToolTip": "FormPadre.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAUwAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T22:06:42.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FormRegistro.cs",
-              "DocumentMoniker": "C:\\Users\\juanm\\OneDrive\\Desktop\\Proyecto Discrod 2\\Proyecto Discrod 2\\FE\\FormRegistro.cs",
+              "DocumentMoniker": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormRegistro.cs",
               "RelativeDocumentMoniker": "FE\\FormRegistro.cs",
-              "ToolTip": "C:\\Users\\juanm\\OneDrive\\Desktop\\Proyecto Discrod 2\\Proyecto Discrod 2\\FE\\FormRegistro.cs",
+              "ToolTip": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormRegistro.cs",
               "RelativeToolTip": "FE\\FormRegistro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAYwBsAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-19T22:53:46.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BEUsuario.cs",
+              "DocumentMoniker": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\BE\\BEUsuario.cs",
+              "RelativeDocumentMoniker": "BE\\BEUsuario.cs",
+              "ToolTip": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\BE\\BEUsuario.cs",
+              "RelativeToolTip": "BE\\BEUsuario.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAADgvw8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T23:47:55.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioDAL.cs",
+              "DocumentMoniker": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\DAL\\UsuarioDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\UsuarioDAL.cs",
+              "ToolTip": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\DAL\\UsuarioDAL.cs",
+              "RelativeToolTip": "DAL\\UsuarioDAL.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwB0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T23:26:49.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Usuarios.cs",
+              "DocumentMoniker": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\BE\\Usuarios.cs",
+              "RelativeDocumentMoniker": "BE\\Usuarios.cs",
+              "ToolTip": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\BE\\Usuarios.cs",
+              "RelativeToolTip": "BE\\Usuarios.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAApwA8AAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T23:19:11.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormIngreso.cs",
+              "DocumentMoniker": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormIngreso.cs",
+              "RelativeDocumentMoniker": "FE\\FormIngreso.cs",
+              "ToolTip": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormIngreso.cs",
+              "RelativeToolTip": "FE\\FormIngreso.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T22:46:03.112Z",
               "EditorCaption": ""
             }
           ]

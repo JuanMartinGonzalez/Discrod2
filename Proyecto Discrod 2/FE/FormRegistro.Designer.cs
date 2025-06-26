@@ -37,11 +37,10 @@
             maskedTextBoxUsuario = new MaskedTextBox();
             txtNombre = new TextBox();
             pictureBox1 = new PictureBox();
-            colorDialog1 = new ColorDialog();
             colorDialogColor = new ColorDialog();
             btnColor = new Button();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
-            maskedTextBox1 = new MaskedTextBox();
+            maskedTextBoxPassword = new MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -118,15 +117,12 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(149, 228);
+            pictureBox1.Image = Properties.Resources.Grafico_matriz_foda_sencillo_formal_neutro_azul_gris;
+            pictureBox1.Location = new Point(114, 237);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(125, 84);
+            pictureBox1.Size = new Size(338, 119);
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
-            // 
-            // colorDialog1
-            // 
-            colorDialog1.Color = Color.IndianRed;
             // 
             // btnColor
             // 
@@ -143,20 +139,20 @@
             sqlCommand1.CommandTimeout = 30;
             sqlCommand1.EnableOptimizedParameterBinding = false;
             // 
-            // maskedTextBox1
+            // maskedTextBoxPassword
             // 
-            maskedTextBox1.Location = new Point(175, 124);
-            maskedTextBox1.Mask = "99999";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(125, 27);
-            maskedTextBox1.TabIndex = 11;
+            maskedTextBoxPassword.Location = new Point(175, 124);
+            maskedTextBoxPassword.Mask = "99999";
+            maskedTextBoxPassword.Name = "maskedTextBoxPassword";
+            maskedTextBoxPassword.Size = new Size(125, 27);
+            maskedTextBoxPassword.TabIndex = 11;
             // 
             // FormRegistro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(679, 462);
-            Controls.Add(maskedTextBox1);
+            ClientSize = new Size(627, 462);
+            Controls.Add(maskedTextBoxPassword);
             Controls.Add(btnColor);
             Controls.Add(pictureBox1);
             Controls.Add(txtNombre);
@@ -168,7 +164,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "FormRegistro";
-            Text = "Regisro de Usuarios";
+            Text = "Registro de Usuarios";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -185,10 +181,9 @@
         private MaskedTextBox maskedTextBoxUsuario;
         private TextBox txtNombre;
         private PictureBox pictureBox1;
-        private ColorDialog colorDialog1;
         private ColorDialog colorDialogColor;
         private Button btnColor;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
-        private MaskedTextBox maskedTextBox1;
+        private MaskedTextBox maskedTextBoxPassword;
     }
 }
