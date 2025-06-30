@@ -1,7 +1,9 @@
 ﻿using Microsoft.Data.SqlClient;
 using Microsoft.Identity.Client;
+using Proyecto_Discrod_2.BE;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -100,4 +102,69 @@ namespace Proyecto_Discrod_2.DAL
                 throw ex;//error; 
             }
         }
+
+        //metodo para traer los usuarios guardados en BD
+        public List<Usuarios> ObtenerUsuarios()
+        {
+            // Lista donde vamos a guardar los usuarios de BD
+            List<Usuarios> LisUsu = new List<Usuarios>();
+
+            // Consulta para traer nombre e imagen
+            string query = "SELECT UsuarioId, Nombre, Imagen FROM Usuario";
+
+            // conexion desde el formulario padre
+            SqlConnection conn = FormPadre.ObtenerConexion();
+
+            if (conn != null)
+            {
+                try
+                {
+                    // Creamos un comando para ejecutar la consulta
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    // Creamos un DataAdapter para llenar un DataTable
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                    // DataTable para guardar temporalmente los datos
+                    DataTable tabla = new DataTable();
+
+                    // Llenamos la tabla con los datos de la consulta
+                    adapter.Fill(tabla);
+
+                    // Recorremos las filas del DataTable 
+                    foreach (DataRow fila in tabla.Rows)
+                    {
+                        // Obtenemos el nombre como string
+                        int UsuarioId = Convert.ToInt32(fila["UsuarioId"]);
+
+                        // Obtenemos el nombre como string
+                        string nombre = fila["Nombre"].ToString();
+
+                        // Obtenemos la imagen como array de bytes (puede ser null)
+                        byte[] imagen = fila["Imagen"] as byte[];
+
+                        // Creamos un objeto Usuario con los datos
+                        Usuarios usuario = new Usuarios(UsuarioId, nombre, imagen);
+
+                        // Lo agregamos a la lista
+                        LisUsu.Add(usuario);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // lanzamos una excepcion con el mensaje
+                    throw new Exception("Error al obtener usuarios: " + ex.Message);
+                }
+                finally
+                {
+                    
+                    conn.Close();
+                }
+            }
+
+            // Devolvemos la lista de usuarios
+            return LisUsu;
+        }
     }
+
+}

@@ -134,3 +134,18 @@ C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-wi
 C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.genruntimeconfig.cache
 C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\ref\Proyecto Discrod 2.dll
 C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.Properties.Resources.resources
+C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.csproj.AssemblyReference.cache
+C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.FE.FormChat.resources
+C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.FE.FormIngreso.resources
+C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.FE.FormRegistro.resources
+C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.FormPadre.resources
+C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.Properties.Resources.resources
+C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.csproj.GenerateResource.cache
+C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.GeneratedMSBuildEditorConfig.editorconfig
+C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.AssemblyInfoInputs.cache
+C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.AssemblyInfo.cs
+C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.csproj.CoreCompileInputs.cache
+C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.sourcelink.json
+C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.dll
+C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\refint\Proyecto Discrod 2.dll
+C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.pdb

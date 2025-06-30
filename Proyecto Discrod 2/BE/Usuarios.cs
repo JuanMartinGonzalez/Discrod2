@@ -21,5 +21,13 @@ namespace Proyecto_Discrod_2.BE
             Color = color;
             Imagen = imagen;
         }
+
+        /*public Usuarios(int usuarioId, string nombre, byte[] imagen)
+        {
+            Nombre = nombre;
+            Imagen = imagen;
+            UsuarioId = usuarioId;
+        }*///pensado con imagen en byte, y solo obteniendo estos tres parametros
+
     }
 }
