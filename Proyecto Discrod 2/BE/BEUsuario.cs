@@ -9,7 +9,6 @@ namespace Proyecto_Discrod_2.BE
     internal class BEUsuario
     {
         public string error{ get; set; }
-        //public BEUsuario() { }
         public int AgregarUsuario(Usuarios usuarios)
         {
             DAL.UsuarioDAL usuarioDAL = new DAL.UsuarioDAL();
@@ -41,6 +40,10 @@ namespace Proyecto_Discrod_2.BE
                 {
                     throw new ArgumentException("La contraseña del usuario no puede estar vacía.", nameof(usuarios.Password));
                 }
+                if (usuarios.Password.Contains('\'') || usuarios.Password.Contains('\"'))
+                {
+                    throw new ArgumentException("La contraseña no puede contener comillas");
+                }
                 if (usuarios.Color == null)
                 {
                     throw new ArgumentOutOfRangeException(nameof(usuarios.Color), "El usuario debe elegir un color.");
@@ -48,6 +51,14 @@ namespace Proyecto_Discrod_2.BE
                 if (usuarios.Imagen == null)
                 {
                     throw new ArgumentNullException(nameof(usuarios.Imagen), "La imagen del usuario no puede ser nula.");
+                }
+                if (usuarios.Nombre == "U S U A R I O")
+                {
+                    throw new ArgumentException(nameof(usuarios.Nombre), "El usuario debe elegir otro nombre.");
+                }
+                if (usuarios.Password == "C O N T R A S E Ñ A")
+                {
+                    throw new ArgumentException(nameof(usuarios.Password), "El usuario debe elegir otra contraseña");
                 }
                 #endregion validaciones
                 return 0; // Si todo está bien, retorna 0 o algún valor que indique éxito

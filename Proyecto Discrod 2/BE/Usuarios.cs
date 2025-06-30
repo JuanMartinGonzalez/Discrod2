@@ -12,8 +12,8 @@ namespace Proyecto_Discrod_2.BE
         public string Nombre { get; set; }
         public string Password { get; set; }
         public int Color { get; set; }
-        public Image Imagen { get; set; }
-        public Usuarios(int usuarioId, string nombre, string password, int color, Image imagen)
+        public byte[]  Imagen { get; set; }
+        public Usuarios(int usuarioId, string nombre, string password, int color, byte[] imagen)
         {
             UsuarioId = usuarioId;
             Nombre = nombre;
