@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\. USARCARPETA .!!!\\..I.S.F.D. Y T. Nº80\\proyectos\\Discrod2-clonado\\Discrod2\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj": {}
+    "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj": {}
   },
   "projects": {
-    "C:\\. USARCARPETA .!!!\\..I.S.F.D. Y T. Nº80\\proyectos\\Discrod2-clonado\\Discrod2\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj": {
+    "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\. USARCARPETA .!!!\\..I.S.F.D. Y T. Nº80\\proyectos\\Discrod2-clonado\\Discrod2\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj",
+        "projectUniqueName": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj",
         "projectName": "Proyecto Discrod 2",
-        "projectPath": "C:\\. USARCARPETA .!!!\\..I.S.F.D. Y T. Nº80\\proyectos\\Discrod2-clonado\\Discrod2\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj",
-        "packagesPath": "C:\\Users\\fan1_\\.nuget\\packages\\",
-        "outputPath": "C:\\. USARCARPETA .!!!\\..I.S.F.D. Y T. Nº80\\proyectos\\Discrod2-clonado\\Discrod2\\Discrod2\\Proyecto Discrod 2\\obj\\",
+        "projectPath": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj",
+        "packagesPath": "C:\\Users\\jmg00\\.nuget\\packages\\",
+        "outputPath": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\fan1_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jmg00\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -74,7 +74,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

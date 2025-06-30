@@ -1,12 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
-using Microsoft.Identity.Client;
 using Proyecto_Discrod_2.BE;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Proyecto_Discrod_2.DAL
 {
@@ -110,17 +104,12 @@ namespace Proyecto_Discrod_2.DAL
             List<Usuarios> LisUsu = new List<Usuarios>();
 
             // Consulta para traer nombre e imagen
-            string query = "SELECT UsuarioId, Nombre, Imagen FROM Usuario";
+            string query = "SELECT UsuarioId, Nombre, Password, Color, Imagen FROM Usuario";
 
-            // conexion desde el formulario padre
-            SqlConnection conn = FormPadre.ObtenerConexion();
-
-            if (conn != null)
-            {
                 try
                 {
                     // Creamos un comando para ejecutar la consulta
-                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlCommand cmd = new SqlCommand(query, FormPadre.ObtenerConexion());
 
                     // Creamos un DataAdapter para llenar un DataTable
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -140,11 +129,15 @@ namespace Proyecto_Discrod_2.DAL
                         // Obtenemos el nombre como string
                         string nombre = fila["Nombre"].ToString();
 
+                        string password = fila["Password"].ToString();
+
+                        int color = Convert.ToInt32(fila["Color"]);
+
                         // Obtenemos la imagen como array de bytes (puede ser null)
                         byte[] imagen = fila["Imagen"] as byte[];
 
                         // Creamos un objeto Usuario con los datos
-                        Usuarios usuario = new Usuarios(UsuarioId, nombre, imagen);
+                        Usuarios usuario = new Usuarios(UsuarioId, nombre, password, color, imagen);
 
                         // Lo agregamos a la lista
                         LisUsu.Add(usuario);
@@ -155,13 +148,6 @@ namespace Proyecto_Discrod_2.DAL
                     // lanzamos una excepcion con el mensaje
                     throw new Exception("Error al obtener usuarios: " + ex.Message);
                 }
-                finally
-                {
-                    
-                    conn.Close();
-                }
-            }
-
             // Devolvemos la lista de usuarios
             return LisUsu;
         }

@@ -13,8 +13,7 @@ namespace Proyecto_Discrod_2.BE
         {
             DAL.UsuarioDAL usuarioDAL = new DAL.UsuarioDAL();
             try
-            {
-                usuarioDAL.AgregarUsuario(usuarios);
+            { 
                 return usuarioDAL.AgregarUsuario(usuarios);
             }
             catch (Exception ex)
@@ -60,7 +59,7 @@ namespace Proyecto_Discrod_2.BE
                 {
                     throw new ArgumentException(nameof(usuarios.Password), "El usuario debe elegir otra contraseña");
                 }
-                #endregion validaciones
+                #endregion validaciones 
                 return 0; // Si todo está bien, retorna 0 o algún valor que indique éxito
             }
             catch (Exception ex)
