@@ -14,6 +14,7 @@ namespace Proyecto_Discrod_2.DAL
     {
         public string error { get; set; }
         // Metodo Agregar usuario
+
         public int AgregarUsuario(BE.Usuarios usuario)
         {
             // Verificar si el usuario ya existe
@@ -87,7 +88,6 @@ namespace Proyecto_Discrod_2.DAL
             int retorna = 0;
             try
             {
-
                 string query = "DELETE FROM Usuarios WHERE UsuarioId = @UsuarioId";
                 using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
                 {

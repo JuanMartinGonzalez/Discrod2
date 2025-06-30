@@ -3,6 +3,8 @@ using System;
 using Proyecto_Discrod_2.BE;
 using Proyecto_Discrod_2.Properties;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Drawing.Imaging;
+using System.CodeDom;
 
 namespace Proyecto_Discrod_2.FE
 {
@@ -15,24 +17,69 @@ namespace Proyecto_Discrod_2.FE
 
         private void btnRegistrarUsuario_Click(object sender, EventArgs e)
         {
-            BEUsuario beusuario = new BEUsuario();
+            BEUsuario beUsuario = new BEUsuario();
             try
             {
                 Usuarios usuario = new Usuarios(0, string.Empty, string.Empty, 0, null);
                 usuario.Nombre = txtNombre.Text.Trim();
-                usuario.Password = maskedTextBoxPassword.Text;
+                usuario.Password = ObtenerPassword();
                 usuario.Color = btnColor.BackColor.ToArgb();
-                usuario.Imagen = Image.FromFile("C:\\Imagenes\\imagen1.jpg");
+                usuario.Imagen = ConvertirImagen();
 
-                beusuario.VerificarUsuario(usuario);
-                beusuario.AgregarUsuario(usuario);
+                beUsuario.VerificarUsuario(usuario);
+
+                usuario.UsuarioId = beUsuario.AgregarUsuario(usuario);
+                DialogResult resultado = MessageBox.Show("Usuario registrado con exito","", MessageBoxButtons.OK);
+
+                if (resultado == DialogResult.OK)
+                {
+                    this.Close();
+                }
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show(beusuario.error + ", " + ex);
+                MessageBox.Show(beUsuario.error + ", " + ex);
             }
         }
-     
+
+        #region Obtener prop
+        private byte[] ConvertirImagen()
+        {
+            using (MemoryStream ms = new MemoryStream())  //recervar espacio de memoria
+            using (Bitmap bmp = new Bitmap(pictureBoxImagen.Image))   //variable que guarda la imagen seleccionada
+            {
+                bmp.Save(ms, ImageFormat.Jpeg);
+                return ms.ToArray();
+            }
+        }
+
+        private string ObtenerPassword()
+        {
+            if (txtPassword.Text != txtConfirmar.Text)
+            {
+                throw new ArgumentException("La contraseña no coincide");
+            }
+             return txtConfirmar.Text.Trim();
+        }
+        #endregion
+
+        private void btnBuscarImg_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog file = new OpenFileDialog();
+                file.Filter = "archivos de imagen (*jpg; *png;) | *jpg; *png;";   //filtra por solo formatos png y jpg
+                if (file.ShowDialog() == DialogResult.OK)       //abre explorador de archivos
+                {
+                    pictureBoxImagen.Image = Image.FromFile(file.FileName);      //mostramos la imagen seleccionada
+                }
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("Error al buscar archivo");
+            }
+        }
         private void btnColor_Click(object sender, EventArgs e)
         {
             if (colorDialogColor.ShowDialog() == DialogResult.OK)
@@ -40,5 +87,80 @@ namespace Proyecto_Discrod_2.FE
                 btnColor.BackColor = colorDialogColor.Color;
             }
         }
+
+        #region Estilizar campos
+        private void txtNombre_Enter(object sender, EventArgs e)
+        {
+            OcultarTexto(txtNombre);
+        }
+        private void txtNombre_Leave(object sender, EventArgs e)
+        {
+            OcultarTexto(txtNombre);
+        }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            OcultarTexto(txtPassword);
+        }
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            OcultarTexto(txtPassword);
+        }
+        private void txtConfirmar_Enter(object sender, EventArgs e)
+        {
+            OcultarTexto(txtConfirmar);
+        }
+
+        private void txtConfirmar_Leave(object sender, EventArgs e)
+        {
+            OcultarTexto(txtConfirmar);
+        }
+
+
+        private void OcultarTexto(TextBox txt)
+        {
+            if (txt.Name == "txtNombre")
+            {
+                if (txt.Text == "U S U A R I O")
+                {
+                    txt.Text = string.Empty;
+                }
+                else if (txt.Text == string.Empty)
+                {
+                    txt.Text = "U S U A R I O";
+                }
+            }
+
+            if (txt.Name == "txtPassword")
+            {
+                if (txt.Focused && txt.Text == "C O N T R A S E Ñ A")
+                {
+                    txt.Text = string.Empty;
+                    txt.UseSystemPasswordChar = true;
+                }
+                else if (!txt.Focused && txt.Text == string.Empty)
+                {
+                    txt.UseSystemPasswordChar = false;
+                    txt.Text = "C O N T R A S E Ñ A";
+                }
+            }
+
+            if (txt.Name == "txtConfirmar")
+            {
+                if (txt.Focused && txt.Text == "C O N F I R M A R  C O N T R A S E Ñ A")
+                {
+                    txt.Text = string.Empty;
+                    txt.UseSystemPasswordChar = true;
+                }
+                else if (!txt.Focused && txt.Text == string.Empty)
+                {
+                    txt.UseSystemPasswordChar = false;
+                    txt.Text = "C O N F I R M A R  C O N T R A S E Ñ A";
+                }
+            }
+
+        }
+        #endregion Estilizar campos
+
     }
 }

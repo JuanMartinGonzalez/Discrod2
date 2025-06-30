@@ -18,7 +18,8 @@ namespace Proyecto_Discrod_2
         {
             InitializeComponent();
         }
-        static string cadena = "Server=SAM\\SQLEXPRESS;Database=Discrod 2;Trusted_Connection=True;TrustServerCertificate=True";
+
+        static string cadena = "Server=DESKTOP-1HL22VO\\SQLEXPRESS;Database=Discrod 2;Trusted_Connection=True;TrustServerCertificate=True";
         static SqlConnection conexion = new SqlConnection(cadena);
         private void btnRegistro_Click(object sender, EventArgs e)
         {
@@ -30,7 +31,10 @@ namespace Proyecto_Discrod_2
         {
             try
             {
-                conexion.Open();
+                if (conexion.State != ConnectionState.Open)
+                {
+                    conexion.Open();
+                }
                 return conexion;
             }
             catch (Exception ex)
@@ -38,7 +42,6 @@ namespace Proyecto_Discrod_2
                 MessageBox.Show("Error al conectar a la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
-
         }
 
         private void FormPadre_Load(object sender, EventArgs e)
