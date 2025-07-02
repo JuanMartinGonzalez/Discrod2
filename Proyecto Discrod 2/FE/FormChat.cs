@@ -24,7 +24,7 @@ namespace Proyecto_Discrod_2.FE
             UsuarioDAL usuarioDAL = new UsuarioDAL();
 
             // Obtenemos la lista de usuarios desde la base de datos
-            List<Usuarios> lista = usuarioDAL.ObtenerUsuarios();
+            List<Usuarios> lista = UsuarioDAL.ObtenerUsuarios();
 
             // Limpiamos las filas existentes del DataGridView para evitar duplicados
             dataGridViewUsuarios.Rows.Clear();

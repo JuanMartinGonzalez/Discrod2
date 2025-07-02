@@ -6,7 +6,7 @@ namespace Proyecto_Discrod_2.DAL
 {
     public class UsuarioDAL
     {
-        public string error { get; set; }
+        public string Error { get; set; }
         // Metodo Agregar usuario
 
         public int AgregarUsuario(BE.Usuarios usuario)
@@ -34,8 +34,8 @@ namespace Proyecto_Discrod_2.DAL
             // Si ocurre un error, captura la excepción y asigna un mensaje de error
             catch (Exception ex)
             {
-                error = "Error en la base de datos.";
-                throw ex;//error; 
+                Error = "Error en la base de datos." + ex;
+                return -1; // Retorna -1 en caso de error
             }
 
 
@@ -69,7 +69,7 @@ namespace Proyecto_Discrod_2.DAL
             catch (Exception ex)
             {
                 // Si ocurre un error, captura la excepción y asigna un mensaje de error
-                error = "Error en la base de datos.";
+                Error = "Error en la base de datos.";
                 throw ex;//error; 
             }
         }
@@ -92,13 +92,13 @@ namespace Proyecto_Discrod_2.DAL
             }
             catch (Exception ex)
             {
-                error = "Error en la base de datos.";
+                Error = "Error en la base de datos.";
                 throw ex;//error; 
             }
         }
 
         //metodo para traer los usuarios guardados en BD
-        public List<Usuarios> ObtenerUsuarios()
+        public static List<Usuarios> ObtenerUsuarios()
         {
             // Lista donde vamos a guardar los usuarios de BD
             List<Usuarios> LisUsu = new List<Usuarios>();
@@ -151,6 +151,27 @@ namespace Proyecto_Discrod_2.DAL
             // Devolvemos la lista de usuarios
             return LisUsu;
         }
+
+        public bool ExisteUsuario(string nombre)
+        {
+            // Verificar si el usuario ya existe
+            try
+            {
+                string query = "SELECT COUNT(*) FROM Usuarios WHERE Nombre = @Nombre";
+                using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
+                {
+                    command.Parameters.AddWithValue("@Nombre", nombre);
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+                    return count > 0; // Retorna true si el usuario ya está registrado
+                }
+            }
+            catch (Exception ex)
+            {
+                Error = "Error en la base de datos." + ex;
+                return false; // Retorna false en caso de error
+            }
+        }
+
     }
 
 }

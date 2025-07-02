@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Proyecto_Discrod_2.DAL;
+using Proyecto_Discrod_2.VAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,65 +10,36 @@ namespace Proyecto_Discrod_2.BE
 {
     internal class BEUsuario
     {
-        public string error{ get; set; }
+        public string Error { get; set; }
         public int AgregarUsuario(Usuarios usuarios)
         {
-            DAL.UsuarioDAL usuarioDAL = new DAL.UsuarioDAL();
+            DAL.UsuarioDAL usuarioDAL = new();
             try
-            { 
+            {
                 return usuarioDAL.AgregarUsuario(usuarios);
             }
             catch (Exception ex)
             {
-                error = "Error al agregar el usuario.";
-                throw ex;
+                Error = "Error al agregar el usuario." + ex;
+                return -1; // Return a default value in case of an exception
             }
         }
-        public int VerificarUsuario(Usuarios usuarios)
+
+        public List<string> ValidarUsuario(Usuarios usuario)
         {
-            try
+            var validator = new ValidarUsuario();
+            var resultado = validator.Validate(usuario);
+
+            var errores = resultado.Errors.Select(e => e.ErrorMessage).ToList();
+
+            var usuarioDAL = new UsuarioDAL();
+            if (usuarioDAL.ExisteUsuario(usuario.Nombre))
             {
-                #region validaciones
-                if (usuarios == null)
-                {
-                    throw new ArgumentNullException(nameof(usuarios), "El usuario no puede ser nulo.");
-                }
-                if (string.IsNullOrWhiteSpace(usuarios.Nombre))
-                {
-                    throw new ArgumentException("El nombre del usuario no puede estar vacío.", nameof(usuarios.Nombre));
-                }
-                if (string.IsNullOrWhiteSpace(usuarios.Password))
-                {
-                    throw new ArgumentException("La contraseña del usuario no puede estar vacía.", nameof(usuarios.Password));
-                }
-                if (usuarios.Password.Contains('\'') || usuarios.Password.Contains('\"'))
-                {
-                    throw new ArgumentException("La contraseña no puede contener comillas");
-                }
-                if (usuarios.Color == null)
-                {
-                    throw new ArgumentOutOfRangeException(nameof(usuarios.Color), "El usuario debe elegir un color.");
-                }
-                if (usuarios.Imagen == null)
-                {
-                    throw new ArgumentNullException(nameof(usuarios.Imagen), "La imagen del usuario no puede ser nula.");
-                }
-                if (usuarios.Nombre == "U S U A R I O")
-                {
-                    throw new ArgumentException(nameof(usuarios.Nombre), "El usuario debe elegir otro nombre.");
-                }
-                if (usuarios.Password == "C O N T R A S E Ñ A")
-                {
-                    throw new ArgumentException(nameof(usuarios.Password), "El usuario debe elegir otra contraseña");
-                }
-                #endregion validaciones 
-                return 0; // Si todo está bien, retorna 0 o algún valor que indique éxito
+                errores.Add("El nombre de usuario ya está registrado.");
             }
-            catch (Exception ex)
-            {
-                error = "Error crítico.";
-                throw ex;
-            }
+
+            return errores;
         }
+
     }
 }

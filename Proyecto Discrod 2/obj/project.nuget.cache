@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "NXGWdZUmC6g=",
+  "dgSpecHash": "ozZaHekmFB4=",
   "success": true,
-  "projectFilePath": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj",
+  "projectFilePath": "M:\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jmg00\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\jmg00\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\jmg00\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
     "C:\\Users\\jmg00\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\jmg00\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.4\\microsoft.bcl.cryptography.9.0.4.nupkg.sha512",
     "C:\\Users\\jmg00\\.nuget\\packages\\microsoft.data.sqlclient\\6.0.2\\microsoft.data.sqlclient.6.0.2.nupkg.sha512",
