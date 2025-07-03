@@ -19,7 +19,7 @@ namespace Proyecto_Discrod_2
             InitializeComponent();
         }
 
-        static string cadena = "Server=EVA\\SQLEXPRESS;Database=Discrod2;Trusted_Connection=True;TrustServerCertificate=True";
+        static string cadena = "Server=EVA\\SQLEXPRESS;Database=Discrod2;Trusted_Connection=True;TrustServerCertificate=True"; 
         static SqlConnection conexion = new SqlConnection(cadena);
         private void btnRegistro_Click(object sender, EventArgs e)
         {
@@ -54,6 +54,20 @@ namespace Proyecto_Discrod_2
             FormRegistro lForm = new FormRegistro();
             lForm.MdiParent = this;
             lForm.Show();
+        }
+
+        private void ingresoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormIngreso lForm1 = new FormIngreso();
+            lForm1.MdiParent = this;
+            lForm1.Show();
+        }
+
+        private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormActualizar lForm2 = new FormActualizar();
+            lForm2.MdiParent = this;
+            lForm2.Show();
         }
     }
 }

@@ -20,11 +20,23 @@ namespace Proyecto_Discrod_2.FE
         }
         private void FormChat_Load(object sender, EventArgs e)
         {
-            // Creamos una instancia de la clase UsuarioDAL para acceder a la logica
-            UsuarioDAL usuarioDAL = new UsuarioDAL();
+            // Creamos una instancia de la clase de lógica de negocio para usuarios
+            BEUsuario beUsuario = new BEUsuario();
 
-            // Obtenemos la lista de usuarios desde la base de datos
-            List<Usuarios> lista = UsuarioDAL.ObtenerUsuarios();
+            // Declaramos la lista donde se guardarán los usuarios obtenidos
+            List<Usuarios> lista;
+
+            try
+            {
+                // Intentamos obtener la lista de usuarios desde la lógica de negocio (puede lanzar una excepción)
+                lista = beUsuario.ObtenerUsuarios();
+            }
+            catch (Exception ex)
+            {
+                // Si ocurre un error al obtener los usuarios, mostramos un mensaje de error al usuario y salimos del método
+                MessageBox.Show("Error al cargar los usuarios: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             // Limpiamos las filas existentes del DataGridView para evitar duplicados
             dataGridViewUsuarios.Rows.Clear();
@@ -53,21 +65,17 @@ namespace Proyecto_Discrod_2.FE
                 Image img = null;
 
                 // Si el usuario tiene una imagen guardada, la convertimos de bytes a un objeto Image
-              /*  if (usuario.Imagen != null && usuario.Imagen.Length > 0)
-                {
-                    using (MemoryStream ms = new MemoryStream(usuario.Imagen))
-                    {
-                        img = Image.FromStream(ms);
-                    }
-                }*///pensado con imagen en byte
+                  if (usuario.Imagen != null && usuario.Imagen.Length > 0)
+                  {
+                      using (MemoryStream ms = new MemoryStream(usuario.Imagen))
+                      {
+                          img = Image.FromStream(ms);
+                      }
+                  }
 
                 // Añadimos una nueva fila a la grilla con el nombre y la imagen del usuario
                 dataGridViewUsuarios.Rows.Add(usuario.Nombre, img);
             }
         }
-
-       
-
-       
     }
 }
