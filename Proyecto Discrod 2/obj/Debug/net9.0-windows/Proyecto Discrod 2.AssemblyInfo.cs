@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Proyecto Discrod 2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb25050ec5ce49a5da5c91830a4d71ec98de483f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a99c3e5aa3eb330acea89a7cfcffa3240a589f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Proyecto Discrod 2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Proyecto Discrod 2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

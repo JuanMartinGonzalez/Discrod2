@@ -19,7 +19,7 @@ namespace Proyecto_Discrod_2
             InitializeComponent();
         }
 
-        static string cadena = "Server=SAM\\SQLEXPRESS;Database=Discrod 2;Trusted_Connection=True;TrustServerCertificate=True";
+        static string cadena = "Server=EVA\\SQLEXPRESS;Database=Discrod2;Trusted_Connection=True;TrustServerCertificate=True";
         static SqlConnection conexion = new SqlConnection(cadena);
         private void btnRegistro_Click(object sender, EventArgs e)
         {

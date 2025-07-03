@@ -18,30 +18,55 @@ namespace Proyecto_Discrod_2.FE
         private void btnRegistrarUsuario_Click(object sender, EventArgs e)
         {
             BEUsuario beUsuario = new BEUsuario();
+
             try
             {
-                Usuarios usuario = new Usuarios(0, string.Empty, string.Empty, 0, null);
-                usuario.Nombre = txtNombre.Text.Trim();
-                usuario.Password = ObtenerPassword();
-                usuario.Color = btnColor.BackColor.ToArgb();
-                usuario.Imagen = ConvertirImagen();
+                // Crear instancia del usuario con los datos del formulario
+                Usuarios usuario = new Usuarios(0, string.Empty, string.Empty, 0, null)
+                {
+                    Nombre = txtNombre.Text.Trim(),
+                    Password = ObtenerPassword(),
+                    Color = btnColor.BackColor.ToArgb(),
+                    Imagen = ConvertirImagen()
+                };
 
-                beUsuario.VerificarUsuario(usuario);
+                // Validar el usuario
+                var errores = beUsuario.ValidarUsuario(usuario); // Cambiado para usar la instancia 'beUsuario'
 
-                usuario.UsuarioId = beUsuario.AgregarUsuario(usuario);
-                DialogResult resultado = MessageBox.Show("Usuario registrado con exito","", MessageBoxButtons.OK);
+                if (errores.Any())
+                {
+                    MessageBox.Show(string.Join("\n", errores), "Errores de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Parar el proceso si hay errores
+                }
+
+                // Intentar agregar el usuario a la base de datos
+                int resultadoId = beUsuario.AgregarUsuario(usuario);
+
+                if (resultadoId == -1)
+                {
+                    MessageBox.Show(beUsuario.Error ?? "Error al registrar el usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Parar el proceso si hubo error en BD
+                }
+
+                // Asignar el ID generado al usuario
+                usuario.UsuarioId = resultadoId;
+
+                // Confirmar éxito
+                DialogResult resultado = MessageBox.Show("Usuario registrado con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 if (resultado == DialogResult.OK)
                 {
-                    this.Close();
+                    this.Close(); // Cerrar el formulario si el usuario acepta
                 }
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show(beUsuario.error + ", " + ex);
+                MessageBox.Show("Ocurrió un error inesperado:\n" + ex.Message, "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
+
 
         #region Obtener prop
         private byte[] ConvertirImagen()
