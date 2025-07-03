@@ -1673,19 +1673,19 @@
   },
   "packageFolders": {
     "C:\\Users\\jmg00\\.nuget\\packages\\": {},
-    "M:\\VSC\\Shared\\NuGetPackages": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "M:\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj",
+      "projectUniqueName": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj",
       "projectName": "Proyecto Discrod 2",
-      "projectPath": "M:\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj",
+      "projectPath": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj",
       "packagesPath": "C:\\Users\\jmg00\\.nuget\\packages\\",
-      "outputPath": "M:\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\obj\\",
+      "outputPath": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "M:\\VSC\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\jmg00\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1715,7 +1715,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net9.0-windows7.0": {
@@ -1749,7 +1749,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ozZaHekmFB4=",
+  "dgSpecHash": "HIxkYMdiEpM=",
   "success": true,
-  "projectFilePath": "M:\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj",
+  "projectFilePath": "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jmg00\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\jmg00\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
