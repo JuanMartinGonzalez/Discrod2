@@ -104,7 +104,7 @@ namespace Proyecto_Discrod_2.DAL
             List<Usuarios> LisUsu = new List<Usuarios>();
 
             // Consulta para traer nombre e imagen
-            string query = "SELECT UsuarioId, Nombre, Password, Color, Imagen FROM Usuario";
+            string query = "SELECT UsuarioId, Nombre, Password, Color, Imagen FROM Usuarios";
 
                 try
                 {

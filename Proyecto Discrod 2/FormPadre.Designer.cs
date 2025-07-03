@@ -30,34 +30,55 @@
         {
             menuStrip1 = new MenuStrip();
             registroToolStripMenuItem = new ToolStripMenuItem();
+            ingresoToolStripMenuItem = new ToolStripMenuItem();
+            actualizarToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { registroToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { registroToolStripMenuItem, ingresoToolStripMenuItem, actualizarToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(966, 28);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(845, 27);
             menuStrip1.TabIndex = 3;
             menuStrip1.Text = "menuStrip1";
             // 
             // registroToolStripMenuItem
             // 
+            registroToolStripMenuItem.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             registroToolStripMenuItem.Name = "registroToolStripMenuItem";
-            registroToolStripMenuItem.Size = new Size(78, 24);
-            registroToolStripMenuItem.Text = "Registro";
+            registroToolStripMenuItem.Size = new Size(93, 23);
+            registroToolStripMenuItem.Text = "REGISTRO";
             registroToolStripMenuItem.Click += registroToolStripMenuItem_Click;
+            // 
+            // ingresoToolStripMenuItem
+            // 
+            ingresoToolStripMenuItem.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ingresoToolStripMenuItem.Name = "ingresoToolStripMenuItem";
+            ingresoToolStripMenuItem.Size = new Size(86, 23);
+            ingresoToolStripMenuItem.Text = "INGRESO";
+            ingresoToolStripMenuItem.Click += ingresoToolStripMenuItem_Click;
+            // 
+            // actualizarToolStripMenuItem
+            // 
+            actualizarToolStripMenuItem.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
+            actualizarToolStripMenuItem.Size = new Size(110, 23);
+            actualizarToolStripMenuItem.Text = "ACTUALIZAR";
+            actualizarToolStripMenuItem.Click += actualizarToolStripMenuItem_Click;
             // 
             // FormPadre
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(966, 754);
+            ClientSize = new Size(845, 562);
             Controls.Add(menuStrip1);
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormPadre";
             Text = "FormPadre";
             Load += FormPadre_Load;
@@ -71,5 +92,7 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem registroToolStripMenuItem;
+        private ToolStripMenuItem ingresoToolStripMenuItem;
+        private ToolStripMenuItem actualizarToolStripMenuItem;
     }
 }
