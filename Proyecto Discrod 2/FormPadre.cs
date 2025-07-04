@@ -18,9 +18,8 @@ namespace Proyecto_Discrod_2
         {
             InitializeComponent();
         }
-
-        static string cadena = "Server=EVA\\SQLEXPRESS;Database=Discrod2;Trusted_Connection=True;TrustServerCertificate=True"; 
-        static SqlConnection conexion = new SqlConnection(cadena);
+        static string rutaArchivo = "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\config\\cadena.txt";
+        static SqlConnection conexion = new SqlConnection(ObtenerCadena(rutaArchivo));
         private void btnRegistro_Click(object sender, EventArgs e)
         {
             FormRegistro lForm = new FormRegistro();
@@ -69,5 +68,26 @@ namespace Proyecto_Discrod_2
             lForm2.MdiParent = this;
             lForm2.Show();
         }
+        public static string ObtenerCadena(string rutaArchivo)
+        {
+            try
+            {
+                if (System.IO.File.Exists(rutaArchivo))
+                {
+                    return System.IO.File.ReadAllText(rutaArchivo);
+                }
+                else
+                {
+                    MessageBox.Show("El archivo no existe: " + rutaArchivo, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return string.Empty;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al leer el archivo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return string.Empty;
+            }
+        }
+
     }
 }
