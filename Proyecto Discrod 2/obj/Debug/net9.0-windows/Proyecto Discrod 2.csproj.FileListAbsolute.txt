@@ -277,3 +277,5 @@ C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\
 C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.genruntimeconfig.cache
 C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\ref\Proyecto Discrod 2.dll
 C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.FE.FormActualizar.resources
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\FluentValidation.dll
+C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.FE.FormActualizar.resources

@@ -47,9 +47,9 @@
             txtNombre.Location = new Point(138, 75);
             txtNombre.MaxLength = 25;
             txtNombre.Name = "txtNombre";
+            txtNombre.PlaceholderText = "U S U A R I O";
             txtNombre.Size = new Size(270, 32);
             txtNombre.TabIndex = 7;
-            txtNombre.Text = "U S U A R I O";
             txtNombre.Enter += txtNombre_Enter;
             txtNombre.Leave += txtNombre_Leave;
             // 
@@ -119,9 +119,9 @@
             txtPassword.Location = new Point(138, 125);
             txtPassword.MaxLength = 25;
             txtPassword.Name = "txtPassword";
+            txtPassword.PlaceholderText = "C O N T R A S E Ñ A";
             txtPassword.Size = new Size(270, 32);
             txtPassword.TabIndex = 17;
-            txtPassword.Text = "C O N T R A S E Ñ A";
             txtPassword.Enter += txtPassword_Enter;
             txtPassword.Leave += txtPassword_Leave;
             // 
@@ -131,9 +131,9 @@
             txtConfirmar.Location = new Point(138, 176);
             txtConfirmar.MaxLength = 15;
             txtConfirmar.Name = "txtConfirmar";
+            txtConfirmar.PlaceholderText = "C O N F I R M A R  C O N T R A S E Ñ A";
             txtConfirmar.Size = new Size(270, 32);
             txtConfirmar.TabIndex = 18;
-            txtConfirmar.Text = "C O N F I R M A R  C O N T R A S E Ñ A";
             txtConfirmar.Enter += txtConfirmar_Enter;
             txtConfirmar.Leave += txtConfirmar_Leave;
             // 
