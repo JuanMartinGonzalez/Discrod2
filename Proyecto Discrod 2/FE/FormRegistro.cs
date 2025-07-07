@@ -146,41 +146,50 @@ namespace Proyecto_Discrod_2.FE
         {
             if (txt.Name == "txtNombre")
             {
-                if (txt.Text == "U S U A R I O")
+                if (txt.PlaceholderText == "U S U A R I O")
                 {
-                    txt.Text = string.Empty;
+                    txt.PlaceholderText = string.Empty;
                 }
                 else if (txt.Text == string.Empty)
                 {
-                    txt.Text = "U S U A R I O";
+                    txt.PlaceholderText = "U S U A R I O";
                 }
             }
 
             if (txt.Name == "txtPassword")
             {
-                if (txt.Focused && txt.Text == "C O N T R A S E Ñ A")
+                if (txt.Focused && txt.PlaceholderText == "C O N T R A S E Ñ A")
                 {
-                    txt.Text = string.Empty;
+                    txt.PlaceholderText = string.Empty;
                     txt.UseSystemPasswordChar = true;
                 }
-                else if (!txt.Focused && txt.Text == string.Empty)
+                if (!txt.Focused && txt.PlaceholderText == string.Empty)
                 {
                     txt.UseSystemPasswordChar = false;
-                    txt.Text = "C O N T R A S E Ñ A";
+                    txt.PlaceholderText = "C O N T R A S E Ñ A";
                 }
+                if ((!string.IsNullOrEmpty(txt.Text) && (txt.Text != "C O N T R A S E Ñ A")) && (!txt.Focused))
+                {
+                    txt.UseSystemPasswordChar = true; // Mantener el uso de caracteres de contraseña si ya se ingresó texto
+                }
+
             }
 
             if (txt.Name == "txtConfirmar")
             {
-                if (txt.Focused && txt.Text == "C O N F I R M A R  C O N T R A S E Ñ A")
+                if (txt.Focused && txt.PlaceholderText == "C O N F I R M A R  C O N T R A S E Ñ A")
                 {
-                    txt.Text = string.Empty;
+                    txt.PlaceholderText = string.Empty;
                     txt.UseSystemPasswordChar = true;
                 }
-                else if (!txt.Focused && txt.Text == string.Empty)
+                if (!txt.Focused && txt.PlaceholderText == string.Empty)
                 {
                     txt.UseSystemPasswordChar = false;
-                    txt.Text = "C O N F I R M A R  C O N T R A S E Ñ A";
+                    txt.PlaceholderText = "C O N F I R M A R  C O N T R A S E Ñ A";
+                }
+                if ((!string.IsNullOrEmpty(txt.Text) && (txt.Text != "C O N F I R M A R  C O N T R A S E Ñ A")) && (!txt.Focused))
+                {
+                    txt.UseSystemPasswordChar = true; // Mantener el uso de caracteres de contraseña si ya se ingresó texto
                 }
             }
 

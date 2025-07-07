@@ -279,3 +279,75 @@ C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\
 C:\. USARCARPETA .!!!\..I.S.F.D. Y T. Nº80\proyectos\Discrod2-clonado\Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.FE.FormActualizar.resources
 C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\FluentValidation.dll
 C:\Instituto80\Proyecto Discrod2\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.FE.FormActualizar.resources
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Proyecto Discrod 2.exe
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Proyecto Discrod 2.deps.json
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Proyecto Discrod 2.runtimeconfig.json
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Proyecto Discrod 2.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Proyecto Discrod 2.pdb
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Azure.Core.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Azure.Identity.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\FluentValidation.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Bcl.Cryptography.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Identity.Client.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\System.ClientModel.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\System.Memory.Data.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\bin\Debug\net9.0-windows\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.csproj.AssemblyReference.cache
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.FE.FormActualizar.resources
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.FE.FormChat.resources
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.FE.FormIngreso.resources
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.FE.FormRegistro.resources
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.FormPadre.resources
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto_Discrod_2.Properties.Resources.resources
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.csproj.GenerateResource.cache
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.AssemblyInfoInputs.cache
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.AssemblyInfo.cs
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.csproj.CoreCompileInputs.cache
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.sourcelink.json
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto.83BA601E.Up2Date
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\refint\Proyecto Discrod 2.dll
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.pdb
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\Proyecto Discrod 2.genruntimeconfig.cache
+C:\Users\Windows 10\OneDrive\Documentos\TrabajoAlgoritmos2\Proyecto\Discrod2\Proyecto Discrod 2\obj\Debug\net9.0-windows\ref\Proyecto Discrod 2.dll
