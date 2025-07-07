@@ -1,5 +1,5 @@
 .vs/
-.obj/
-.v17/
-.DesignTimeBuild/
-.config/
+obj/
+v17/
+DesignTimeBuild/
+config/
