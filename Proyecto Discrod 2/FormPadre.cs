@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using Proyecto_Discrod_2.FE;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Proyecto_Discrod_2.FE;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Proyecto_Discrod_2
 {
@@ -18,7 +19,8 @@ namespace Proyecto_Discrod_2
         {
             InitializeComponent();
         }
-        static string rutaArchivo = "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\config\\cadena.txt";
+        static string rutaArchivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "cadena.txt"); 
+        //Users\juanm\Desktop\Proyecto Discrod 2\Discrod2\Proyecto Discrod 2\config
         static SqlConnection conexion = new SqlConnection(ObtenerCadena(rutaArchivo));
         private void btnRegistro_Click(object sender, EventArgs e)
         {
