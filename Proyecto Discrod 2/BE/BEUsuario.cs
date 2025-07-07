@@ -41,5 +41,18 @@ namespace Proyecto_Discrod_2.BE
             return errores;
         }
 
+        public List<Usuarios> ObtenerUsuarios()
+        {
+            try
+            {
+                var lista = UsuarioDAL.ObtenerUsuarios();
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al cargar los usuarios: " + ex.Message);
+            }
+        }
+
     }
 }

@@ -18,9 +18,8 @@ namespace Proyecto_Discrod_2
         {
             InitializeComponent();
         }
-
-        static string cadena = "Server=EVA\\SQLEXPRESS;Database=Discrod2;Trusted_Connection=True;TrustServerCertificate=True";
-        static SqlConnection conexion = new SqlConnection(cadena);
+        static string rutaArchivo = "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\config\\cadena.txt";
+        static SqlConnection conexion = new SqlConnection(ObtenerCadena(rutaArchivo));
         private void btnRegistro_Click(object sender, EventArgs e)
         {
             FormRegistro lForm = new FormRegistro();
@@ -55,5 +54,40 @@ namespace Proyecto_Discrod_2
             lForm.MdiParent = this;
             lForm.Show();
         }
+
+        private void ingresoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormIngreso lForm1 = new FormIngreso();
+            lForm1.MdiParent = this;
+            lForm1.Show();
+        }
+
+        private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormActualizar lForm2 = new FormActualizar();
+            lForm2.MdiParent = this;
+            lForm2.Show();
+        }
+        public static string ObtenerCadena(string rutaArchivo)
+        {
+            try
+            {
+                if (System.IO.File.Exists(rutaArchivo))
+                {
+                    return System.IO.File.ReadAllText(rutaArchivo);
+                }
+                else
+                {
+                    MessageBox.Show("El archivo no existe: " + rutaArchivo, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return string.Empty;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al leer el archivo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return string.Empty;
+            }
+        }
+
     }
 }

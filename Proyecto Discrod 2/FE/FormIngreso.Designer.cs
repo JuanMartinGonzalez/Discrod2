@@ -37,63 +37,62 @@
             // 
             // textBoxUsuarioLogin
             // 
-            textBoxUsuarioLogin.Location = new Point(549, 76);
+            textBoxUsuarioLogin.Location = new Point(331, 52);
+            textBoxUsuarioLogin.Margin = new Padding(3, 2, 3, 2);
             textBoxUsuarioLogin.Name = "textBoxUsuarioLogin";
-            textBoxUsuarioLogin.Size = new Size(325, 27);
+            textBoxUsuarioLogin.Size = new Size(285, 23);
             textBoxUsuarioLogin.TabIndex = 0;
             // 
             // textBoxPasswordLogin
             // 
-            textBoxPasswordLogin.Location = new Point(549, 142);
+            textBoxPasswordLogin.Location = new Point(331, 101);
+            textBoxPasswordLogin.Margin = new Padding(3, 2, 3, 2);
             textBoxPasswordLogin.Name = "textBoxPasswordLogin";
-            textBoxPasswordLogin.Size = new Size(325, 27);
+            textBoxPasswordLogin.Size = new Size(285, 23);
             textBoxPasswordLogin.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(375, 76);
+            label1.Location = new Point(179, 52);
             label1.Name = "label1";
-            label1.Size = new Size(59, 20);
+            label1.Size = new Size(47, 15);
             label1.TabIndex = 2;
             label1.Text = "Usuario";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(375, 142);
+            label2.Location = new Point(179, 101);
             label2.Name = "label2";
-            label2.Size = new Size(83, 20);
+            label2.Size = new Size(67, 15);
             label2.TabIndex = 3;
             label2.Text = "Contraseña";
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(375, 228);
+            btnLogin.Location = new Point(179, 166);
+            btnLogin.Margin = new Padding(3, 2, 3, 2);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(499, 140);
+            btnLogin.Size = new Size(437, 105);
             btnLogin.TabIndex = 4;
             btnLogin.Text = "Ingresar";
             btnLogin.UseVisualStyleBackColor = true;
             // 
             // FormIngreso
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1392, 450);
+            ClientSize = new Size(800, 338);
             Controls.Add(btnLogin);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(textBoxPasswordLogin);
             Controls.Add(textBoxUsuarioLogin);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormIngreso";
             Text = "FormIngreso";
             Load += FormIngreso_Load;
-            Controls.SetChildIndex(textBoxUsuarioLogin, 0);
-            Controls.SetChildIndex(textBoxPasswordLogin, 0);
-            Controls.SetChildIndex(label1, 0);
-            Controls.SetChildIndex(label2, 0);
-            Controls.SetChildIndex(btnLogin, 0);
             ResumeLayout(false);
             PerformLayout();
         }
