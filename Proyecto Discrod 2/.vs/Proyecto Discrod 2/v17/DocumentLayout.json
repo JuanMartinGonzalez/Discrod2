@@ -1,42 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\",
+  "WorkspaceRootPath": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\windows 10\\onedrive\\documentos\\trabajoalgoritmos2\\proyecto\\discrod2\\proyecto discrod 2\\config\\cadena.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:config\\cadena.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\alexis\\documents\\proyecto discrod2\\discrod2\\proyecto discrod 2\\fe\\formingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:fe\\formingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\windows 10\\onedrive\\documentos\\trabajoalgoritmos2\\proyecto\\discrod2\\proyecto discrod 2\\formpadre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:formpadre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\windows 10\\onedrive\\documentos\\trabajoalgoritmos2\\proyecto\\discrod2\\proyecto discrod 2\\fe\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:fe\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\windows 10\\onedrive\\documentos\\trabajoalgoritmos2\\proyecto\\discrod2\\proyecto discrod 2\\be\\beusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:be\\beusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\formpadre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:formpadre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\windows 10\\onedrive\\documentos\\trabajoalgoritmos2\\proyecto\\discrod2\\proyecto discrod 2\\dal\\usuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:dal\\usuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\fe\\formingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\fe\\formingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:fe\\formingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\windows 10\\onedrive\\documentos\\trabajoalgoritmos2\\proyecto\\discrod2\\proyecto discrod 2\\be\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\alexis\\documents\\proyecto discrod2\\discrod2\\proyecto discrod 2\\formpadre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:formpadre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\alexis\\documents\\proyecto discrod2\\discrod2\\proyecto discrod 2\\val\\validarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:val\\validarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\formpadre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:formpadre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\alexis\\documents\\proyecto discrod2\\discrod2\\proyecto discrod 2\\dal\\usuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:dal\\usuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\alexis\\documents\\proyecto discrod2\\discrod2\\proyecto discrod 2\\be\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:be\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\windows 10\\onedrive\\documentos\\trabajoalgoritmos2\\proyecto\\discrod2\\proyecto discrod 2\\val\\validarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:val\\validarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\alexis\\documents\\proyecto discrod2\\discrod2\\proyecto discrod 2\\be\\beusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:be\\beusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\alexis\\documents\\proyecto discrod2\\discrod2\\proyecto discrod 2\\config\\cadena.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:config\\cadena.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|c:\\users\\alexis\\documents\\proyecto discrod2\\discrod2\\proyecto discrod 2\\fe\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86284AD7-DA20-4F10-8246-9621B835DFAE}|Proyecto Discrod 2.csproj|solutionrelative:fe\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,20 +50,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{f2bd8fb8-fc94-3dae-a733-fd993c73cc87}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FormIngreso.cs",
+              "DocumentMoniker": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormIngreso.cs",
+              "RelativeDocumentMoniker": "FE\\FormIngreso.cs",
+              "ToolTip": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormIngreso.cs",
+              "RelativeToolTip": "FE\\FormIngreso.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T18:59:40.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "cadena.txt",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\config\\cadena.txt",
+              "DocumentMoniker": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\config\\cadena.txt",
               "RelativeDocumentMoniker": "config\\cadena.txt",
-              "ToolTip": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\config\\cadena.txt*",
-              "RelativeToolTip": "config\\cadena.txt*",
+              "ToolTip": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\config\\cadena.txt",
+              "RelativeToolTip": "config\\cadena.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2025-07-06T23:25:03.17Z",
@@ -67,11 +88,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "BEUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\BE\\BEUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\BE\\BEUsuario.cs",
               "RelativeDocumentMoniker": "BE\\BEUsuario.cs",
-              "ToolTip": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\BE\\BEUsuario.cs",
+              "ToolTip": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\BE\\BEUsuario.cs",
               "RelativeToolTip": "BE\\BEUsuario.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAuwCMAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -80,59 +101,62 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Usuarios.cs",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\BE\\Usuarios.cs",
+              "DocumentMoniker": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\BE\\Usuarios.cs",
               "RelativeDocumentMoniker": "BE\\Usuarios.cs",
-              "ToolTip": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\BE\\Usuarios.cs",
+              "ToolTip": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\BE\\Usuarios.cs",
               "RelativeToolTip": "BE\\Usuarios.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T23:15:25.274Z"
+              "WhenOpened": "2025-06-30T23:15:25.274Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "UsuarioDAL.cs",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\DAL\\UsuarioDAL.cs",
+              "DocumentMoniker": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\DAL\\UsuarioDAL.cs",
               "RelativeDocumentMoniker": "DAL\\UsuarioDAL.cs",
-              "ToolTip": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\DAL\\UsuarioDAL.cs",
+              "ToolTip": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\DAL\\UsuarioDAL.cs",
               "RelativeToolTip": "DAL\\UsuarioDAL.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAA2wI0AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAowF0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T23:26:49.31Z"
+              "WhenOpened": "2025-06-19T23:26:49.31Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "FormPadre.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\FormPadre.cs",
+              "Title": "FormPadre.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FormPadre.cs",
               "RelativeDocumentMoniker": "FormPadre.cs",
-              "ToolTip": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\FormPadre.cs [Design]",
-              "RelativeToolTip": "FormPadre.cs [Design]",
+              "ToolTip": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FormPadre.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FormPadre.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-03T17:46:49.532Z",
-              "EditorCaption": " [Design]"
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "ValidarUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\VAL\\ValidarUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\VAL\\ValidarUsuario.cs",
               "RelativeDocumentMoniker": "VAL\\ValidarUsuario.cs",
-              "ToolTip": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\VAL\\ValidarUsuario.cs",
+              "ToolTip": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\VAL\\ValidarUsuario.cs",
               "RelativeToolTip": "VAL\\ValidarUsuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T04:13:04.299Z"
+              "WhenOpened": "2025-07-01T04:13:04.299Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FormPadre.cs",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\FormPadre.cs",
+              "DocumentMoniker": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FormPadre.cs",
               "RelativeDocumentMoniker": "FormPadre.cs",
-              "ToolTip": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\FormPadre.cs",
+              "ToolTip": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FormPadre.cs",
               "RelativeToolTip": "FormPadre.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAACiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -141,27 +165,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "FormIngreso.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\FE\\FormIngreso.cs",
+              "DocumentMoniker": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormIngreso.cs",
               "RelativeDocumentMoniker": "FE\\FormIngreso.cs",
-              "ToolTip": "C:\\. USARCARPETA .!!!\\..I.S.F.D. Y T. N\u00BA80\\proyectos\\Discrod2-clonado\\Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormIngreso.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\. USARCARPETA .!!!\\..I.S.F.D. Y T. N\u00BA80\\proyectos\\Discrod2-clonado\\Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormIngreso.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormIngreso.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FE\\FormIngreso.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T23:18:30.769Z"
+              "WhenOpened": "2025-06-30T23:18:30.769Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "FormRegistro.cs",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\FE\\FormRegistro.cs",
+              "DocumentMoniker": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormRegistro.cs",
               "RelativeDocumentMoniker": "FE\\FormRegistro.cs",
-              "ToolTip": "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\FE\\FormRegistro.cs",
+              "ToolTip": "C:\\Users\\alexis\\Documents\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\FE\\FormRegistro.cs",
               "RelativeToolTip": "FE\\FormRegistro.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAqwE0AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T23:34:00.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-29T23:34:00.802Z"
             }
           ]
         }
