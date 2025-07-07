@@ -18,7 +18,7 @@ namespace Proyecto_Discrod_2
         {
             InitializeComponent();
         }
-        static string rutaArchivo = "C:\\Instituto80\\Proyecto Discrod2\\Discrod2\\Proyecto Discrod 2\\config\\cadena.txt";
+        static string rutaArchivo = "C:\\Users\\Windows 10\\OneDrive\\Documentos\\TrabajoAlgoritmos2\\Proyecto\\Discrod2\\Proyecto Discrod 2\\config\\cadena.txt";
         static SqlConnection conexion = new SqlConnection(ObtenerCadena(rutaArchivo));
         private void btnRegistro_Click(object sender, EventArgs e)
         {
