@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Proyecto_Discrod_2.BE;
+using Proyecto_Discrod_2.DAL;
+using Proyecto_Discrod_2.VAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,10 +19,9 @@ namespace Proyecto_Discrod_2.FE
         {
             InitializeComponent();
         }
-
-        private void FormIngreso_Load(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-
+         
         }
     }
 }
