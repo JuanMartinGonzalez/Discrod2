@@ -48,8 +48,8 @@ namespace Proyecto_Discrod_2
         private void FormPadre_Load(object sender, EventArgs e)
         {
             ObtenerConexion();
-            FormChat form = new();
-            form.Show();
+           // FormChat form = new();
+            //form.Show();
         }
 
         private void registroToolStripMenuItem_Click(object sender, EventArgs e)
