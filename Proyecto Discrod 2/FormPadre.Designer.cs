@@ -1,4 +1,5 @@
-﻿namespace Proyecto_Discrod_2
+﻿
+namespace Proyecto_Discrod_2
 {
     partial class FormPadre
     {
