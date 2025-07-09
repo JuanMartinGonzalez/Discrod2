@@ -31,22 +31,20 @@ namespace Proyecto_Discrod_2.FE
             BEUsuario beUsuario = new BEUsuario();
 
             // Verificar si el usuario existe con ese nombre y contraseña
-            bool existe = beUsuario.ExisteUusuario(textBoxUsuarioLogin.Text.Trim(), textBoxPasswordLogin.Text.Trim());
-
-            if (existe)
+            int resultado = beUsuario.VerificarLoginUsuario(textBoxUsuarioLogin.Text.Trim(), textBoxPasswordLogin.Text.Trim());
+            if (resultado == 1)
             {
                 MessageBox.Show("Ingreso exitoso", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 FormChat formChat = new FormChat();
                 this.Close();
                 formChat.ShowDialog();
-
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(beUsuario.Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
+
         }
     }
 }

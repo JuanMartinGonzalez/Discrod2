@@ -26,27 +26,33 @@ namespace Proyecto_Discrod_2.BE
             }
         }
 
-        public bool ExisteUusuario(string nombre, string password)
-
-        {
-            // Verificar si el usuario ya existe
+        public int VerificarLoginUsuario(string nombre, string password)
+        { 
+            DAL.UsuarioDAL usuarioDAL = new();
             try
             {
-                string query = "SELECT COUNT(*) FROM Usuarios WHERE Nombre = @Nombre AND Password = @Password";
-                using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
+                if (!usuarioDAL.ExisteUsuario(nombre))
                 {
-                    command.Parameters.AddWithValue("@Nombre", nombre);
-                    command.Parameters.AddWithValue("@Password", password);
-                    int count = Convert.ToInt32(command.ExecuteScalar());
-                    return count > 0; // Retorna true si el usuario ya está registrado
+                    Error = "El usuario no existe.";
+                    return -1;
                 }
+
+                // Aquí deberías tener un método que reciba nombre y password
+                if (!usuarioDAL.PasswordCorrecta(nombre, password))
+                {
+                    Error = "La contraseña es incorrecta.";
+                    return -2;
+                }
+
+                return 1; // Login correcto
             }
             catch (Exception ex)
             {
-                Error = "Los datos ingresados son incorrecetos" + ex;
-                return false; // Retorna false en caso de error
+                Error = "Error al verificar el usuario: " + ex.Message;
+                return -1;
             }
         }
+
 
         public List<string> ValidarUsuario(Usuarios usuario)
         {

@@ -171,7 +171,31 @@ namespace Proyecto_Discrod_2.DAL
                 return false; // Retorna false en caso de error
             }
         }
+        public bool PasswordCorrecta(string nombre, string password)
+        {
+     
+            try
+            {
+                string query = "SELECT Password FROM Usuarios WHERE Nombre = @Nombre";
+                using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
+                {
+                    command.Parameters.AddWithValue("@Nombre", nombre);
+                    var result = command.ExecuteScalar();
+                    if (result == null)
+                        return false;
+
+                    string passwordEnBD = result.ToString();
+                    return passwordEnBD == password;
+                }
+            }
+            catch (Exception ex)
+            {
+                Error = "Error al verificar la contraseña: " + ex.Message;
+                return false;
+            }
+        }
 
     }
 
 }
+
