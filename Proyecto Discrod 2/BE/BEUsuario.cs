@@ -1,20 +1,14 @@
-﻿using Microsoft.Data.SqlClient;
-using Proyecto_Discrod_2.DAL;
+﻿using Proyecto_Discrod_2.DAL;
 using Proyecto_Discrod_2.VAL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Proyecto_Discrod_2.BE
 {
     internal class BEUsuario
     {
-        public string Error { get; set; }
+        public string Error { get; set; }  //variable para almacenar errores, comunicar desde capa BA y DAL
         public int AgregarUsuario(Usuarios usuarios)
         {
-            DAL.UsuarioDAL usuarioDAL = new();
+            DAL.UsuarioDAL usuarioDAL = new UsuarioDAL();
             try
             {
                 return usuarioDAL.AgregarUsuario(usuarios);
@@ -28,7 +22,7 @@ namespace Proyecto_Discrod_2.BE
 
         public int VerificarLoginUsuario(string nombre, string password)
         { 
-            DAL.UsuarioDAL usuarioDAL = new();
+            DAL.UsuarioDAL usuarioDAL = new UsuarioDAL();
             try
             {
                 if (!usuarioDAL.ExisteUsuario(nombre))
@@ -57,8 +51,9 @@ namespace Proyecto_Discrod_2.BE
         public List<string> ValidarUsuario(Usuarios usuario)
         {
             var validator = new ValidarUsuario();
+            // Validar el usuario usando FluentValidation
             var resultado = validator.Validate(usuario);
-
+            // Si hay errores, los convertimos a una lista de strings
             var errores = resultado.Errors.Select(e => e.ErrorMessage).ToList();
 
             var usuarioDAL = new UsuarioDAL();
@@ -66,12 +61,12 @@ namespace Proyecto_Discrod_2.BE
             {
                 errores.Add("El nombre de usuario ya está registrado.");
             }
-
             return errores;
         }
 
         public List<Usuarios> ObtenerUsuarios()
         {
+            //llamamos a la capa DAL para obtener la lista de usuarios
             try
             {
                 var lista = UsuarioDAL.ObtenerUsuarios();
