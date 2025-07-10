@@ -15,6 +15,9 @@ namespace Proyecto_Discrod_2.VAL
 
             RuleFor(u => u.Password)
                 .NotEmpty().WithMessage("La contraseña no puede estar vacía.")
+                .Matches(@"[A-Z]").WithMessage("La contraseña debe contener al menos una mayúscula.")
+                .Matches(@"[a-z]").WithMessage("La contraseña debe contener al menos una minúscula.")
+                .Matches(@"\d").WithMessage("La contraseña debe contener al menos un número.")
                 .MinimumLength(6).WithMessage("La contraseña debe tener al menos 6 caracteres.")
                 .Must(pw => !ContieneSQL(pw)).WithMessage("La contraseña contiene patrones no permitidos.");
 
