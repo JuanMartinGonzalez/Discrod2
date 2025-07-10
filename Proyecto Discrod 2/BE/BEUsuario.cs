@@ -1,5 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
-using Proyecto_Discrod_2.DAL;
+﻿using Proyecto_Discrod_2.DAL;
 using Proyecto_Discrod_2.VAL;
 using System;
 using System.Collections.Generic;
@@ -23,28 +22,6 @@ namespace Proyecto_Discrod_2.BE
             {
                 Error = "Error al agregar el usuario." + ex;
                 return -1; // Return a default value in case of an exception
-            }
-        }
-
-        public bool ExisteUusuario(string nombre, string password)
-
-        {
-            // Verificar si el usuario ya existe
-            try
-            {
-                string query = "SELECT COUNT(*) FROM Usuarios WHERE Nombre = @Nombre AND Password = @Password";
-                using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
-                {
-                    command.Parameters.AddWithValue("@Nombre", nombre);
-                    command.Parameters.AddWithValue("@Password", password);
-                    int count = Convert.ToInt32(command.ExecuteScalar());
-                    return count > 0; // Retorna true si el usuario ya está registrado
-                }
-            }
-            catch (Exception ex)
-            {
-                Error = "Los datos ingresados son incorrecetos" + ex;
-                return false; // Retorna false en caso de error
             }
         }
 

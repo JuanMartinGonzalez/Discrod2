@@ -48,8 +48,6 @@
             textBoxPasswordLogin.Name = "textBoxPasswordLogin";
             textBoxPasswordLogin.Size = new Size(325, 27);
             textBoxPasswordLogin.TabIndex = 1;
-            // Ocultar la contraseña
-            textBoxPasswordLogin.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -91,9 +89,6 @@
             Controls.Add(textBoxUsuarioLogin);
             Name = "FormIngreso";
             Text = "FormIngreso";
-            // Evitar que el formulario se pueda redimensionar
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -105,6 +100,5 @@
         private Label label1;
         private Label label2;
         private Button btnLogin;
-
     }
 }
