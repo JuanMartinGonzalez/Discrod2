@@ -1,15 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using Proyecto_Discrod_2.FE;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Proyecto_Discrod_2
 {
@@ -20,14 +11,8 @@ namespace Proyecto_Discrod_2
             InitializeComponent();
         }
         static string rutaArchivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "cadena.txt"); 
-        //Users\juanm\Desktop\Proyecto Discrod 2\Discrod2\Proyecto Discrod 2\config
-        static SqlConnection conexion = new SqlConnection(ObtenerCadena(rutaArchivo));
-        private void btnRegistro_Click(object sender, EventArgs e)
-        {
-            FormRegistro lForm = new FormRegistro();
-            lForm.MdiParent = this;
-            lForm.Show();
-        }
+        static SqlConnection conexion = new SqlConnection(ObtenerCadena(rutaArchivo));   //hacer conexion a la base de datos
+
         public static SqlConnection? ObtenerConexion()
         {
             try
@@ -44,14 +29,11 @@ namespace Proyecto_Discrod_2
                 return null;
             }
         }
-
         private void FormPadre_Load(object sender, EventArgs e)
         {
-            ObtenerConexion();
-           // FormChat form = new();
-            //form.Show();
+            ObtenerConexion(); 
         }
-
+        #region Botones de la barra de herramientas
         private void registroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormRegistro lForm = new FormRegistro();
@@ -72,13 +54,15 @@ namespace Proyecto_Discrod_2
             lForm2.MdiParent = this;
             lForm2.Show();
         }
+        #endregion
         public static string ObtenerCadena(string rutaArchivo)
         {
+            // Método para leer la cadena de conexión desde un archivo
             try
             {
-                if (System.IO.File.Exists(rutaArchivo))
+                if (System.IO.File.Exists(rutaArchivo)) // Verifica si el archivo existe
                 {
-                    return System.IO.File.ReadAllText(rutaArchivo);
+                    return System.IO.File.ReadAllText(rutaArchivo);  // Lee el contenido del archivo
                 }
                 else
                 {

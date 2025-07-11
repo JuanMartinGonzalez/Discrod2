@@ -1,20 +1,14 @@
-﻿using Microsoft.Data.SqlClient;
-using Proyecto_Discrod_2.DAL;
+﻿using Proyecto_Discrod_2.DAL;
 using Proyecto_Discrod_2.VAL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Proyecto_Discrod_2.BE
 {
     internal class BEUsuario
     {
-        public string Error { get; set; }
+        public string Error { get; set; }  //variable para almacenar errores, comunicar desde capa BA y DAL
         public int AgregarUsuario(Usuarios usuarios)
         {
-            DAL.UsuarioDAL usuarioDAL = new();
+            DAL.UsuarioDAL usuarioDAL = new UsuarioDAL();
             try
             {
                 return usuarioDAL.AgregarUsuario(usuarios);
@@ -26,33 +20,40 @@ namespace Proyecto_Discrod_2.BE
             }
         }
 
-        public bool ExisteUusuario(string nombre, string password)
-
-        {
-            // Verificar si el usuario ya existe
+        public int VerificarLoginUsuario(string nombre, string password)
+        { 
+            DAL.UsuarioDAL usuarioDAL = new UsuarioDAL();
             try
             {
-                string query = "SELECT COUNT(*) FROM Usuarios WHERE Nombre = @Nombre AND Password = @Password";
-                using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
+                if (!usuarioDAL.ExisteUsuario(nombre))
                 {
-                    command.Parameters.AddWithValue("@Nombre", nombre);
-                    command.Parameters.AddWithValue("@Password", password);
-                    int count = Convert.ToInt32(command.ExecuteScalar());
-                    return count > 0; // Retorna true si el usuario ya está registrado
+                    Error = "El usuario no existe.";
+                    return -1;
                 }
+
+                // Aquí deberías tener un método que reciba nombre y password
+                if (!usuarioDAL.PasswordCorrecta(nombre, password))
+                {
+                    Error = "La contraseña es incorrecta.";
+                    return -2;
+                }
+
+                return 1; // Login correcto
             }
             catch (Exception ex)
             {
-                Error = "Los datos ingresados son incorrecetos" + ex;
-                return false; // Retorna false en caso de error
+                Error = "Error al verificar el usuario: " + ex.Message;
+                return -1;
             }
         }
+
 
         public List<string> ValidarUsuario(Usuarios usuario)
         {
             var validator = new ValidarUsuario();
+            // Validar el usuario usando FluentValidation
             var resultado = validator.Validate(usuario);
-
+            // Si hay errores, los convertimos a una lista de strings
             var errores = resultado.Errors.Select(e => e.ErrorMessage).ToList();
 
             var usuarioDAL = new UsuarioDAL();
@@ -60,12 +61,12 @@ namespace Proyecto_Discrod_2.BE
             {
                 errores.Add("El nombre de usuario ya está registrado.");
             }
-
             return errores;
         }
 
         public List<Usuarios> ObtenerUsuarios()
         {
+            //llamamos a la capa DAL para obtener la lista de usuarios
             try
             {
                 var lista = UsuarioDAL.ObtenerUsuarios();

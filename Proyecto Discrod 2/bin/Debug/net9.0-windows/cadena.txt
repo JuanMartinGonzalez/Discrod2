@@ -1,1 +1,1 @@
-Server=alexisgodoy\SQLEXPRESS;Database = discrod 2;TrustServerCertificate=true;Integrated Security=true
+Server=DESKTOP-1HL22VO\SQLEXPRESS;Database = Discrod 2;TrustServerCertificate=true;Integrated Security=true
