@@ -1,16 +1,4 @@
 ﻿using Proyecto_Discrod_2.BE;
-using Proyecto_Discrod_2.DAL;
-using Proyecto_Discrod_2.VAL;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Proyecto_Discrod_2.FE
 {
@@ -22,31 +10,40 @@ namespace Proyecto_Discrod_2.FE
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBoxUsuarioLogin.Text.Trim()) || string.IsNullOrWhiteSpace(textBoxPasswordLogin.Text.Trim()))
+            try
             {
-                MessageBox.Show("Por favor, complete ambos campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                // Obtiene los valores de los textBox y limpiarlos de espacios
+                string usuario = textBoxUsuarioLogin.Text.Trim();
+                string pasword = textBoxPasswordLogin.Text.Trim();
+
+                // Validar que los campos no estén vacíos
+                if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(pasword))
+                {
+                    MessageBox.Show("Por favor, complete ambos campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                BEUsuario beUsuario = new BEUsuario();
+
+                // Verificar si el usuario existe con ese nombre y contraseña
+                int resultado = beUsuario.VerificarLoginUsuario(usuario, pasword);
+                if (resultado == 1)
+                {
+                    MessageBox.Show("Ingreso exitoso", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    FormChat formChat = new FormChat();
+                    this.Close();
+                    formChat.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show(beUsuario.Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-
-            BEUsuario beUsuario = new BEUsuario();
-
-            // Verificar si el usuario existe con ese nombre y contraseña
-            bool existe = beUsuario.ExisteUusuario(textBoxUsuarioLogin.Text.Trim(), textBoxPasswordLogin.Text.Trim());
-
-            if (existe)
+            catch (Exception ex)
             {
-                MessageBox.Show("Ingreso exitoso", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                FormChat formChat = new FormChat();
-                this.Close();
-                formChat.ShowDialog();
-
+                MessageBox.Show("Ocurrió un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-            {
-                MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-           
         }
     }
 }
