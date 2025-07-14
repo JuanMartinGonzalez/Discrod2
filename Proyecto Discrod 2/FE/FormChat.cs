@@ -1,4 +1,18 @@
 ﻿using Proyecto_Discrod_2.BE;
+<<<<<<< Updated upstream
+=======
+using Proyecto_Discrod_2.DAL;
+using Proyecto_Discrod_2.ESTADO;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+>>>>>>> Stashed changes
 
 namespace Proyecto_Discrod_2.FE
 {
@@ -55,17 +69,42 @@ namespace Proyecto_Discrod_2.FE
                 Image img = null;
 
                 // Si el usuario tiene una imagen guardada, la convertimos de bytes a un objeto Image
-                  if (usuario.Imagen != null && usuario.Imagen.Length > 0)
-                  {
-                      using (MemoryStream ms = new MemoryStream(usuario.Imagen))
-                      {
-                          img = Image.FromStream(ms);
-                      }
-                  }
+                if (usuario.Imagen != null && usuario.Imagen.Length > 0)
+                {
+                    using (MemoryStream ms = new MemoryStream(usuario.Imagen))
+                    {
+                        img = Image.FromStream(ms);
+                    }
+                }
 
                 // Añadimos una nueva fila a la grilla con el nombre y la imagen del usuario
                 dataGridViewUsuarios.Rows.Add(usuario.Nombre, img);
             }
+        }
+
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            if (!UsuarioLogueado.EstaLogueado)
+            {
+                MessageBox.Show("Debe iniciar sesión primero.");
+                return;
+            }
+
+            FormActualizar editar = new FormActualizar(UsuarioLogueado.UsuarioActual);
+            editar.ShowDialog();
+        }
+
+        private void btnCerrarSeccion_Click(object sender, EventArgs e)
+        {
+            // 1. Cierra la sesión
+            UsuarioLogueado.CerrarSesion();
+
+            // 2. Abre nuevamente el formulario de login
+            FormIngreso login = new FormIngreso();
+            login.Show();
+
+            // 3. Cierra el FormChat (este formulario)
+            this.Close();
         }
     }
 }

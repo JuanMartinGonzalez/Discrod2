@@ -1,1 +1,5 @@
+<<<<<<< Updated upstream
 Server=DESKTOP-1HL22VO\SQLEXPRESS;Database = Discrod 2;TrustServerCertificate=true;Integrated Security=true
+=======
+Server=FLOR;Database=Discrod2;Trusted_Connection=True;Encrypt=False;
+>>>>>>> Stashed changes

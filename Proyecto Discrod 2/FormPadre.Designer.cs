@@ -32,14 +32,13 @@ namespace Proyecto_Discrod_2
             menuStrip1 = new MenuStrip();
             registroToolStripMenuItem = new ToolStripMenuItem();
             ingresoToolStripMenuItem = new ToolStripMenuItem();
-            actualizarToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { registroToolStripMenuItem, ingresoToolStripMenuItem, actualizarToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { registroToolStripMenuItem, ingresoToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(5, 2, 0, 2);
@@ -62,14 +61,6 @@ namespace Proyecto_Discrod_2
             ingresoToolStripMenuItem.Size = new Size(86, 23);
             ingresoToolStripMenuItem.Text = "INGRESO";
             ingresoToolStripMenuItem.Click += ingresoToolStripMenuItem_Click;
-            // 
-            // actualizarToolStripMenuItem
-            // 
-            actualizarToolStripMenuItem.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
-            actualizarToolStripMenuItem.Size = new Size(110, 23);
-            actualizarToolStripMenuItem.Text = "ACTUALIZAR";
-            actualizarToolStripMenuItem.Click += actualizarToolStripMenuItem_Click;
             // 
             // FormPadre
             // 
@@ -94,6 +85,5 @@ namespace Proyecto_Discrod_2
         private MenuStrip menuStrip1;
         private ToolStripMenuItem registroToolStripMenuItem;
         private ToolStripMenuItem ingresoToolStripMenuItem;
-        private ToolStripMenuItem actualizarToolStripMenuItem;
     }
 }
