@@ -1,6 +1,5 @@
 ﻿using Proyecto_Discrod_2.BE;
-<<<<<<< Updated upstream
-=======
+
 using Proyecto_Discrod_2.ESTADO;
 using System;
 using System.Collections.Generic;
@@ -11,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
->>>>>>> Stashed changes
+
 
 namespace Proyecto_Discrod_2.FE
 {

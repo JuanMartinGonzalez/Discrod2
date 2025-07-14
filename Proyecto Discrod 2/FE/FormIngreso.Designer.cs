@@ -95,10 +95,9 @@
             Controls.Add(textBoxPasswordLogin);
             Controls.Add(textBoxUsuarioLogin);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-<<<<<<< Updated upstream
-=======
+
             Margin = new Padding(3, 2, 3, 2);
->>>>>>> Stashed changes
+
             MaximizeBox = false;
             Name = "FormIngreso";
             Text = "FormIngreso";

@@ -1,6 +1,5 @@
 ﻿using Proyecto_Discrod_2.BE;
-<<<<<<< Updated upstream
-=======
+
 using Proyecto_Discrod_2.DAL;
 using Proyecto_Discrod_2.ESTADO;
 using Proyecto_Discrod_2.VAL;
@@ -14,7 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Runtime.InteropServices.JavaScript.JSType;
->>>>>>> Stashed changes
+
 
 namespace Proyecto_Discrod_2.FE
 {
@@ -47,6 +46,12 @@ namespace Proyecto_Discrod_2.FE
                 {
                     MessageBox.Show("Ingreso exitoso", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    // obtenemos el usuario completo para guardarlo en la sesión
+                    Usuarios usuarioCompleto = beUsuario.ObtenerUsuariologueado(textBoxUsuarioLogin.Text.Trim(), textBoxPasswordLogin.Text.Trim());
+
+                    // Guardamos el usuario completo en la clase estática para sesión
+                    UsuarioLogueado.IniciarSesion(usuarioCompleto);
+
                     FormChat formChat = new FormChat();
                     this.Close();
                     formChat.ShowDialog();
@@ -58,29 +63,9 @@ namespace Proyecto_Discrod_2.FE
             }
             catch (Exception ex)
             {
-<<<<<<< Updated upstream
+
                 MessageBox.Show("Ocurrió un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-=======
-                MessageBox.Show("Ingreso exitoso", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // obtenemos el usuario completo para guardarlo en la sesión
-                Usuarios usuarioCompleto = beUsuario.ObtenerUsuariologueado(textBoxUsuarioLogin.Text.Trim(), textBoxPasswordLogin.Text.Trim());
-
-                // Guardamos el usuario completo en la clase estática para sesión
-                UsuarioLogueado.IniciarSesion(usuarioCompleto);
-
-                FormChat formChat = new FormChat();
-                this.Close();
-                formChat.ShowDialog();
-
-            }
-            else
-            {
-                MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
->>>>>>> Stashed changes
         }
     }
 }

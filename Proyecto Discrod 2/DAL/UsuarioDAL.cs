@@ -193,7 +193,7 @@ namespace Proyecto_Discrod_2.DAL
                     if (result == null)
                         return false;
 
-<<<<<<< Updated upstream
+
                     string? passwordEnBD = result as string; // Casteo seguro para evitar posibles nulls
                     //Compara la contraseña ingresada con la almacenada en la base de datos
                     return passwordEnBD == password;     // true si son iguales, false si no lo son
@@ -205,10 +205,6 @@ namespace Proyecto_Discrod_2.DAL
                 return false;
             }
         }
-=======
-       
-
->>>>>>> Stashed changes
     }
 }
 

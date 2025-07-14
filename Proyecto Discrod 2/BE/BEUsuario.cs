@@ -1,10 +1,7 @@
-<<<<<<< Updated upstream
+
 ﻿using Proyecto_Discrod_2.DAL;
-=======
 ﻿using Microsoft.Data.SqlClient;
-using Proyecto_Discrod_2.DAL;
 using Proyecto_Discrod_2.ESTADO;
->>>>>>> Stashed changes
 using Proyecto_Discrod_2.VAL;
 
 namespace Proyecto_Discrod_2.BE

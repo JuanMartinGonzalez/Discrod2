@@ -45,17 +45,13 @@
             // 
             groupBox1.Controls.Add(dataGridViewUsuarios);
             groupBox1.Font = new Font("Bahnschrift SemiBold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-<<<<<<< Updated upstream
-            groupBox1.Location = new Point(113, 15);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(336, 568);
-=======
+
             groupBox1.Location = new Point(31, 39);
             groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 2, 3, 2);
             groupBox1.Size = new Size(290, 426);
->>>>>>> Stashed changes
+
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Usuarios";
@@ -68,11 +64,11 @@
             dataGridViewUsuarios.Name = "dataGridViewUsuarios";
             dataGridViewUsuarios.ReadOnly = true;
             dataGridViewUsuarios.RowHeadersWidth = 51;
-<<<<<<< Updated upstream
+
             dataGridViewUsuarios.Size = new Size(333, 501);
-=======
+
             dataGridViewUsuarios.Size = new Size(290, 376);
->>>>>>> Stashed changes
+
             dataGridViewUsuarios.TabIndex = 0;
             // 
             // groupBox2
@@ -81,22 +77,22 @@
             groupBox2.Controls.Add(flowLayoutPanelChat);
             groupBox2.Controls.Add(textBoxMensaje);
             groupBox2.Font = new Font("Bahnschrift SemiBold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-<<<<<<< Updated upstream
+
             groupBox2.Location = new Point(497, 15);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(640, 437);
-=======
+
             groupBox2.Location = new Point(338, 39);
             groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(3, 2, 3, 2);
             groupBox2.Size = new Size(460, 414);
->>>>>>> Stashed changes
+
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Mensajes";
             // 
-<<<<<<< Updated upstream
+
             // flowLayoutPanelChat
             // 
             flowLayoutPanelChat.BackColor = SystemColors.ControlLight;
@@ -120,12 +116,8 @@
             buttonEnviar.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buttonEnviar.Location = new Point(959, 515);
             buttonEnviar.Margin = new Padding(3, 4, 3, 4);
-=======
-            // buttonEnviar
-            // 
-            buttonEnviar.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonEnviar.Location = new Point(358, 382);
->>>>>>> Stashed changes
+
+
             buttonEnviar.Name = "buttonEnviar";
             buttonEnviar.Size = new Size(86, 44);
             buttonEnviar.TabIndex = 2;
@@ -174,15 +166,15 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-<<<<<<< Updated upstream
+
             ClientSize = new Size(1370, 619);
             Controls.Add(buttonEnviar);
             Controls.Add(textBoxMensaje);
-=======
-            ClientSize = new Size(833, 466);
+
+            
             Controls.Add(btnCerrarSeccion);
             Controls.Add(btnConfig);
->>>>>>> Stashed changes
+
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "FormChat";
