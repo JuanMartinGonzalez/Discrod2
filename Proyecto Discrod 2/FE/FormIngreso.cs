@@ -12,8 +12,12 @@ namespace Proyecto_Discrod_2.FE
         {
             try
             {
-                // Validar que los campos de usuario y contraseña no estén vacíos
-                if (string.IsNullOrWhiteSpace(textBoxUsuarioLogin.Text.Trim()) || string.IsNullOrWhiteSpace(textBoxPasswordLogin.Text.Trim()))
+                // Obtiene los valores de los textBox y limpiarlos de espacios
+                string usuario = textBoxUsuarioLogin.Text.Trim();
+                string pasword = textBoxPasswordLogin.Text.Trim();
+
+                // Validar que los campos no estén vacíos
+                if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(pasword))
                 {
                     MessageBox.Show("Por favor, complete ambos campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -22,7 +26,7 @@ namespace Proyecto_Discrod_2.FE
                 BEUsuario beUsuario = new BEUsuario();
 
                 // Verificar si el usuario existe con ese nombre y contraseña
-                int resultado = beUsuario.VerificarLoginUsuario(textBoxUsuarioLogin.Text.Trim(), textBoxPasswordLogin.Text.Trim());
+                int resultado = beUsuario.VerificarLoginUsuario(usuario, pasword);
                 if (resultado == 1)
                 {
                     MessageBox.Show("Ingreso exitoso", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -38,8 +42,8 @@ namespace Proyecto_Discrod_2.FE
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones generales
                 MessageBox.Show("Ocurrió un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
+}
