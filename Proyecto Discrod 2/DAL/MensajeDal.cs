@@ -62,7 +62,7 @@ namespace Proyecto_Discrod_2.DAL
             try
             {
                 string query = @"UPDATE Mensajes 
-                         SET Texto = @Texto, 
+                         SET Texto = @Texto,
                              FechaEnvio = @FechaEnvio, 
                              FechaLectura = @FechaLectura, 
                              UsuarioOrigenId = @OrigenId, 
