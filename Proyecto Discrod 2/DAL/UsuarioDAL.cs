@@ -6,9 +6,9 @@ namespace Proyecto_Discrod_2.DAL
 {
     public class UsuarioDAL
     {
-        public string Error { get; set; }
-        // Metodo Agregar usuario
+        public string Error { get; set; } // Propiedad para almacenar mensajes de error
 
+        // Metodo Agregar usuario
         public int AgregarUsuario(BE.Usuarios usuario)
         {
             // Verificar si el usuario ya existe
@@ -37,9 +37,6 @@ namespace Proyecto_Discrod_2.DAL
                 Error = "Error en la base de datos." + ex;
                 return -1; // Retorna -1 en caso de error
             }
-
-
-
         }
         // Metodo Actualizar usuario
         public int ActualizarUsuario(BE.Usuarios usuario)
@@ -49,7 +46,6 @@ namespace Proyecto_Discrod_2.DAL
             // Intentar ejecutar la actualización del usuario
             try
             {
-
                 string query = "UPDATE Usuarios SET Nombre = @Nombre, Password = @Password, Color = @Color, Imagen = @Imagen WHERE UsuarioId = @UsuarioId";
                 // Crear un comando SQL para actualizar el usuario
                 using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
@@ -62,10 +58,8 @@ namespace Proyecto_Discrod_2.DAL
                     command.Parameters.AddWithValue("@Imagen", usuario.Imagen);
                     retorna = command.ExecuteNonQuery();
                 }
-
-                return retorna;
+                return retorna;  // Retorna el número de filas afectadas por la actualización
             }
-
             catch (Exception ex)
             {
                 // Si ocurre un error, captura la excepción y asigna un mensaje de error
@@ -73,8 +67,6 @@ namespace Proyecto_Discrod_2.DAL
                 throw ex;//error; 
             }
         }
-        //Metodo Eliminar usuario
-
         // Este método elimina un usuario de la base de datos según su ID.
         public int EliminarUsuario(int usuarioId)
         {
@@ -88,7 +80,7 @@ namespace Proyecto_Discrod_2.DAL
                     command.Parameters.AddWithValue("@UsuarioId", usuarioId);
                     retorna = command.ExecuteNonQuery();
                 }
-                return retorna;
+                return retorna; // Retorna el número de filas afectadas por la eliminación
             }
             catch (Exception ex)
             {
@@ -98,56 +90,47 @@ namespace Proyecto_Discrod_2.DAL
         }
 
         //metodo para traer los usuarios guardados en BD
-        public static List<Usuarios> ObtenerUsuarios()
+        public static List<Usuarios> ObtenerUsuarios() 
         {
             // Lista donde vamos a guardar los usuarios de BD
             List<Usuarios> LisUsu = new List<Usuarios>();
 
             // Consulta para traer nombre e imagen
             string query = "SELECT UsuarioId, Nombre, Password, Color, Imagen FROM Usuarios";
+            try 
+            {
+                // Creamos un comando para ejecutar la consulta
+                SqlCommand cmd = new SqlCommand(query, FormPadre.ObtenerConexion());
 
-                try
+                // Creamos un DataAdapter para llenar un DataTable
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                // DataTable para guardar temporalmente los datos
+                DataTable tabla = new DataTable();
+
+                // Llenamos la tabla con los datos de la consulta
+                adapter.Fill(tabla);
+
+                // Recorremos las filas del DataTable 
+                foreach (DataRow fila in tabla.Rows)
                 {
-                    // Creamos un comando para ejecutar la consulta
-                    SqlCommand cmd = new SqlCommand(query, FormPadre.ObtenerConexion());
-
-                    // Creamos un DataAdapter para llenar un DataTable
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-
-                    // DataTable para guardar temporalmente los datos
-                    DataTable tabla = new DataTable();
-
-                    // Llenamos la tabla con los datos de la consulta
-                    adapter.Fill(tabla);
-
-                    // Recorremos las filas del DataTable 
-                    foreach (DataRow fila in tabla.Rows)
-                    {
-                        // Obtenemos el nombre como string
-                        int UsuarioId = Convert.ToInt32(fila["UsuarioId"]);
-
-                        // Obtenemos el nombre como string
-                        string nombre = fila["Nombre"].ToString();
-
-                        string password = fila["Password"].ToString();
-
-                        int color = Convert.ToInt32(fila["Color"]);
-
-                        // Obtenemos la imagen como array de bytes (puede ser null)
-                        byte[] imagen = fila["Imagen"] as byte[];
-
+                    // Obtenemos los datos de cada fila
+                    int UsuarioId = Convert.ToInt32(fila["UsuarioId"]);
+                    string nombre = fila["Nombre"].ToString();
+                    string password = fila["Password"].ToString();
+                    int color = Convert.ToInt32(fila["Color"]);
+                    byte[] imagen = fila["Imagen"] as byte[];
                         // Creamos un objeto Usuario con los datos
-                        Usuarios usuario = new Usuarios(UsuarioId, nombre, password, color, imagen);
-
-                        // Lo agregamos a la lista
-                        LisUsu.Add(usuario);
-                    }
+                    Usuarios usuario = new Usuarios(UsuarioId, nombre, password, color, imagen);
+                    // Lo agregamos a la lista
+                    LisUsu.Add(usuario);
                 }
-                catch (Exception ex)
-                {
-                    // lanzamos una excepcion con el mensaje
-                    throw new Exception("Error al obtener usuarios: " + ex.Message);
-                }
+            }
+            catch (Exception ex)
+            {
+                // lanzamos una excepcion con el mensaje
+                throw new Exception("Error al obtener usuarios: " + ex.Message);
+            }
             // Devolvemos la lista de usuarios
             return LisUsu;
         }
@@ -171,7 +154,30 @@ namespace Proyecto_Discrod_2.DAL
                 return false; // Retorna false en caso de error
             }
         }
+        public bool PasswordCorrecta(string nombre, string password)
+        {
+            //verifica si la contraseña es correcta para el usuario dado
+            try
+            {
+                string query = "SELECT Password FROM Usuarios WHERE Nombre = @Nombre";
+                using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
+                {
+                    command.Parameters.AddWithValue("@Nombre", nombre);
+                    var result = command.ExecuteScalar();
+                    if (result == null)
+                        return false;
 
+                    string? passwordEnBD = result as string; // Casteo seguro para evitar posibles nulls
+                    //Compara la contraseña ingresada con la almacenada en la base de datos
+                    return passwordEnBD == password;     // true si son iguales, false si no lo son
+                }
+            }
+            catch (Exception ex)
+            {
+                Error = "Error al verificar la contraseña: " + ex.Message;
+                return false;
+            }
+        }
     }
-
 }
+
