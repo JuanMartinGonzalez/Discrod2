@@ -1,125 +1,50 @@
 ﻿using Proyecto_Discrod_2.BE;
+<<<<<<< Updated upstream
+=======
+using Proyecto_Discrod_2.ESTADO;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+>>>>>>> Stashed changes
 
 namespace Proyecto_Discrod_2.FE
 {
     public partial class FormActualizar : Form
     {
-        public FormActualizar()
+        private Usuarios UsuarioActual;
+        public FormActualizar(Usuarios usuario)
         {
             InitializeComponent();
+            UsuarioActual = usuario;
+            // Aquí puedes usar usuarioActual para cargar datos o personalizar el formulario
         }
-
+       
         private void FormActualizar_Load(object sender, EventArgs e)
         {
-            // Creamos una instancia de la clase de lógica de negocio para usuarios
-            BEUsuario beUsuario = new BEUsuario();
-
-            // Declaramos la lista donde se guardarán los usuarios obtenidos
-            List<Usuarios> lista;
-
-            try
+            if (UsuarioLogueado.EstaLogueado)
             {
-                // Intentamos obtener la lista de usuarios desde la lógica de negocio (puede lanzar una excepción)
-                lista = beUsuario.ObtenerUsuarios();
-            }
-            catch (Exception ex)
-            {
-                // Si ocurre un error al obtener los usuarios, mostramos un mensaje de error al usuario y salimos del método
-                MessageBox.Show("Error al cargar los usuarios: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+                // Crear una lista con solo el usuario actual
+                List<Usuarios> listaUsuario = new List<Usuarios>();
+                listaUsuario.Add(UsuarioLogueado.UsuarioActual);
 
-            // Limpiamos las filas existentes del DataGridView para evitar duplicados
-            dataGridViewActualizar.Rows.Clear();
-
-            // Limpiamos las columnas para definirlas nuevamente
-            dataGridViewActualizar.Columns.Clear();
-
-            dataGridViewActualizar.Columns.Add("UsuarioId", "ID");
-            dataGridViewActualizar.Columns.Add("Nombre", "Nombre");
-            dataGridViewActualizar.Columns.Add("Password", "Password");
-            dataGridViewActualizar.Columns.Add("Color", "Color");
-
-            // Creamos una columna especial para mostrar imágenes en la grilla
-            DataGridViewImageColumn imgCol = new DataGridViewImageColumn();
-            imgCol.HeaderText = "Imagen";
-            imgCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
-
-            // Añadimos la columna de imágenes al DataGridView
-            dataGridViewActualizar.Columns.Add(imgCol);
-
-            // Recorremos la lista de usuarios obtenida para agregar cada uno al DataGridView
-            foreach (var usuario in lista)
-            {
-                Image img = null;
-
-                if (usuario.Imagen != null && usuario.Imagen.Length > 0)
+                // Mostrar en el DataGridView
+                dataGridViewActualizar.DataSource = listaUsuario;
+                if (dataGridViewActualizar.Columns["Imagen"] is DataGridViewImageColumn colImagen)
                 {
-                    using (MemoryStream ms = new MemoryStream(usuario.Imagen))
-                    {
-                        img = Image.FromStream(ms);
-                    }
-                }
-
-                // Añadimos una nueva fila a la grilla con el nombre y la imagen del usuario
-                dataGridViewActualizar.Rows.Add(usuario.UsuarioId,
-                    usuario.Nombre ?? string.Empty,
-                    usuario.Password ?? string.Empty,
-                    usuario.Color,
-                    img);
-            }
-        }
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            // Obtiene el usuario seleccionado en el DataGridView
-            var usuario = ObtenerUsuarioSeleccionado();
-            if (usuario == null)
-            {
-                // Si no hay usuario seleccionado, muestra un mensaje y sale del método
-                MessageBox.Show("Seleccione un usuario para eliminar.");
-                return;
-            }
-            // Pide confirmación antes de eliminar
-            if (MessageBox.Show("¿Está seguro que desea eliminar este usuario?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-               /* BEUsuario beUsuario = new BEUsuario();
-                // Llama al método para eliminar el usuario (debes implementarlo en BEUsuario)
-                beUsuario.EliminarUsuario(usuario.UsuarioId);
-                // Recarga la grilla para reflejar los cambios
-                FormActualizar_Load(null, null);*/
-            }
-        }
-
-        // MÉTODO PARA OBTENER EL USUARIO SELECCIONADO
-        private Usuarios ObtenerUsuarioSeleccionado()
-        {
-            if (dataGridViewActualizar.CurrentRow == null) return null;
-
-            // Obtener la imagen de la celda
-            var imgCell = dataGridViewActualizar.CurrentRow.Cells["Imagen"].Value as Image;
-            byte[] imagenBytes = null;
-            if (imgCell != null)
-            {
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    imgCell.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                    imagenBytes = ms.ToArray();
+                    colImagen.ImageLayout = DataGridViewImageCellLayout.Zoom; // Ajusta la imagen al tamaño de celda
                 }
             }
-
-            return new Usuarios(
-                Convert.ToInt32(dataGridViewActualizar.CurrentRow.Cells["UsuarioId"].Value),
-                dataGridViewActualizar.CurrentRow.Cells["Nombre"].Value.ToString(),
-                dataGridViewActualizar.CurrentRow.Cells["Password"].Value.ToString(),
-                Convert.ToInt32(dataGridViewActualizar.CurrentRow.Cells["Color"].Value),
-                imagenBytes
-            );
+            else
+            {
+                MessageBox.Show("No hay usuario logueado.");
+                this.Close(); // o redireccionar a login
+            }
         }
     }
 }

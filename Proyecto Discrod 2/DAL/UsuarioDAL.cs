@@ -135,6 +135,32 @@ namespace Proyecto_Discrod_2.DAL
             return LisUsu;
         }
 
+        public Usuarios ObtenerUsuarioLogueado(string nombre, string password)
+        {
+            string query = "SELECT UsuarioId, Nombre, Password, Color, Imagen FROM Usuarios WHERE Nombre = @Nombre AND Password = @Password";
+
+            using (SqlCommand cmd = new SqlCommand(query, FormPadre.ObtenerConexion()))
+            {
+                cmd.Parameters.AddWithValue("@Nombre", nombre);
+                cmd.Parameters.AddWithValue("@Password", password);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return new Usuarios(
+                            Convert.ToInt32(reader["UsuarioId"]),
+                            reader["Nombre"].ToString(),
+                            reader["Password"].ToString(),
+                            Convert.ToInt32(reader["Color"]),
+                            reader["Imagen"] as byte[]
+                        );
+                    }
+                }
+            }
+
+            return null;
+        }
         public bool ExisteUsuario(string nombre)
         {
             // Verificar si el usuario ya existe
@@ -167,6 +193,7 @@ namespace Proyecto_Discrod_2.DAL
                     if (result == null)
                         return false;
 
+<<<<<<< Updated upstream
                     string? passwordEnBD = result as string; // Casteo seguro para evitar posibles nulls
                     //Compara la contraseña ingresada con la almacenada en la base de datos
                     return passwordEnBD == password;     // true si son iguales, false si no lo son
@@ -178,6 +205,10 @@ namespace Proyecto_Discrod_2.DAL
                 return false;
             }
         }
+=======
+       
+
+>>>>>>> Stashed changes
     }
 }
 

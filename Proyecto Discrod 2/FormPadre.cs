@@ -48,6 +48,7 @@ namespace Proyecto_Discrod_2
             lForm1.Show();
         }
 
+<<<<<<< Updated upstream
         private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormActualizar lForm2 = new FormActualizar();
@@ -55,6 +56,8 @@ namespace Proyecto_Discrod_2
             lForm2.Show();
         }
         #endregion
+=======
+>>>>>>> Stashed changes
         public static string ObtenerCadena(string rutaArchivo)
         {
             // Método para leer la cadena de conexión desde un archivo
