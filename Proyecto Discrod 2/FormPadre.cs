@@ -56,8 +56,7 @@ namespace Proyecto_Discrod_2
             lForm2.Show();
         }
         #endregion
-=======
->>>>>>> Stashed changes
+
         public static string ObtenerCadena(string rutaArchivo)
         {
             // Método para leer la cadena de conexión desde un archivo
