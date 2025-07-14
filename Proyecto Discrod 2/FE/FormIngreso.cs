@@ -1,4 +1,5 @@
 ﻿using Proyecto_Discrod_2.BE;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Proyecto_Discrod_2.FE
 {
