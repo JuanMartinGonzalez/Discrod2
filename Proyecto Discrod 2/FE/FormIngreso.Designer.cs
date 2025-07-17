@@ -37,18 +37,16 @@
             // 
             // textBoxUsuarioLogin
             // 
-            textBoxUsuarioLogin.Location = new Point(331, 52);
-            textBoxUsuarioLogin.Margin = new Padding(3, 2, 3, 2);
+            textBoxUsuarioLogin.Location = new Point(378, 69);
             textBoxUsuarioLogin.Name = "textBoxUsuarioLogin";
-            textBoxUsuarioLogin.Size = new Size(285, 23);
+            textBoxUsuarioLogin.Size = new Size(325, 27);
             textBoxUsuarioLogin.TabIndex = 0;
             // 
             // textBoxPasswordLogin
             // 
-            textBoxPasswordLogin.Location = new Point(331, 101);
-            textBoxPasswordLogin.Margin = new Padding(3, 2, 3, 2);
+            textBoxPasswordLogin.Location = new Point(378, 135);
             textBoxPasswordLogin.Name = "textBoxPasswordLogin";
-            textBoxPasswordLogin.Size = new Size(285, 23);
+            textBoxPasswordLogin.Size = new Size(325, 27);
             textBoxPasswordLogin.TabIndex = 1;
             textBoxPasswordLogin.UseSystemPasswordChar = true;
             // 
@@ -56,9 +54,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(179, 52);
+            label1.Location = new Point(205, 69);
             label1.Name = "label1";
-            label1.Size = new Size(65, 19);
+            label1.Size = new Size(80, 24);
             label1.TabIndex = 2;
             label1.Text = "Usuario";
             // 
@@ -66,19 +64,18 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(179, 101);
+            label2.Location = new Point(205, 135);
             label2.Name = "label2";
-            label2.Size = new Size(93, 19);
+            label2.Size = new Size(114, 24);
             label2.TabIndex = 3;
             label2.Text = "Contraseña";
             // 
             // btnLogin
             // 
             btnLogin.Font = new Font("Bahnschrift SemiBold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogin.Location = new Point(179, 166);
-            btnLogin.Margin = new Padding(3, 2, 3, 2);
+            btnLogin.Location = new Point(205, 221);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(437, 105);
+            btnLogin.Size = new Size(499, 140);
             btnLogin.TabIndex = 4;
             btnLogin.Text = "Ingresar";
             btnLogin.UseVisualStyleBackColor = true;
@@ -86,19 +83,15 @@
             // 
             // FormIngreso
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 338);
+            ClientSize = new Size(914, 451);
             Controls.Add(btnLogin);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(textBoxPasswordLogin);
             Controls.Add(textBoxUsuarioLogin);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-<<<<<<< Updated upstream
-=======
-            Margin = new Padding(3, 2, 3, 2);
->>>>>>> Stashed changes
             MaximizeBox = false;
             Name = "FormIngreso";
             Text = "FormIngreso";
