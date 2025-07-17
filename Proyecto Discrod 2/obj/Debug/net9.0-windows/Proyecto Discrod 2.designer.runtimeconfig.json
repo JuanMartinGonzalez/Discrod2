@@ -1,24 +1,12 @@
 {
   "runtimeOptions": {
     "tfm": "net9.0",
-    "frameworks": [
-      {
-        "name": "Microsoft.NETCore.App",
-        "version": "9.0.0"
-      },
-      {
-        "name": "Microsoft.WindowsDesktop.App",
-        "version": "9.0.0"
-      }
-    ],
     "additionalProbingPaths": [
-      "C:\\Users\\fan1_\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\fan1_\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\galva\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\galva\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false,
-      "CSWINRT_USE_WINDOWS_UI_XAML_PROJECTIONS": false,
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
     }
   }
