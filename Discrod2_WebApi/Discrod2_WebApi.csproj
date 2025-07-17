@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\styles\**" />
+    <Content Remove="wwwroot\styles\**" />
+    <EmbeddedResource Remove="wwwroot\styles\**" />
+    <None Remove="wwwroot\styles\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.7" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Proyecto Discrod 2\Proyecto Discrod 2.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\index.html" />
+  </ItemGroup>
+
+</Project>

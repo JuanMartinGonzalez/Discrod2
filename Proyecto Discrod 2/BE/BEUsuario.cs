@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Discrod_2.BE
 {
-    internal class BEUsuario
+    public class BEUsuario
     {
         public string Error { get; set; }
         public int AgregarUsuario(Usuarios usuarios)
@@ -45,7 +45,8 @@ namespace Proyecto_Discrod_2.BE
         {
             try
             {
-                var lista = UsuarioDAL.ObtenerUsuarios();
+                var dal = new UsuarioDAL();    // Crear instancia
+                var lista = dal.ObtenerUsuarios();  // Llamar método de instancia
                 return lista;
             }
             catch (Exception ex)
