@@ -1,9 +1,11 @@
 ﻿using Proyecto_Discrod_2.DAL;
+﻿using Microsoft.Data.SqlClient;
+using Proyecto_Discrod_2.ESTADO;
 using Proyecto_Discrod_2.VAL;
 
 namespace Proyecto_Discrod_2.BE
 {
-    internal class BEUsuario
+    public class BEUsuario
     {
         public string Error { get; set; }  //variable para almacenar errores, comunicar desde capa BA y DAL
         public int AgregarUsuario(Usuarios usuarios)
@@ -78,5 +80,11 @@ namespace Proyecto_Discrod_2.BE
             }
         }
 
+        public Usuarios ObtenerUsuariologueado(string nombre, string password)
+        {
+            // Llamá a la DAL para que traiga el usuario completo que coincida con nombre y password
+            UsuarioDAL usuarioDAL = new UsuarioDAL();
+            return usuarioDAL.ObtenerUsuarioLogueado(nombre, password);
+        }
     }
 }

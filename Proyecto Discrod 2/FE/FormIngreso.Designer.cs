@@ -53,23 +53,26 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(205, 69);
             label1.Name = "label1";
-            label1.Size = new Size(59, 20);
+            label1.Size = new Size(80, 24);
             label1.TabIndex = 2;
             label1.Text = "Usuario";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(205, 135);
             label2.Name = "label2";
-            label2.Size = new Size(83, 20);
+            label2.Size = new Size(114, 24);
             label2.TabIndex = 3;
             label2.Text = "Contraseña";
             // 
             // btnLogin
             // 
+            btnLogin.Font = new Font("Bahnschrift SemiBold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.Location = new Point(205, 221);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(499, 140);

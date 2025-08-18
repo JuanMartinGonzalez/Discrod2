@@ -10,7 +10,7 @@ namespace Proyecto_Discrod_2
         {
             InitializeComponent();
         }
-        static string rutaArchivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "cadena.txt"); 
+        static string rutaArchivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "cadena.txt");
         static SqlConnection conexion = new SqlConnection(ObtenerCadena(rutaArchivo));   //hacer conexion a la base de datos
 
         public static SqlConnection? ObtenerConexion()
@@ -31,7 +31,7 @@ namespace Proyecto_Discrod_2
         }
         private void FormPadre_Load(object sender, EventArgs e)
         {
-            ObtenerConexion(); 
+            ObtenerConexion();
         }
         #region Botones de la barra de herramientas
         private void registroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,14 +47,8 @@ namespace Proyecto_Discrod_2
             lForm1.MdiParent = this;
             lForm1.Show();
         }
-
-        private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormActualizar lForm2 = new FormActualizar();
-            lForm2.MdiParent = this;
-            lForm2.Show();
-        }
         #endregion
+
         public static string ObtenerCadena(string rutaArchivo)
         {
             // Método para leer la cadena de conexión desde un archivo
@@ -62,7 +56,7 @@ namespace Proyecto_Discrod_2
             {
                 if (System.IO.File.Exists(rutaArchivo)) // Verifica si el archivo existe
                 {
-                    return System.IO.File.ReadAllText(rutaArchivo);  // Lee el contenido del archivo
+                      return  System.IO.File.ReadAllText(rutaArchivo);  // Lee el contenido del archivo
                 }
                 else
                 {

@@ -1,5 +1,6 @@
 ﻿using Proyecto_Discrod_2.BE;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using Proyecto_Discrod_2.ESTADO;
+
 
 namespace Proyecto_Discrod_2.FE
 {
@@ -31,7 +32,11 @@ namespace Proyecto_Discrod_2.FE
                 if (resultado == 1)
                 {
                     MessageBox.Show("Ingreso exitoso", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // obtenemos el usuario completo para guardarlo en la sesión
+                    Usuarios usuarioCompleto = beUsuario.ObtenerUsuariologueado(textBoxUsuarioLogin.Text.Trim(), textBoxPasswordLogin.Text.Trim());
 
+                    // Guardamos el usuario completo en la clase estática para sesión
+                    UsuarioLogueado.IniciarSesion(usuarioCompleto);
                     FormChat formChat = new FormChat();
                     this.Close();
                     formChat.ShowDialog();
