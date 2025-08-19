@@ -1,1 +1,0 @@
-Server=FLOR;Database=Discrod2;Trusted_Connection=True;Encrypt=False;

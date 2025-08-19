@@ -14,7 +14,6 @@ namespace Proyecto_Discrod_2.FE
         {
             InitializeComponent();
         }
-
         private void btnRegistrarUsuario_Click(object sender, EventArgs e)
         {
             BEUsuario beUsuario = new BEUsuario();
@@ -64,10 +63,6 @@ namespace Proyecto_Discrod_2.FE
                 MessageBox.Show("Ocurrió un error inesperado:\n" + ex.Message, "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-
-
         #region Obtener prop
         private byte[] ConvertirImagen()
         {
@@ -85,7 +80,7 @@ namespace Proyecto_Discrod_2.FE
             {
                 throw new ArgumentException("La contraseña no coincide");
             }
-             return txtConfirmar.Text.Trim();
+            return txtConfirmar.Text.Trim();
         }
         #endregion
 
@@ -100,11 +95,13 @@ namespace Proyecto_Discrod_2.FE
                     pictureBoxImagen.Image = Image.FromFile(file.FileName);      //mostramos la imagen seleccionada
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show("Error al buscar archivo");
             }
         }
+
+        // Evento del boton "Elegir Color"
         private void btnColor_Click(object sender, EventArgs e)
         {
             if (colorDialogColor.ShowDialog() == DialogResult.OK)
@@ -112,7 +109,6 @@ namespace Proyecto_Discrod_2.FE
                 btnColor.BackColor = colorDialogColor.Color;
             }
         }
-
         #region Estilizar campos
         private void txtNombre_Enter(object sender, EventArgs e)
         {
@@ -195,6 +191,5 @@ namespace Proyecto_Discrod_2.FE
 
         }
         #endregion Estilizar campos
-
     }
 }

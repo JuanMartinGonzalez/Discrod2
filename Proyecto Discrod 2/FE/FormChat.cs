@@ -22,7 +22,16 @@ namespace Proyecto_Discrod_2.FE
         }
         private void FormChat_Load(object sender, EventArgs e)
         {
-            // Creamos una instancia de la clase de lógica de negocio para usuarios
+            // Obtener el color del usuario logueado y aplicarlo a todos los GroupBox del formulario
+            if (UsuarioLogueado.EstaLogueado)
+            {
+                // Convertir el int a Color
+                Color colorUsuario = Color.FromArgb(UsuarioLogueado.UsuarioActual.Color);
+                // Aplicar ese color a todos los GroupBox
+                AplicarColorGroupBox(this, colorUsuario);
+            }
+
+            // Creamos una instancia de la clase de logica de negocio para usuarios
             BEUsuario beUsuario = new BEUsuario();
 
             // Declaramos la lista donde se guardarán los usuarios obtenidos
@@ -94,7 +103,7 @@ namespace Proyecto_Discrod_2.FE
 
         private void btnCerrarSeccion_Click(object sender, EventArgs e)
         {
-            // 1. Cierra la sesión
+            // 1. Cierra la sesion
             UsuarioLogueado.CerrarSesion();
 
             // 2. Abre nuevamente el formulario de login
@@ -104,5 +113,29 @@ namespace Proyecto_Discrod_2.FE
             // 3. Cierra el FormChat (este formulario)
             this.Close();
         }
+
+        // Meodo que aplica un color a todos los GroupBox que haya dentro de un contenedor (formulario, panel, etc.)
+        private void AplicarColorGroupBox(Control parent, Color color)
+        {
+            // Recorremos todos los controles que estan dentro del contenedor "parent"
+            foreach (Control ctrl in parent.Controls)
+            {
+                // Si el control actual es un GroupBox...
+                if (ctrl is GroupBox)
+                {
+                    //  entonces cambiamos su color de fondo al que recibimos por parametro
+                    ctrl.BackColor = color;
+                }
+
+                // Si este control tiene a su vez controles "hijos" (otros controles dentro)
+                if (ctrl.HasChildren)
+                {
+                    // Llamamos recursivamente al mismo metodo para revisar los hijos
+                    // Así nos aseguramos de que tambien cambien los GroupBox dentro de otros contenedores
+                    AplicarColorGroupBox(ctrl, color);
+                }
+            }
+        }
+
     }
 }

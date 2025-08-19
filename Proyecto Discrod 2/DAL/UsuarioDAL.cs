@@ -89,6 +89,38 @@ namespace Proyecto_Discrod_2.DAL
             }
         }
 
+        //este metodo obtine un usuario por id para luego ser mas especifico a la hora de editar usuario
+        public Usuarios ObtenerUsuarioPorId(int usuarioId)
+        {
+           
+                string query = "SELECT UsuarioId, Nombre, Password, Color, Imagen FROM Usuarios WHERE UsuarioId = @UsuarioId";
+
+                using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
+                {
+                    command.Parameters.AddWithValue("@UsuarioId", usuarioId);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            int id = Convert.ToInt32(reader["UsuarioId"]);
+                            string nombre = reader["Nombre"].ToString();
+                            string password = reader["Password"].ToString();
+                            int color = Convert.ToInt32(reader["Color"]);
+
+                            byte[] imagenBytes = reader["Imagen"] == DBNull.Value
+                                ? Array.Empty<byte>()
+                                : (byte[])reader["Imagen"];
+
+                            return new Usuarios(id, nombre, password, color, imagenBytes);
+                        }
+                    }
+                }
+            
+
+            // Si no encuentra el usuario devuelve null
+            return null;
+        }
         //metodo para traer los usuarios guardados en BD
         public static List<Usuarios> ObtenerUsuarios() 
         {
@@ -134,7 +166,7 @@ namespace Proyecto_Discrod_2.DAL
             // Devolvemos la lista de usuarios
             return LisUsu;
         }
-
+        // se obtiene el usaurio logueado para poder darle funcion al editar o eliminar usuario
         public Usuarios ObtenerUsuarioLogueado(string nombre, string password)
         {
             string query = "SELECT UsuarioId, Nombre, Password, Color, Imagen FROM Usuarios WHERE Nombre = @Nombre AND Password = @Password";
