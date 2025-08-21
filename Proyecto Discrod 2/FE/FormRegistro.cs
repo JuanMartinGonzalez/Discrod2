@@ -17,7 +17,8 @@ namespace Proyecto_Discrod_2.FE
 
         private void btnRegistrarUsuario_Click(object sender, EventArgs e)
         {
-            BEUsuario beUsuario = new BEUsuario();
+            this.Close();
+            /*BEUsuario beUsuario = new BEUsuario();
 
             try
             {
@@ -63,6 +64,7 @@ namespace Proyecto_Discrod_2.FE
             {
                 MessageBox.Show("Ocurrió un error inesperado:\n" + ex.Message, "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            */
         }
 
 

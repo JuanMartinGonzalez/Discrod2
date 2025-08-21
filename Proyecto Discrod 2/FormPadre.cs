@@ -2,6 +2,7 @@
 using Proyecto_Discrod_2.FE;
 using System.Data;
 
+
 namespace Proyecto_Discrod_2
 {
     public partial class FormPadre : Form
@@ -9,6 +10,7 @@ namespace Proyecto_Discrod_2
         public FormPadre()
         {
             InitializeComponent();
+
         }
         static string rutaArchivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "cadena.txt");
         static SqlConnection conexion = new SqlConnection(ObtenerCadena(rutaArchivo));   //hacer conexion a la base de datos
@@ -32,6 +34,10 @@ namespace Proyecto_Discrod_2
         private void FormPadre_Load(object sender, EventArgs e)
         {
             ObtenerConexion();
+
+            FormIngreso ingreso = new FormIngreso();
+            ingreso.ShowDialog();
+
         }
         #region Botones de la barra de herramientas
         private void registroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -71,5 +77,9 @@ namespace Proyecto_Discrod_2
             }
         }
 
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

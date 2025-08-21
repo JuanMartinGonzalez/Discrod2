@@ -51,5 +51,11 @@ namespace Proyecto_Discrod_2.FE
                 MessageBox.Show("Ocurrió un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            FormRegistro registro = new FormRegistro();
+            registro.ShowDialog();  // La ventana bloquea hasta cerrarse.
+        }
     }
 }
