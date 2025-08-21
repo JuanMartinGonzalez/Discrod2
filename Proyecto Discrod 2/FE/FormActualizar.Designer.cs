@@ -28,81 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            groupBox1 = new GroupBox();
             dataGridViewActualizar = new DataGridView();
             btnActualizar = new Button();
             btnEliminar = new Button();
-            groupBox1.SuspendLayout();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewActualizar).BeginInit();
             SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(dataGridViewActualizar);
-            groupBox1.Font = new Font("Bahnschrift SemiBold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(28, 11);
-            groupBox1.Margin = new Padding(3, 2, 3, 2);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(619, 426);
-            groupBox1.TabIndex = 1;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Usuarios";
             // 
             // dataGridViewActualizar
             // 
             dataGridViewActualizar.BackgroundColor = SystemColors.ControlLight;
             dataGridViewActualizar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewActualizar.Location = new Point(0, 44);
+            dataGridViewActualizar.Location = new Point(28, 58);
             dataGridViewActualizar.Margin = new Padding(3, 2, 3, 2);
             dataGridViewActualizar.Name = "dataGridViewActualizar";
             dataGridViewActualizar.RowHeadersWidth = 51;
-            dataGridViewActualizar.Size = new Size(598, 376);
+            dataGridViewActualizar.Size = new Size(543, 68);
             dataGridViewActualizar.TabIndex = 0;
             // 
             // btnActualizar
             // 
             btnActualizar.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnActualizar.Location = new Point(653, 74);
+            btnActualizar.Location = new Point(162, 172);
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Size = new Size(135, 49);
             btnActualizar.TabIndex = 2;
             btnActualizar.Text = "Actualizar";
             btnActualizar.UseVisualStyleBackColor = true;
-            btnActualizar.Click += btnActualizar_Click;
             // 
             // btnEliminar
             // 
             btnEliminar.Font = new Font("Bahnschrift SemiBold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEliminar.Location = new Point(653, 172);
+            btnEliminar.Location = new Point(425, 172);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(135, 49);
             btnEliminar.TabIndex = 3;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
-            btnEliminar.Click += btnEliminar_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Bahnschrift SemiBold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(28, 21);
+            label1.Name = "label1";
+            label1.Size = new Size(85, 25);
+            label1.TabIndex = 4;
+            label1.Text = "Usuario";
             // 
             // FormActualizar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(646, 248);
+            Controls.Add(dataGridViewActualizar);
+            Controls.Add(label1);
             Controls.Add(btnEliminar);
             Controls.Add(btnActualizar);
-            Controls.Add(groupBox1);
             Name = "FormActualizar";
             Text = "FormActualizar";
             Load += FormActualizar_Load;
-            groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewActualizar).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private GroupBox groupBox1;
         private DataGridView dataGridViewActualizar;
         private Button btnActualizar;
         private Button btnEliminar;
+        private Label label1;
     }
 }

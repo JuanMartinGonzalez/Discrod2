@@ -1,5 +1,6 @@
 {
   "version": 2,
+
   "dgSpecHash": "x7AADGD24qo=",
   "success": true,
   "projectFilePath": "D:\\I80\\Algoritomos II\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj",
@@ -40,6 +41,7 @@
     "C:\\Users\\galva\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\galva\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512",
     "C:\\Users\\galva\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+
   ],
   "logs": []
 }

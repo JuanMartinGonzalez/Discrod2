@@ -34,6 +34,7 @@ namespace Proyecto_Discrod_2
         private void FormPadre_Load(object sender, EventArgs e)
         {
             ObtenerConexion();
+
             FormIngreso ingreso = new FormIngreso();
             ingreso.ShowDialog();
 
@@ -52,14 +53,8 @@ namespace Proyecto_Discrod_2
             lForm1.MdiParent = this;
             lForm1.Show();
         }
-
-        private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormActualizar lForm2 = new FormActualizar();
-            lForm2.MdiParent = this;
-            lForm2.Show();
-        }
         #endregion
+
         public static string ObtenerCadena(string rutaArchivo)
         {
             // Método para leer la cadena de conexión desde un archivo
@@ -67,7 +62,7 @@ namespace Proyecto_Discrod_2
             {
                 if (System.IO.File.Exists(rutaArchivo)) // Verifica si el archivo existe
                 {
-                    return System.IO.File.ReadAllText(rutaArchivo);  // Lee el contenido del archivo
+                      return  System.IO.File.ReadAllText(rutaArchivo);  // Lee el contenido del archivo
                 }
                 else
                 {

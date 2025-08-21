@@ -2,8 +2,10 @@
   "runtimeOptions": {
     "tfm": "net9.0",
     "additionalProbingPaths": [
+
       "C:\\Users\\galva\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\galva\\.nuget\\packages"
+
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false,

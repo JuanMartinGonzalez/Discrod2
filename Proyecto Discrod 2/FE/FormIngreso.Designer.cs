@@ -56,25 +56,31 @@
             // label1
             // 
             label1.AutoSize = true;
+
             label1.Location = new Point(179, 52);
             label1.Name = "label1";
             label1.Size = new Size(47, 15);
+
             label1.TabIndex = 2;
             label1.Text = "Usuario";
             // 
             // label2
             // 
             label2.AutoSize = true;
+          
             label2.Location = new Point(179, 101);
             label2.Name = "label2";
             label2.Size = new Size(67, 15);
+
             label2.TabIndex = 3;
             label2.Text = "Contraseña";
             // 
             // btnLogin
             // 
+
             btnLogin.Location = new Point(350, 166);
             btnLogin.Margin = new Padding(3, 2, 3, 2);
+
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(213, 105);
             btnLogin.TabIndex = 4;

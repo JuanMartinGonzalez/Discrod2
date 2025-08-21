@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+
     "D:\\I80\\Algoritomos II\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj": {}
   },
   "projects": {
@@ -12,9 +13,12 @@
         "projectPath": "D:\\I80\\Algoritomos II\\Discrod2\\Proyecto Discrod 2\\Proyecto Discrod 2.csproj",
         "packagesPath": "C:\\Users\\galva\\.nuget\\packages\\",
         "outputPath": "D:\\I80\\Algoritomos II\\Discrod2\\Proyecto Discrod 2\\obj\\",
+
         "projectStyle": "PackageReference",
         "configFilePaths": [
+
           "C:\\Users\\galva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,7 +43,9 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
+
         }
+
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -73,7 +79,9 @@
               "privateAssets": "none"
             }
           },
+          
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+
         }
       }
     }
