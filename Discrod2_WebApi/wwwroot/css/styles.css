@@ -1,0 +1,155 @@
+  :root {
+      --soviet-red: #CC0000;
+      --soviet-gold: #FFD700;
+      --soviet-dark: #2c2c2c;
+      --soviet-light: #f5f5f5;
+  }
+
+  body {
+      background-color: var(--soviet-dark);
+      background-image: url('https://www.transparenttextures.com/patterns/concrete-wall-3.png');
+      font-family: 'Roboto', sans-serif;
+      color: var(--soviet-light);
+  }
+
+  .login-container {
+      margin-top: 10vh;
+      border: 3px solid var(--soviet-red);
+      background-color: rgba(10, 10, 10, 0.8);
+      padding: 2.5rem;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+      border-radius: 0;
+  }
+
+  .login-header h1 {
+      font-family: 'Russo One', sans-serif;
+      color: var(--soviet-gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px #000;
+  }
+
+  .form-control {
+      background-color: #333;
+      border: 1px solid #555;
+      color: var(--soviet-light);
+      border-radius: 0;
+      font-size: 1.1rem;
+  }
+
+  .form-control:focus {
+      background-color: #444;
+      color: var(--soviet-light);
+      border-color: var(--soviet-gold);
+      box-shadow: 0 0 10px var(--soviet-gold);
+  }
+
+  .form-label {
+      color: var(--soviet-light);
+      font-weight: bold;
+      text-transform: uppercase;
+  }
+
+  #loginButton {
+      background-color: var(--soviet-red);
+      border: none;
+      font-family: 'Russo One', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      width: 100%;
+      padding: 12px;
+      font-size: 1.2rem;
+      border-radius: 0;
+      transition: background-color 0.3s ease;
+  }
+
+  #loginButton:hover {
+      background-color: #a00000;
+  }
+
+  .register-link {
+      color: var(--soviet-gold);
+      text-decoration: none;
+  }
+
+  .register-link:hover {
+      color: #ffffff;
+      text-decoration: underline;
+  }
+
+  .star-divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: var(--soviet-red);
+      font-size: 1.5rem;
+      margin: 1.5rem 0;
+  }
+
+  .star-divider::before,
+  .star-divider::after {
+      content: '';
+      flex: 1;
+      border-bottom: 2px solid var(--soviet-red);
+  }
+
+  .star-divider:not(:empty)::before {
+      margin-right: .5em;
+  }
+
+  .star-divider:not(:empty)::after {
+      margin-left: .5em;
+  }
+
+/* Estilos adicionales para el formulario de registro */
+
+/* Botón de Registro */
+#registerButton {
+    background-color: var(--soviet-red);
+    border: none;
+    font-family: 'Russo One', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+}
+
+#registerButton:hover {
+    background-color: #a00000;
+}
+
+/* Estilo para el input de tipo color */
+.form-control-color {
+    width: 100%;
+    height: 50px;
+    padding: .375rem;
+    cursor: pointer;
+}
+
+.form-control-color:focus,
+.form-control-color:hover {
+    border-color: var(--soviet-gold);
+    box-shadow: 0 0 10px var(--soviet-gold);
+}
+
+
+/* Estilo para el input de tipo archivo */
+#archivoImagen::file-selector-button {
+    font-family: 'Russo One', sans-serif;
+    background-color: #5a5a5a;
+    color: var(--soviet-light);
+    border: none;
+    padding: .5rem .75rem;
+    text-transform: uppercase;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#archivoImagen::file-selector-button:hover {
+    background-color: var(--soviet-red);
+}

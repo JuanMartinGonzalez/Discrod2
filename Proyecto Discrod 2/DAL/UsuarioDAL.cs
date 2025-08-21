@@ -6,9 +6,30 @@ namespace Proyecto_Discrod_2.DAL
 {
     public class UsuarioDAL
     {
-        public string Error { get; set; } // Propiedad para almacenar mensajes de error
-
+        public string Error { get; set; }
         // Metodo Agregar usuario
+        private SqlConnection _conexionManual;
+
+        // Constructor sin parámetros → para WinForms
+        public UsuarioDAL()
+        {
+            _conexionManual = null;
+        }
+
+        // Constructor con conexión → para la API
+        public UsuarioDAL(SqlConnection conexionExterna)
+        {
+            _conexionManual = conexionExterna;
+        }
+
+        // Método central para obtener la conexión
+        private SqlConnection ObtenerConexion()
+        {
+            if (_conexionManual != null)
+                return _conexionManual;
+
+            return FormPadre.ObtenerConexion();
+        }
         public int AgregarUsuario(BE.Usuarios usuario)
         {
             // Verificar si el usuario ya existe
@@ -17,7 +38,7 @@ namespace Proyecto_Discrod_2.DAL
             {
                 // Consulta SQL para insertar un nuevo usuario y obtener su ID
                 string query = "INSERT INTO Usuarios (Nombre, Password, Color, Imagen) VALUES (@Nombre, @Password, @Color, @Imagen); SELECT SCOPE_IDENTITY();";
-                using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
+                using (SqlCommand command = new SqlCommand(query, ObtenerConexion()))
 
                 {
                     // Añadir los parámetros necesarios para la consulta
@@ -48,7 +69,7 @@ namespace Proyecto_Discrod_2.DAL
             {
                 string query = "UPDATE Usuarios SET Nombre = @Nombre, Password = @Password, Color = @Color, Imagen = @Imagen WHERE UsuarioId = @UsuarioId";
                 // Crear un comando SQL para actualizar el usuario
-                using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
+                using (SqlCommand command = new SqlCommand(query, ObtenerConexion()))
                 {
                     // Añadir los parámetros necesarios para la consulta
                     command.Parameters.AddWithValue("@UsuarioId", usuario.UsuarioId);
@@ -75,7 +96,7 @@ namespace Proyecto_Discrod_2.DAL
             try
             {
                 string query = "DELETE FROM Usuarios WHERE UsuarioId = @UsuarioId";
-                using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
+                using (SqlCommand command = new SqlCommand(query, ObtenerConexion()))
                 {
                     command.Parameters.AddWithValue("@UsuarioId", usuarioId);
                     retorna = command.ExecuteNonQuery();
@@ -90,17 +111,18 @@ namespace Proyecto_Discrod_2.DAL
         }
 
         //metodo para traer los usuarios guardados en BD
-        public static List<Usuarios> ObtenerUsuarios() 
+        public List<Usuarios> ObtenerUsuarios()
         {
             // Lista donde vamos a guardar los usuarios de BD
             List<Usuarios> LisUsu = new List<Usuarios>();
 
             // Consulta para traer nombre e imagen
             string query = "SELECT UsuarioId, Nombre, Password, Color, Imagen FROM Usuarios";
-            try 
-            {
-                // Creamos un comando para ejecutar la consulta
-                SqlCommand cmd = new SqlCommand(query, FormPadre.ObtenerConexion());
+
+                try
+                {
+                    // Creamos un comando para ejecutar la consulta
+                    SqlCommand cmd = new SqlCommand(query, ObtenerConexion());
 
                 // Creamos un DataAdapter para llenar un DataTable
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -167,7 +189,7 @@ namespace Proyecto_Discrod_2.DAL
             try
             {
                 string query = "SELECT COUNT(*) FROM Usuarios WHERE Nombre = @Nombre";
-                using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
+                using (SqlCommand command = new SqlCommand(query, ObtenerConexion()))
                 {
                     command.Parameters.AddWithValue("@Nombre", nombre);
                     int count = Convert.ToInt32(command.ExecuteScalar());

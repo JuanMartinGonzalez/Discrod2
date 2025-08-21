@@ -71,7 +71,8 @@ namespace Proyecto_Discrod_2.BE
             //llamamos a la capa DAL para obtener la lista de usuarios
             try
             {
-                var lista = UsuarioDAL.ObtenerUsuarios();
+                var dal = new UsuarioDAL();    // Crear instancia
+                var lista = dal.ObtenerUsuarios();  // Llamar método de instancia
                 return lista;
             }
             catch (Exception ex)

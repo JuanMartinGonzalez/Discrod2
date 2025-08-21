@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Регистрация</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="login-container">
+
+                    <div class="login-header text-center mb-4">
+                        <h1>Союз</h1> <p>Форма регистрации товарищей</p> </div>
+
+                    <form id="registrationForm" novalidate>
+                        
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Имя</label> <input type="text" class="form-control" id="nombre" name="nombre" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="contrasenaRegistro" class="form-label">Пароль</label> <input type="password" class="form-control" id="contrasenaRegistro" name="contrasena" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="colorFavorito" class="form-label">Цвет Пропаганды</label> <input type="color" class="form-control form-control-color" id="colorFavorito" name="colorFavorito" value="#CC0000" title="Elige tu color">
+                        </div>
+
+                        <div class="mb-4">
+                             <label for="archivoImagen" class="form-label">Фотография</label> <input class="form-control" type="file" id="archivoImagen" name="archivoImagen">
+                        </div>
+
+                        <div class="d-grid mb-4">
+                            <button type="submit" class="btn btn-primary" id="registerButton">Зарегистрироваться</button> </div>
+
+                    </form>
+
+                    <div class="star-divider">★</div>
+
+                    <div class="text-center">
+                        <p class="mb-0">¿Ya eres parte del colectivo?</p>
+                        <a href="../index.html" class="register-link" id="loginLink">Inicia sesión</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- JS Scripts -->
+    <script src="../scripts/registro.js"></script>
+</body>
+</html>
