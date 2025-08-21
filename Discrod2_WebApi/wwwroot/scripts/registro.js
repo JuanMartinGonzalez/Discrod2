@@ -25,7 +25,7 @@
         if (imagen) {
             formData.append("Imagen", imagen);
         }
-
+        alert("llego hasta aca");
         // Enviar AJAX
         $.ajax({
             url: "/api/usuarios/registrar",
