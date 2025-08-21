@@ -87,5 +87,47 @@ namespace Proyecto_Discrod_2.BE
             UsuarioDAL usuarioDAL = new UsuarioDAL();
             return usuarioDAL.ObtenerUsuarioLogueado(nombre, password);
         }
+
+        public int ActualizarUsuario(Usuarios usuario)
+        {
+            UsuarioDAL usuarioDAL = new UsuarioDAL();
+            try
+            {
+                return usuarioDAL.ActualizarUsuario(usuario);
+            }
+            catch (Exception ex)
+            {
+                Error = "Error al actualizar el usuario: " + ex.Message;
+                return -1;
+            }
+        }
+        public int EliminarUsuario(int usuarioId)
+        {
+            UsuarioDAL usuarioDAL = new UsuarioDAL();
+            try
+            {
+                return usuarioDAL.EliminarUsuario(usuarioId);
+            }
+            catch (Exception ex)
+            {
+                Error = "Error al eliminar el usuario: " + ex.Message;
+                return -1;
+            }
+        }
+
+        public Usuarios ObtenerUsuarioPorId(int usuarioId)
+        {
+            UsuarioDAL usuarioDAL = new UsuarioDAL();
+            try
+            {
+                return usuarioDAL.ObtenerUsuarioPorId(usuarioId);
+            }
+            catch (Exception ex)
+            {
+                Error = "Error al obtener el usuario: " + ex.Message;
+                return null;
+            }
+        }
     }
 }
+

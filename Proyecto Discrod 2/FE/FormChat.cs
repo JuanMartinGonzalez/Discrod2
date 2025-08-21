@@ -21,6 +21,15 @@ namespace Proyecto_Discrod_2.FE
         }
         private void FormChat_Load(object sender, EventArgs e)
         {
+            // Obtener el color del usuario logueado y aplicarlo a todos los GroupBox del formulario
+            if (UsuarioLogueado.EstaLogueado)
+            {
+                // Convertir el int a Color
+                Color colorUsuario = Color.FromArgb(UsuarioLogueado.UsuarioActual.Color);
+                // Aplicar ese color a todos los GroupBox
+                AplicarColorGroupBox(this, colorUsuario);
+            }
+
             // Creamos una instancia de la clase de lógica de negocio para usuarios
             BEUsuario beUsuario = new BEUsuario();
 
@@ -104,6 +113,28 @@ namespace Proyecto_Discrod_2.FE
             this.Close();
         }
 
+        // Meodo que aplica un color a todos los GroupBox que haya dentro de un contenedor (formulario, panel, etc.)
+        private void AplicarColorGroupBox(Control parent, Color color)
+        {
+            // Recorremos todos los controles que estan dentro del contenedor "parent"
+            foreach (Control ctrl in parent.Controls)
+            {
+                // Si el control actual es un GroupBox...
+                if (ctrl is GroupBox)
+                {
+                    //  entonces cambiamos su color de fondo al que recibimos por parametro
+                    ctrl.BackColor = color;
+                }
+
+                // Si este control tiene a su vez controles "hijos" (otros controles dentro)
+                if (ctrl.HasChildren)
+                {
+                    // Llamamos recursivamente al mismo metodo para revisar los hijos
+                    // Así nos aseguramos de que tambien cambien los GroupBox dentro de otros contenedores
+                    AplicarColorGroupBox(ctrl, color);
+                }
+            }
+        }
         private void buttonEnviar_Click(object sender, EventArgs e)
         {
 
