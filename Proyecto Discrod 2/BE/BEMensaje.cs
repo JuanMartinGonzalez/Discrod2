@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Discrod_2.BE
 {
-    public class BEMensajes
+    public class BEMensaje
     {
-        public int AgregarMensajes(Mensajes mensaje)
+        public int AgregarMensaje(Mensajes mensaje)
         {
             DAL.MensajeDal mensajeDAL = new DAL.MensajeDal();
             try
@@ -20,6 +20,19 @@ namespace Proyecto_Discrod_2.BE
             {
                 mensajeDAL.Error = "Error al agregar el mensaje: " + ex.Message;
                 return -1; // Retorno un valor por defecto en caso de error
+            }
+        }
+        public bool ExisteMensaje(int mensajeId)
+        {
+            DAL.MensajeDal mensajeDal = new DAL.MensajeDal();
+            try
+            {
+                return mensajeDal.ExisteMensaje(mensajeId);
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }
