@@ -1,155 +1,100 @@
-  :root {
-      --soviet-red: #CC0000;
-      --soviet-gold: #FFD700;
-      --soviet-dark: #2c2c2c;
-      --soviet-light: #f5f5f5;
-  }
+/* Paleta de colores estándar */
+:root {
+    --primary-color: #0d6efd; /* Azul principal de Bootstrap */
+    --light-gray: #f8f9fa; /* Fondo suave */
+    --medium-gray: #dee2e6; /* Bordes */
+    --dark-gray: #495057; /* Texto principal */
+    --white: #ffffff;
+}
 
-  body {
-      background-color: var(--soviet-dark);
-      background-image: url('https://www.transparenttextures.com/patterns/concrete-wall-3.png');
-      font-family: 'Roboto', sans-serif;
-      color: var(--soviet-light);
-  }
+body {
+    background-color: var(--light-gray);
+    font-family: 'Roboto', sans-serif; /* Se mantiene Roboto, se quita Russo One */
+    color: var(--dark-gray);
+}
 
-  .login-container {
-      margin-top: 10vh;
-      border: 3px solid var(--soviet-red);
-      background-color: rgba(10, 10, 10, 0.8);
-      padding: 2.5rem;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
-      border-radius: 0;
-  }
+/* Contenedor principal para los formularios */
+.form-container {
+    margin-top: 10vh;
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border: 1px solid var(--medium-gray);
+}
 
-  .login-header h1 {
-      font-family: 'Russo One', sans-serif;
-      color: var(--soviet-gold);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 2.5rem;
-      text-shadow: 2px 2px 4px #000;
-  }
+.form-header h2 {
+    color: var(--dark-gray);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
 
-  .form-control {
-      background-color: #333;
-      border: 1px solid #555;
-      color: var(--soviet-light);
-      border-radius: 0;
-      font-size: 1.1rem;
-  }
+.form-header p {
+    color: #6c757d; /* Texto secundario */
+    font-size: 0.95rem;
+}
 
-  .form-control:focus {
-      background-color: #444;
-      color: var(--soviet-light);
-      border-color: var(--soviet-gold);
-      box-shadow: 0 0 10px var(--soviet-gold);
-  }
+/* Estilo general para inputs */
+.form-control {
+    background-color: var(--white);
+    border: 1px solid var(--medium-gray);
+    color: var(--dark-gray);
+    border-radius: 6px;
+    font-size: 1rem;
+    padding: 10px 12px;
+}
 
-  .form-label {
-      color: var(--soviet-light);
-      font-weight: bold;
-      text-transform: uppercase;
-  }
+    .form-control:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+        background-color: var(--white);
+        color: var(--dark-gray);
+    }
 
-  #loginButton {
-      background-color: var(--soviet-red);
-      border: none;
-      font-family: 'Russo One', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      width: 100%;
-      padding: 12px;
-      font-size: 1.2rem;
-      border-radius: 0;
-      transition: background-color 0.3s ease;
-  }
+.form-label {
+    font-weight: 500;
+    color: var(--dark-gray);
+}
 
-  #loginButton:hover {
-      background-color: #a00000;
-  }
-
-  .register-link {
-      color: var(--soviet-gold);
-      text-decoration: none;
-  }
-
-  .register-link:hover {
-      color: #ffffff;
-      text-decoration: underline;
-  }
-
-  .star-divider {
-      display: flex;
-      align-items: center;
-      text-align: center;
-      color: var(--soviet-red);
-      font-size: 1.5rem;
-      margin: 1.5rem 0;
-  }
-
-  .star-divider::before,
-  .star-divider::after {
-      content: '';
-      flex: 1;
-      border-bottom: 2px solid var(--soviet-red);
-  }
-
-  .star-divider:not(:empty)::before {
-      margin-right: .5em;
-  }
-
-  .star-divider:not(:empty)::after {
-      margin-left: .5em;
-  }
-
-/* Estilos adicionales para el formulario de registro */
-
-/* Botón de Registro */
-#registerButton {
-    background-color: var(--soviet-red);
+/* Clase genérica para botones principales */
+.btn-custom {
+    background-color: var(--primary-color);
     border: none;
-    font-family: 'Russo One', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     width: 100%;
     padding: 12px;
-    font-size: 1.2rem;
-    border-radius: 0;
-    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    color: var(--white);
 }
 
-#registerButton:hover {
-    background-color: #a00000;
+    .btn-custom:hover {
+        background-color: #0b5ed7; /* Un azul un poco más oscuro */
+        transform: translateY(-2px);
+    }
+
+/* Enlaces dentro del formulario */
+.form-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
 }
+
+    .form-link:hover {
+        text-decoration: underline;
+    }
 
 /* Estilo para el input de tipo color */
 .form-control-color {
     width: 100%;
-    height: 50px;
+    height: 45px;
     padding: .375rem;
     cursor: pointer;
 }
 
-.form-control-color:focus,
-.form-control-color:hover {
-    border-color: var(--soviet-gold);
-    box-shadow: 0 0 10px var(--soviet-gold);
-}
-
-
-/* Estilo para el input de tipo archivo */
-#archivoImagen::file-selector-button {
-    font-family: 'Russo One', sans-serif;
-    background-color: #5a5a5a;
-    color: var(--soviet-light);
-    border: none;
-    padding: .5rem .75rem;
-    text-transform: uppercase;
-    margin-right: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#archivoImagen::file-selector-button:hover {
-    background-color: var(--soviet-red);
+/* Estilo para el input de tipo archivo (usa los defaults de Bootstrap 5 que son limpios) */
+.form-control[type="file"] {
+    padding: 6px 12px;
 }

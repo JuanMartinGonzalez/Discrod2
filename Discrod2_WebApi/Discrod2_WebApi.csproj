@@ -24,10 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\views\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="wwwroot\index.html" />
   </ItemGroup>
 

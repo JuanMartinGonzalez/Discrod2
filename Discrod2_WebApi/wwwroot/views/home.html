@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discrod2 - Inicio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Discrod2</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="../index.html" class="btn btn-outline-danger" id="logoutButton">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="p-5 text-center bg-body-tertiary rounded-3">
+            <h1 class="display-5" id="welcomeMessage">¡Bienvenido!</h1>
+            <p class="col-lg-8 mx-auto fs-5 text-muted">
+                Este es tu panel principal de <strong>Discrod2</strong>. Desde aquí puedes acceder al chat, ver otros usuarios y modificar tu perfil.
+            </p>
+        </div>
+
+        <div class="row mt-5 g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ir al Chat</h5>
+                        <p class="card-text">Accede al chat general para hablar con los demás usuarios conectados.</p>
+                        <a href="chat.html" class="btn btn-primary w-100">Entrar al chat</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Lista de Usuarios</h5>
+                        <p class="card-text">Mirá quién está registrado en el sistema o conectado actualmente.</p>
+                        <a href="usuarios.html" class="btn btn-success w-100">Ver usuarios</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mi Cuenta</h5>
+                        <p class="card-text">Editá tu nombre, color preferido, imagen de perfil o cambiá tu contraseña.</p>
+                        <a href="perfil.html" class="btn btn-secondary w-100">Configurar cuenta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        // Mostrar el nombre del usuario desde sessionStorage
+        $(document).ready(function () {
+            const nombre = sessionStorage.getItem("nombre");
+            if (nombre) {
+                $('#welcomeMessage').text("¡Bienvenido de vuelta, " + nombre + "!");
+            }
+
+            // Botón logout: limpiar datos
+            $('#logoutButton').click(function () {
+                sessionStorage.clear();
+            });
+        });
+    </script>
+</body>
+</html>

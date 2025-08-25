@@ -2,9 +2,7 @@
 using Proyecto_Discrod_2.BE;
 using Proyecto_Discrod_2.DAL;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Threading.Tasks;
 
 namespace Discrod_2.WebApi.Controllers
 {
@@ -12,8 +10,7 @@ namespace Discrod_2.WebApi.Controllers
     [Route("api/[controller]")]
     public class UsuariosController : ControllerBase
     {
-
-        // Update the method to handle IFormFile correctly
+        // POST api/usuarios/registrar
         [HttpPost("registrar")]
         public IActionResult RegistrarUsuario([FromForm] UsuarioRegistroDTO dto)
         {
@@ -27,7 +24,7 @@ namespace Discrod_2.WebApi.Controllers
                 if (dto.Imagen != null && dto.Imagen.Length > 0)
                 {
                     using var ms = new MemoryStream();
-                    dto.Imagen.CopyTo(ms); // This now works because Imagen is of type IFormFile
+                    dto.Imagen.CopyTo(ms);
                     imagenBytes = ms.ToArray();
                 }
 
@@ -67,15 +64,58 @@ namespace Discrod_2.WebApi.Controllers
             }
         }
 
+        // POST api/usuarios/login
+        [HttpPost("login")]
+        public IActionResult Login([FromForm] LoginDTO dto)
+        {
+            BEUsuario beUsuario = new();
+            try
+            {
+                int resultado = beUsuario.VerificarLoginUsuario(dto.Nombre, dto.Password);
 
+                if (resultado == 1)
+                {
+                    var usuario = beUsuario.ObtenerUsuariologueado(dto.Nombre, dto.Password);
+                    return Ok(new
+                    {
+                        mensaje = "Login exitoso",
+                        usuarioId = usuario.UsuarioId,
+                        nombre = usuario.Nombre,
+                        color = usuario.Color
+                    });
+                }
+                else if (resultado == -2)
+                {
+                    return Unauthorized(new { mensaje = "Contraseña incorrecta" });
+                }
+                else
+                {
+                    return NotFound(new { mensaje = beUsuario.Error ?? "El usuario no existe" });
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    mensaje = "Error inesperado en login",
+                    error = ex.Message
+                });
+            }
+        }
 
-        // Replace the property type of Imagen in UsuarioRegistroDTO
+        // DTOs internos
         public class UsuarioRegistroDTO
         {
             public string Nombre { get; set; }
             public string Password { get; set; }
             public int Color { get; set; }
-            public IFormFile Imagen { get; set; } // Change byte[] to IFormFile
+            public IFormFile Imagen { get; set; }
+        }
+
+        public class LoginDTO
+        {
+            public string Nombre { get; set; }
+            public string Password { get; set; }
         }
     }
 }
