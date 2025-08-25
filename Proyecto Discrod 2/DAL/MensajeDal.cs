@@ -88,7 +88,7 @@ namespace Proyecto_Discrod_2.DAL
                 return false;
             }
         }
-        public int EliminarMnesaje(int mensajeId)
+        public int EliminarMensaje(int mensajeId)
         {
             // Método para eliminar un mensaje por su ID
             int retorna = 0;

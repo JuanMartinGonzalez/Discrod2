@@ -31,8 +31,47 @@ namespace Proyecto_Discrod_2.BE
             }
             catch (Exception)
             {
-
-                throw;
+                mensajeDal.Error = "Error en la verificacion";
+                return false;
+            }
+        }
+        public bool ModificarMensaje(int mensajeId,Mensajes mensaje)
+        {
+            DAL.MensajeDal mensajeDal = new DAL.MensajeDal();
+            try
+            {
+                return mensajeDal.ModificarMensaje(mensajeId, mensaje);
+            }
+            catch (Exception)
+            {
+                mensajeDal.Error = "Error en la modificacion del mensaje";
+                return false;
+            }
+        }
+        public int EliminarMensaje(int mensajeId)
+        {
+            DAL.MensajeDal mensajeDal = new DAL.MensajeDal();
+            try
+            {
+                return mensajeDal.EliminarMensaje(mensajeId);
+            }
+            catch (Exception ex)
+            {
+                mensajeDal.Error = "Error en la eliminacion del mensaje" + ex.Message;
+                return -1;
+            }
+        }
+        public bool MarcarMensajeComoRecibido(int mensajeId)
+        {
+            DAL.MensajeDal mensajeDal = new DAL.MensajeDal();
+            try
+            {
+                return mensajeDal.MarcarMensajeComoRecibido(mensajeId);
+            }
+            catch (Exception)
+            {
+                mensajeDal.Error = "Error en marcar como leido";
+                return false;
             }
         }
     }
