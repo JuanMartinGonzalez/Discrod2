@@ -106,7 +106,7 @@ namespace Proyecto_Discrod_2.DAL
             catch (Exception ex)
             {
                 Error = "Error en la base de datos.";
-                throw ex;//error; 
+                throw;//error; 
             }
         }
 

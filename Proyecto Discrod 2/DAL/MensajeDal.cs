@@ -62,7 +62,7 @@ namespace Proyecto_Discrod_2.DAL
             try
             {
                 string query = @"UPDATE Mensajes 
-                         SET Texto = @Texto,
+                         SET Texto = @Texto
                          WHERE MensajeId = @MensajeId";
 
                 using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
@@ -97,7 +97,7 @@ namespace Proyecto_Discrod_2.DAL
             catch (Exception ex)
             {
                 Error = "Error en la base de datos: " + ex.Message;
-                throw ex;
+                throw;
             }
         }
         public bool MarcarMensajeComoRecibido(int mensajeId)
@@ -116,11 +116,11 @@ namespace Proyecto_Discrod_2.DAL
                         if (reader.Read())
                         {
                             // lo marca como recibido en la base de datos 
-                            DateTime fecha;
-                            fecha = DateTime.Now;
-                            string updateQuery = "UPDATE Mensajes SET FechaLectura = " + fecha + " WHERE MensajeId = @MensajeId";
+                            DateTime fecha = DateTime.Now;
+                            string updateQuery = "UPDATE Mensajes SET FechaLectura = @FechaLectura WHERE MensajeId = @MensajeId";
                             using (SqlCommand updateCommand = new SqlCommand(updateQuery, FormPadre.ObtenerConexion()))
                             {
+                                updateCommand.Parameters.AddWithValue("@FechaLectura", fecha);
                                 updateCommand.Parameters.AddWithValue("@MensajeId", mensajeId);
                                 updateCommand.ExecuteNonQuery();
                                 // Actualiza la fecha de lectura al momento de marcarlo como recibido
