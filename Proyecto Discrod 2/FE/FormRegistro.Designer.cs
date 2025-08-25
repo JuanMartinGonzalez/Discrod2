@@ -49,7 +49,7 @@
             txtNombre.Name = "txtNombre";
             txtNombre.PlaceholderText = "U S U A R I O";
             txtNombre.Size = new Size(270, 32);
-            txtNombre.TabIndex = 7;
+            txtNombre.TabIndex = 1;
             txtNombre.Enter += txtNombre_Enter;
             txtNombre.Leave += txtNombre_Leave;
             // 
@@ -70,7 +70,7 @@
             btnColor.Margin = new Padding(0);
             btnColor.Name = "btnColor";
             btnColor.Size = new Size(302, 43);
-            btnColor.TabIndex = 10;
+            btnColor.TabIndex = 4;
             btnColor.Text = "S E L E C C I O N A R   C O L O R";
             btnColor.UseVisualStyleBackColor = true;
             btnColor.Click += btnColor_Click;
@@ -86,7 +86,7 @@
             btnBuscarImg.Location = new Point(31, 288);
             btnBuscarImg.Name = "btnBuscarImg";
             btnBuscarImg.Size = new Size(184, 47);
-            btnBuscarImg.TabIndex = 13;
+            btnBuscarImg.TabIndex = 5;
             btnBuscarImg.Text = "B U S C A R   I M A G E N";
             btnBuscarImg.UseVisualStyleBackColor = true;
             btnBuscarImg.Click += btnBuscarImg_Click;
@@ -98,7 +98,7 @@
             btnRegistrarUsuario.Location = new Point(94, 486);
             btnRegistrarUsuario.Name = "btnRegistrarUsuario";
             btnRegistrarUsuario.Size = new Size(376, 68);
-            btnRegistrarUsuario.TabIndex = 5;
+            btnRegistrarUsuario.TabIndex = 6;
             btnRegistrarUsuario.Text = "R E G I S T R A R";
             btnRegistrarUsuario.UseVisualStyleBackColor = true;
             btnRegistrarUsuario.Click += btnRegistrarUsuario_Click;
@@ -109,7 +109,7 @@
             label4.Location = new Point(107, 16);
             label4.Name = "label4";
             label4.Size = new Size(340, 38);
-            label4.TabIndex = 16;
+            label4.TabIndex = 0;
             label4.Text = "CREAR CUENTA \r\n";
             label4.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -121,7 +121,7 @@
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderText = "C O N T R A S E Ñ A";
             txtPassword.Size = new Size(270, 32);
-            txtPassword.TabIndex = 17;
+            txtPassword.TabIndex = 2;
             txtPassword.Enter += txtPassword_Enter;
             txtPassword.Leave += txtPassword_Leave;
             // 
@@ -133,7 +133,7 @@
             txtConfirmar.Name = "txtConfirmar";
             txtConfirmar.PlaceholderText = "C O N F I R M A R  C O N T R A S E Ñ A";
             txtConfirmar.Size = new Size(270, 32);
-            txtConfirmar.TabIndex = 18;
+            txtConfirmar.TabIndex = 3;
             txtConfirmar.Enter += txtConfirmar_Enter;
             txtConfirmar.Leave += txtConfirmar_Leave;
             // 
