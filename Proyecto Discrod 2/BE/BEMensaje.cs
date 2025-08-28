@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Discrod_2.BE
 {
-    public class BEMensajes
+    public class BEMensaje
     {
-        public int AgregarMensajes(Mensajes mensaje)
+        public int AgregarMensaje(Mensajes mensaje)
         {
             DAL.MensajeDal mensajeDAL = new DAL.MensajeDal();
             try
@@ -20,6 +20,58 @@ namespace Proyecto_Discrod_2.BE
             {
                 mensajeDAL.Error = "Error al agregar el mensaje: " + ex.Message;
                 return -1; // Retorno un valor por defecto en caso de error
+            }
+        }
+        public bool ExisteMensaje(int mensajeId)
+        {
+            DAL.MensajeDal mensajeDal = new DAL.MensajeDal();
+            try
+            {
+                return mensajeDal.ExisteMensaje(mensajeId);
+            }
+            catch (Exception)
+            {
+                mensajeDal.Error = "Error en la verificacion";
+                return false;
+            }
+        }
+        public bool ModificarMensaje(int mensajeId,Mensajes mensaje)
+        {
+            DAL.MensajeDal mensajeDal = new DAL.MensajeDal();
+            try
+            {
+                return mensajeDal.ModificarMensaje(mensajeId, mensaje);
+            }
+            catch (Exception)
+            {
+                mensajeDal.Error = "Error en la modificacion del mensaje";
+                return false;
+            }
+        }
+        public int EliminarMensaje(int mensajeId)
+        {
+            DAL.MensajeDal mensajeDal = new DAL.MensajeDal();
+            try
+            {
+                return mensajeDal.EliminarMensaje(mensajeId);
+            }
+            catch (Exception ex)
+            {
+                mensajeDal.Error = "Error en la eliminacion del mensaje" + ex.Message;
+                return -1;
+            }
+        }
+        public bool MarcarMensajeComoRecibido(int mensajeId)
+        {
+            DAL.MensajeDal mensajeDal = new DAL.MensajeDal();
+            try
+            {
+                return mensajeDal.MarcarMensajeComoRecibido(mensajeId);
+            }
+            catch (Exception)
+            {
+                mensajeDal.Error = "Error en marcar como leido";
+                return false;
             }
         }
     }
