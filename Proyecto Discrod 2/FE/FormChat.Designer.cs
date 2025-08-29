@@ -79,10 +79,14 @@
             // 
             // flowLayoutPanelMensajes
             // 
+            flowLayoutPanelMensajes.AutoScroll = true;
+            flowLayoutPanelMensajes.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanelMensajes.Location = new Point(53, 57);
+            flowLayoutPanelMensajes.Margin = new Padding(0);
             flowLayoutPanelMensajes.Name = "flowLayoutPanelMensajes";
             flowLayoutPanelMensajes.Size = new Size(657, 409);
             flowLayoutPanelMensajes.TabIndex = 1;
+            flowLayoutPanelMensajes.WrapContents = false;
             // 
             // buttonEnviar
             // 

@@ -27,11 +27,11 @@ namespace Gantt
             var contenedor = new RoundedPanel
             {
                 BackColor = esPropio ? Color.LightGreen : Color.LightGray,
-                Padding = new Padding(10),
+                Padding = new Padding(6, 4, 6, 4), // Espacio interno más pequeño
                 MaximumSize = new Size(300, 0),
                 AutoSize = true,
                 AutoSizeMode = AutoSizeMode.GrowAndShrink,
-                Margin = new Padding(5),
+                Margin = new Padding(0),
                 BorderRadius = 8,
             };
 
@@ -46,9 +46,8 @@ namespace Gantt
             contenedor.Controls.Add(lblTexto);
             this.Controls.Add(contenedor);
 
-            // Alineación dinámica
-            this.Anchor = esPropio ? AnchorStyles.Right : AnchorStyles.Left;
-            this.Padding = esPropio ? new Padding(100, 0, 0, 0) : new Padding(0, 0, 100, 0);
+            // Elimina el padding lateral exagerado
+            this.Padding = new Padding(0);
         }
     }
 }

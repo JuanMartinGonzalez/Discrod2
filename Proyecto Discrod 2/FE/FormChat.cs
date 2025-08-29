@@ -178,17 +178,11 @@ namespace Proyecto_Discrod_2.FE
                 bool esMio = mensaje.UsuarioOrigen == usuarioOrigenId;
                 var chatBubble = new ChatBubbleControl(mensaje.Texto, esMio);
 
-                var panel = new RoundedPanel();
-                panel.Width = flowLayoutPanelMensajes.Width - 30;
-                panel.Height = chatBubble.Height + 10;
-                panel.Controls.Add(chatBubble);
+                chatBubble.Margin = new Padding(0, 2, 0, 2); 
+                chatBubble.Padding = new Padding(0);
+                chatBubble.Dock = esMio ? DockStyle.Right : DockStyle.Left;
 
-                flowLayoutPanelMensajes.Controls.Add(panel);
-                if (flowLayoutPanelMensajes.Controls.Count > 0)
-                {
-                    var ultimo = flowLayoutPanelMensajes.Controls[flowLayoutPanelMensajes.Controls.Count - 1];
-                    flowLayoutPanelMensajes.ScrollControlIntoView(ultimo);
-                }
+                flowLayoutPanelMensajes.Controls.Add(chatBubble);
             }
         }
 
