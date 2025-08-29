@@ -1,4 +1,5 @@
-﻿using Proyecto_Discrod_2.BE;
+﻿using Gantt;
+using Proyecto_Discrod_2.BE;
 using Proyecto_Discrod_2.DAL;
 using Proyecto_Discrod_2.ESTADO;
 using System;
@@ -54,8 +55,13 @@ namespace Proyecto_Discrod_2.FE
             // Limpiamos las columnas para definirlas nuevamente
             dataGridViewUsuarios.Columns.Clear();
 
+            dataGridViewUsuarios.Columns.Add("UsuarioId", "UsuarioId");
+            dataGridViewUsuarios.Columns["UsuarioId"].Visible = false;  
             // Agregamos una columna para mostrar el nombre de los usuarios
             dataGridViewUsuarios.Columns.Add("Nombre", "Nombre");
+
+
+
 
             // Creamos una columna especial para mostrar imágenes en la grilla
             DataGridViewImageColumn imgCol = new DataGridViewImageColumn();
@@ -84,7 +90,7 @@ namespace Proyecto_Discrod_2.FE
                 }
 
                 // Añadimos una nueva fila a la grilla con el nombre y la imagen del usuario
-                dataGridViewUsuarios.Rows.Add(usuario.Nombre, img);
+                dataGridViewUsuarios.Rows.Add(usuario.UsuarioId, usuario.Nombre, img);
             }
         }
 
@@ -137,7 +143,63 @@ namespace Proyecto_Discrod_2.FE
         }
         private void buttonEnviar_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrWhiteSpace(textBoxMensaje.Text) && dataGridViewUsuarios.CurrentRow != null)
+            {   
+                BEUsuario beUsuario = new BEUsuario();
+                int fila = dataGridViewUsuarios.CurrentRow.Index;
+                int usuarioDestinoId = Convert.ToInt32(dataGridViewUsuarios["UsuarioId", fila].Value);
+                DateTime fechaLectura = new DateTime (1900, 1, 1);
+                Mensajes nuevoMensaje = new Mensajes(
+                    textBoxMensaje.Text,
+                    DateTime.Now,
+                    fechaLectura,
+                    UsuarioLogueado.UsuarioActual.UsuarioId,
+                    usuarioDestinoId
+                );
 
+                BEMensaje beMensaje = new BEMensaje();
+                beMensaje.AgregarMensaje(nuevoMensaje);
+
+                MostrarMensajesChat(usuarioDestinoId);
+                textBoxMensaje.Clear();
+
+            }
+        }
+        private void MostrarMensajesChat(int usuarioDestinoId)
+        {
+            flowLayoutPanelMensajes.Controls.Clear();
+
+            int usuarioOrigenId = UsuarioLogueado.UsuarioActual.UsuarioId;
+            BEMensaje beMensaje = new BEMensaje();
+            List<Mensajes> mensajes = beMensaje.ObtenerMensajesEntreUsuarios(usuarioOrigenId, usuarioDestinoId);
+
+            foreach (var mensaje in mensajes)
+            {
+                bool esMio = mensaje.UsuarioOrigen == usuarioOrigenId;
+                var chatBubble = new ChatBubbleControl(mensaje.Texto, esMio);
+
+                var panel = new RoundedPanel();
+                panel.Width = flowLayoutPanelMensajes.Width - 30;
+                panel.Height = chatBubble.Height + 10;
+                panel.Controls.Add(chatBubble);
+
+                flowLayoutPanelMensajes.Controls.Add(panel);
+                if (flowLayoutPanelMensajes.Controls.Count > 0)
+                {
+                    var ultimo = flowLayoutPanelMensajes.Controls[flowLayoutPanelMensajes.Controls.Count - 1];
+                    flowLayoutPanelMensajes.ScrollControlIntoView(ultimo);
+                }
+            }
+        }
+
+        private void dataGridViewUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewUsuarios.SelectedRows.Count > 0)
+            {
+                int fila = dataGridViewUsuarios.CurrentRow.Index;
+                int usuarioDestinoId = Convert.ToInt32(dataGridViewUsuarios["UsuarioId", fila].Value);
+                MostrarMensajesChat(usuarioDestinoId);
+            }
         }
     }
 }

@@ -1,1 +1,1 @@
-Server=EVA\SQLEXPRESS;Database = Discrod2;TrustServerCertificate=true;Integrated Security=true
+Server=SAM\SQLEXPRESS;Database = Discrod 2;TrustServerCertificate=true;Integrated Security=true

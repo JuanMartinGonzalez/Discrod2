@@ -31,8 +31,8 @@
             groupBox1 = new GroupBox();
             dataGridViewUsuarios = new DataGridView();
             groupBox2 = new GroupBox();
+            flowLayoutPanelMensajes = new FlowLayoutPanel();
             buttonEnviar = new Button();
-            flowLayoutPanelChat = new FlowLayoutPanel();
             textBoxMensaje = new TextBox();
             btnConfig = new Button();
             btnCerrarSeccion = new Button();
@@ -45,11 +45,9 @@
             // 
             groupBox1.Controls.Add(dataGridViewUsuarios);
             groupBox1.Font = new Font("Bahnschrift SemiBold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(27, 29);
-            groupBox1.Margin = new Padding(3, 2, 3, 2);
+            groupBox1.Location = new Point(31, 39);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(321, 540);
+            groupBox1.Size = new Size(367, 720);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Usuarios";
@@ -58,63 +56,61 @@
             // 
             dataGridViewUsuarios.BackgroundColor = SystemColors.ControlLight;
             dataGridViewUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewUsuarios.Location = new Point(33, 43);
-            dataGridViewUsuarios.Margin = new Padding(3, 2, 3, 2);
+            dataGridViewUsuarios.Location = new Point(38, 57);
             dataGridViewUsuarios.Name = "dataGridViewUsuarios";
             dataGridViewUsuarios.ReadOnly = true;
             dataGridViewUsuarios.RowHeadersWidth = 51;
-            dataGridViewUsuarios.Size = new Size(254, 456);
+            dataGridViewUsuarios.Size = new Size(290, 608);
             dataGridViewUsuarios.TabIndex = 0;
+            dataGridViewUsuarios.CellClick += dataGridViewUsuarios_CellClick;
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(flowLayoutPanelMensajes);
             groupBox2.Controls.Add(buttonEnviar);
-            groupBox2.Controls.Add(flowLayoutPanelChat);
             groupBox2.Controls.Add(textBoxMensaje);
             groupBox2.Font = new Font("Bahnschrift SemiBold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox2.Location = new Point(392, 29);
-            groupBox2.Margin = new Padding(3, 2, 3, 2);
+            groupBox2.Location = new Point(448, 39);
             groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(3, 2, 3, 2);
-            groupBox2.Size = new Size(834, 540);
+            groupBox2.Size = new Size(953, 720);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Mensajes";
             // 
+            // flowLayoutPanelMensajes
+            // 
+            flowLayoutPanelMensajes.Location = new Point(53, 57);
+            flowLayoutPanelMensajes.Name = "flowLayoutPanelMensajes";
+            flowLayoutPanelMensajes.Size = new Size(657, 409);
+            flowLayoutPanelMensajes.TabIndex = 1;
+            // 
             // buttonEnviar
             // 
             buttonEnviar.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonEnviar.Location = new Point(717, 466);
+            buttonEnviar.Location = new Point(819, 621);
+            buttonEnviar.Margin = new Padding(3, 4, 3, 4);
             buttonEnviar.Name = "buttonEnviar";
-            buttonEnviar.Size = new Size(75, 33);
+            buttonEnviar.Size = new Size(86, 44);
             buttonEnviar.TabIndex = 2;
             buttonEnviar.Text = "Enviar";
             buttonEnviar.UseVisualStyleBackColor = true;
             buttonEnviar.Click += buttonEnviar_Click;
             // 
-            // flowLayoutPanelChat
-            // 
-            flowLayoutPanelChat.BackColor = SystemColors.ControlLight;
-            flowLayoutPanelChat.Location = new Point(46, 31);
-            flowLayoutPanelChat.Name = "flowLayoutPanelChat";
-            flowLayoutPanelChat.Size = new Size(746, 341);
-            flowLayoutPanelChat.TabIndex = 1;
-            // 
             // textBoxMensaje
             // 
-            textBoxMensaje.Location = new Point(46, 378);
+            textBoxMensaje.Location = new Point(53, 504);
+            textBoxMensaje.Margin = new Padding(3, 4, 3, 4);
             textBoxMensaje.Multiline = true;
             textBoxMensaje.Name = "textBoxMensaje";
-            textBoxMensaje.Size = new Size(746, 121);
+            textBoxMensaje.Size = new Size(852, 160);
             textBoxMensaje.TabIndex = 2;
             // 
             // btnConfig
             // 
             btnConfig.Font = new Font("Bahnschrift SemiBold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnConfig.Location = new Point(10, 2);
-            btnConfig.Margin = new Padding(3, 2, 3, 2);
+            btnConfig.Location = new Point(11, 3);
             btnConfig.Name = "btnConfig";
-            btnConfig.Size = new Size(51, 23);
+            btnConfig.Size = new Size(58, 31);
             btnConfig.TabIndex = 2;
             btnConfig.Text = "Config";
             btnConfig.UseVisualStyleBackColor = true;
@@ -123,10 +119,9 @@
             // btnCerrarSeccion
             // 
             btnCerrarSeccion.Font = new Font("Bahnschrift SemiBold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCerrarSeccion.Location = new Point(1090, 2);
-            btnCerrarSeccion.Margin = new Padding(3, 2, 3, 2);
+            btnCerrarSeccion.Location = new Point(1246, 3);
             btnCerrarSeccion.Name = "btnCerrarSeccion";
-            btnCerrarSeccion.Size = new Size(94, 23);
+            btnCerrarSeccion.Size = new Size(107, 31);
             btnCerrarSeccion.TabIndex = 3;
             btnCerrarSeccion.Text = "Cerrar seccion";
             btnCerrarSeccion.UseVisualStyleBackColor = true;
@@ -134,14 +129,13 @@
             // 
             // FormChat
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1238, 590);
+            ClientSize = new Size(1415, 787);
             Controls.Add(btnCerrarSeccion);
             Controls.Add(btnConfig);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FormChat";
             Text = "FormChat";
             Load += FormChat_Load;
@@ -159,8 +153,8 @@
         private DataGridView dataGridViewUsuarios;
         private Button buttonEnviar;
         private TextBox textBoxMensaje;
-        private FlowLayoutPanel flowLayoutPanelChat;
         private Button btnConfig;
         private Button btnCerrarSeccion;
+        private FlowLayoutPanel flowLayoutPanelMensajes;
     }
 }

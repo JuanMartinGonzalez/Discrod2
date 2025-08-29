@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="FE\ChatBubbleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="FE\FormActualizar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -12,6 +15,9 @@
     </Compile>
     <Compile Update="FE\FormRegistro.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FE\RoundedPanel.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Update="FormPadre.cs">
       <SubType>Form</SubType>
