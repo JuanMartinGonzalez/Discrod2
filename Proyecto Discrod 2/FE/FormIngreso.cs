@@ -52,10 +52,69 @@ namespace Proyecto_Discrod_2.FE
             }
         }
 
-        private void btnSignUp_Click(object sender, EventArgs e)
+        private void linkLabelRegistrarse_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormRegistro registro = new FormRegistro();
             registro.ShowDialog();  // La ventana bloquea hasta cerrarse.
         }
+
+
+        #region Estilo txt
+
+        private void textBoxUsuarioLogin_Enter(object sender, EventArgs e)
+        {
+            OcultarTexto(textBoxUsuarioLogin);
+        }
+
+        private void textBoxUsuarioLogin_Leave(object sender, EventArgs e)
+        {
+            OcultarTexto(textBoxUsuarioLogin);
+        }
+
+        private void textBoxPasswordLogin_Enter(object sender, EventArgs e)
+        {
+            OcultarTexto(textBoxPasswordLogin);
+        }
+
+        private void textBoxPasswordLogin_Leave(object sender, EventArgs e)
+        {
+            OcultarTexto(textBoxPasswordLogin);
+        }
+
+        private void OcultarTexto (TextBox txt)
+        {
+            if (txt.Name == "textBoxUsuarioLogin")
+            {
+                if (txt.PlaceholderText == "U S U A R I O")
+                {
+                    txt.PlaceholderText = string.Empty;
+                }
+                else if (txt.Text == string.Empty)
+                {
+                    txt.PlaceholderText = "U S U A R I O";
+                }
+            }
+            if (txt.Name == "textBoxPasswordLogin")
+            {
+                if (txt.Focused && txt.PlaceholderText == "C O N T R A S E Ñ A")
+                {
+                    txt.PlaceholderText = string.Empty;
+                    txt.UseSystemPasswordChar = true;
+                }
+                if (!txt.Focused && txt.PlaceholderText == string.Empty)
+                {
+                    txt.UseSystemPasswordChar = false;
+                    txt.PlaceholderText = "C O N T R A S E Ñ A";
+                }
+                if ((!string.IsNullOrEmpty(txt.Text) && (txt.Text != "C O N T R A S E Ñ A")) && (!txt.Focused))
+                {
+                    txt.UseSystemPasswordChar = true; // Mantener el uso de caracteres de contraseña si ya se ingresó texto
+                }
+
+            }
+
+        }
+        #endregion
+
     }
 }

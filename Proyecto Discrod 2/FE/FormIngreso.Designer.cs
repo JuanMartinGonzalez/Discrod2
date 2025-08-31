@@ -30,91 +30,94 @@
         {
             textBoxUsuarioLogin = new TextBox();
             textBoxPasswordLogin = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
             btnLogin = new Button();
-            btnSignUp = new Button();
+            label1 = new Label();
+            linkLabelRegistrarse = new LinkLabel();
+            label2 = new Label();
             SuspendLayout();
             // 
             // textBoxUsuarioLogin
             // 
-            textBoxUsuarioLogin.Location = new Point(331, 52);
-            textBoxUsuarioLogin.Margin = new Padding(3, 2, 3, 2);
+            textBoxUsuarioLogin.Location = new Point(145, 102);
+            textBoxUsuarioLogin.Margin = new Padding(3, 4, 3, 4);
             textBoxUsuarioLogin.Name = "textBoxUsuarioLogin";
-            textBoxUsuarioLogin.Size = new Size(285, 23);
-            textBoxUsuarioLogin.TabIndex = 0;
+            textBoxUsuarioLogin.PlaceholderText = "U S U A R I O";
+            textBoxUsuarioLogin.Size = new Size(270, 32);
+            textBoxUsuarioLogin.TabIndex = 2;
+            textBoxUsuarioLogin.Enter += textBoxUsuarioLogin_Enter;
+            textBoxUsuarioLogin.Leave += textBoxUsuarioLogin_Leave;
             // 
             // textBoxPasswordLogin
             // 
-            textBoxPasswordLogin.Location = new Point(331, 101);
-            textBoxPasswordLogin.Margin = new Padding(3, 2, 3, 2);
+            textBoxPasswordLogin.Location = new Point(145, 172);
+            textBoxPasswordLogin.Margin = new Padding(3, 4, 3, 4);
             textBoxPasswordLogin.Name = "textBoxPasswordLogin";
-            textBoxPasswordLogin.Size = new Size(285, 23);
-            textBoxPasswordLogin.TabIndex = 1;
+            textBoxPasswordLogin.PlaceholderText = "C O N T R A S E Ñ A";
+            textBoxPasswordLogin.Size = new Size(270, 32);
+            textBoxPasswordLogin.TabIndex = 3;
             textBoxPasswordLogin.UseSystemPasswordChar = true;
+            textBoxPasswordLogin.Enter += textBoxPasswordLogin_Enter;
+            textBoxPasswordLogin.Leave += textBoxPasswordLogin_Leave;
+            // 
+            // btnLogin
+            // 
+            btnLogin.Font = new Font("Bahnschrift Condensed", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogin.Location = new Point(107, 274);
+            btnLogin.Margin = new Padding(3, 4, 3, 4);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(353, 54);
+            btnLogin.TabIndex = 0;
+            btnLogin.Text = "I N G R E S A R ";
+            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-
-            label1.Location = new Point(179, 52);
+            label1.Location = new Point(151, 427);
             label1.Name = "label1";
-            label1.Size = new Size(47, 15);
-
-            label1.TabIndex = 2;
-            label1.Text = "Usuario";
+            label1.Size = new Size(158, 24);
+            label1.TabIndex = 4;
+            label1.Text = "¿No tenés una cuenta?";
+            // 
+            // linkLabelRegistrarse
+            // 
+            linkLabelRegistrarse.AutoSize = true;
+            linkLabelRegistrarse.Location = new Point(318, 427);
+            linkLabelRegistrarse.Name = "linkLabelRegistrarse";
+            linkLabelRegistrarse.Size = new Size(86, 24);
+            linkLabelRegistrarse.TabIndex = 5;
+            linkLabelRegistrarse.TabStop = true;
+            linkLabelRegistrarse.Text = "Registrarse";
+            linkLabelRegistrarse.LinkClicked += linkLabelRegistrarse_LinkClicked;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-          
-            label2.Location = new Point(179, 101);
+            label2.Font = new Font("Bahnschrift SemiBold", 18F, FontStyle.Bold | FontStyle.Underline);
+            label2.Location = new Point(107, 16);
             label2.Name = "label2";
-            label2.Size = new Size(67, 15);
-
-            label2.TabIndex = 3;
-            label2.Text = "Contraseña";
-            // 
-            // btnLogin
-            // 
-
-            btnLogin.Location = new Point(350, 166);
-            btnLogin.Margin = new Padding(3, 2, 3, 2);
-
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(213, 105);
-            btnLogin.TabIndex = 4;
-            btnLogin.Text = "Ingresar";
-            btnLogin.UseVisualStyleBackColor = true;
-            btnLogin.Click += btnLogin_Click;
-            // 
-            // btnSignUp
-            // 
-            btnSignUp.Location = new Point(12, 11);
-            btnSignUp.Margin = new Padding(3, 2, 3, 2);
-            btnSignUp.Name = "btnSignUp";
-            btnSignUp.Size = new Size(119, 31);
-            btnSignUp.TabIndex = 5;
-            btnSignUp.Text = "Crear cuenta";
-            btnSignUp.UseVisualStyleBackColor = true;
-            btnSignUp.Click += btnSignUp_Click;
+            label2.Size = new Size(353, 46);
+            label2.TabIndex = 1;
+            label2.Text = "INICIAR SESION";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FormIngreso
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 338);
-            Controls.Add(btnSignUp);
-            Controls.Add(btnLogin);
+            ClientSize = new Size(558, 550);
             Controls.Add(label2);
+            Controls.Add(linkLabelRegistrarse);
             Controls.Add(label1);
+            Controls.Add(btnLogin);
             Controls.Add(textBoxPasswordLogin);
             Controls.Add(textBoxUsuarioLogin);
+            Font = new Font("Bahnschrift Condensed", 12F);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(3, 2, 3, 2);
+            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "FormIngreso";
-            Text = "FormIngreso";
+            Text = "Ingreso de Usuarios";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -123,9 +126,9 @@
 
         private TextBox textBoxUsuarioLogin;
         private TextBox textBoxPasswordLogin;
-        private Label label1;
-        private Label label2;
         private Button btnLogin;
-        private Button btnSignUp;
+        private Label label1;
+        private LinkLabel linkLabelRegistrarse;
+        private Label label2;
     }
 }
