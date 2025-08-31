@@ -16,18 +16,18 @@ namespace Proyecto_Discrod_2.DAL
         {
             try
             {
-                string query = @"INSERT INTO Mensajes (Texto, FechaEnvio, FechaLectura, UsuarioOrigenId, UsuarioDestinoId)
-                                 VALUES (@Texto, @FechaEnvio, @FechaLectura, @OrigenId, @DestinoId);
+                string query = @"INSERT INTO Mensajes (Mensaje, FechaEnvio, FechaLectura, UsuarioOrigenId, UsuarioDestinoId)
+                                 VALUES (@Mensaje, @FechaEnvio, @FechaLectura, @OrigenId, @DestinoId);
                                  SELECT SCOPE_IDENTITY();";
 
                 using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
                 {
                     //añado los parámetros necesarios para la consulta 
-                    command.Parameters.AddWithValue("@Texto", mensaje.Texto);
+                    command.Parameters.AddWithValue("@Mensaje", mensaje.Texto);
                     command.Parameters.AddWithValue("@FechaEnvio", mensaje.FechaEnvio);
                     command.Parameters.AddWithValue("@FechaLectura", mensaje.FechaLectura);
-                    command.Parameters.AddWithValue("@OrigenId", mensaje.UsuarioOrigen.UsuarioId);
-                    command.Parameters.AddWithValue("@DestinoId", mensaje.UsuarioDestino.UsuarioId);
+                    command.Parameters.AddWithValue("@OrigenId", mensaje.UsuarioOrigen);
+                    command.Parameters.AddWithValue("@DestinoId", mensaje.UsuarioDestino);
 
                     return Convert.ToInt32(command.ExecuteScalar());
                 }
@@ -62,12 +62,12 @@ namespace Proyecto_Discrod_2.DAL
             try
             {
                 string query = @"UPDATE Mensajes 
-                         SET Texto = @Texto
+                         SET Mensaje = @Mensaje
                          WHERE MensajeId = @MensajeId";
 
                 using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
                 {
-                    command.Parameters.AddWithValue("@Texto", mensaje.Texto);
+                    command.Parameters.AddWithValue("@Mensaje", mensaje.Texto);
                     command.Parameters.AddWithValue("@MensajeId", mensajeId);
 
                     int filasAfectadas = command.ExecuteNonQuery();
@@ -141,7 +141,37 @@ namespace Proyecto_Discrod_2.DAL
                 return false;
             }
         }
+        public List<Mensajes> ObtenerMensajesEntreUsuarios(int usuarioOrigenId, int usuarioDestinoId)
+        {
+            var mensajes = new List<Mensajes>();
+            string query = @"SELECT * FROM Mensajes 
+                     WHERE (UsuarioOrigenId = @UsuarioOrigenId AND UsuarioDestinoId = @UsuarioDestinoId)
+                        OR (UsuarioOrigenId = @UsuarioDestinoId AND UsuarioDestinoId = @UsuarioOrigenId)
+                     ORDER BY FechaEnvio ASC";
+            using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
+            {
+                command.Parameters.AddWithValue("@UsuarioOrigenId", usuarioOrigenId);
+                command.Parameters.AddWithValue("@UsuarioDestinoId", usuarioDestinoId);
+                using (var reader = command.ExecuteReader())
+                {
+                    UsuarioDAL usuarioDal = new UsuarioDAL();
+                    while (reader.Read())
+                    {
+                        int idOrigen = Convert.ToInt32(reader["UsuarioOrigenId"]);
+                        int idDestino = Convert.ToInt32(reader["UsuarioDestinoId"]);
+                        DateTime fechaEnvio = Convert.ToDateTime(reader["FechaEnvio"]);
+                        DateTime fechaLectura = Convert.ToDateTime(reader["FechaLectura"]);
+                        string texto = reader["Mensaje"].ToString();
 
+                       // Usuarios usuarioOrigen = usuarioDal.ObtenerUsuarioPorId(idOrigen);
+                       // Usuarios usuarioDestino = usuarioDal.ObtenerUsuarioPorId(idDestino);
+                        Mensajes mensaje = new Mensajes(texto, fechaEnvio, fechaLectura, idOrigen, idDestino);
+                        mensajes.Add(mensaje);
+                    }
+                }
+            }
+            return mensajes;
+        }
 
     }
 }

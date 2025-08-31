@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Proyecto_Discrod_2.DAL;
 
 namespace Proyecto_Discrod_2.BE
 {
@@ -35,7 +36,7 @@ namespace Proyecto_Discrod_2.BE
                 return false;
             }
         }
-        public bool ModificarMensaje(int mensajeId,Mensajes mensaje)
+        public bool ModificarMensaje(int mensajeId, Mensajes mensaje)
         {
             DAL.MensajeDal mensajeDal = new DAL.MensajeDal();
             try
@@ -73,6 +74,20 @@ namespace Proyecto_Discrod_2.BE
                 mensajeDal.Error = "Error en marcar como leido";
                 return false;
             }
+        }
+        public List<Mensajes> ObtenerMensajesEntreUsuarios(int usuarioOrigenId, int usuarioDestinoId)
+        {
+            DAL.MensajeDal mensajeDal = new DAL.MensajeDal();
+            try
+            {
+                return mensajeDal.ObtenerMensajesEntreUsuarios(usuarioOrigenId, usuarioDestinoId);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al cargar los usuarios: " + ex.Message);
+            }
+
         }
     }
 }

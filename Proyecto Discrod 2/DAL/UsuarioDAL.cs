@@ -154,37 +154,37 @@ namespace Proyecto_Discrod_2.DAL
                     // Creamos un comando para ejecutar la consulta
                     SqlCommand cmd = new SqlCommand(query, ObtenerConexion());
 
-                // Creamos un DataAdapter para llenar un DataTable
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    // Creamos un DataAdapter para llenar un DataTable
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 
-                // DataTable para guardar temporalmente los datos
-                DataTable tabla = new DataTable();
+                    // DataTable para guardar temporalmente los datos
+                    DataTable tabla = new DataTable();
 
-                // Llenamos la tabla con los datos de la consulta
-                adapter.Fill(tabla);
+                    // Llenamos la tabla con los datos de la consulta
+                    adapter.Fill(tabla);
 
-                // Recorremos las filas del DataTable 
-                foreach (DataRow fila in tabla.Rows)
-                {
-                    // Obtenemos los datos de cada fila
-                    int UsuarioId = Convert.ToInt32(fila["UsuarioId"]);
-                    string nombre = fila["Nombre"].ToString();
-                    string password = fila["Password"].ToString();
-                    int color = Convert.ToInt32(fila["Color"]);
-                    byte[] imagen = fila["Imagen"] as byte[];
-                        // Creamos un objeto Usuario con los datos
-                    Usuarios usuario = new Usuarios(UsuarioId, nombre, password, color, imagen);
-                    // Lo agregamos a la lista
-                    LisUsu.Add(usuario);
+                    // Recorremos las filas del DataTable 
+                    foreach (DataRow fila in tabla.Rows)
+                    {
+                        // Obtenemos los datos de cada fila
+                        int UsuarioId = Convert.ToInt32(fila["UsuarioId"]);
+                        string nombre = fila["Nombre"].ToString();
+                        string password = fila["Password"].ToString();
+                        int color = Convert.ToInt32(fila["Color"]);
+                        byte[] imagen = fila["Imagen"] as byte[];
+                            // Creamos un objeto Usuario con los datos
+                        Usuarios usuario = new Usuarios(UsuarioId, nombre, password, color, imagen);
+                        // Lo agregamos a la lista
+                        LisUsu.Add(usuario);
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                // lanzamos una excepcion con el mensaje
-                throw new Exception("Error al obtener usuarios: " + ex.Message);
-            }
-            // Devolvemos la lista de usuarios
-            return LisUsu;
+                 catch (Exception ex)
+                 {
+                    // lanzamos una excepcion con el mensaje
+                    throw new Exception("Error al obtener usuarios: " + ex.Message);
+                 }
+                 // Devolvemos la lista de usuarios
+                 return LisUsu;
         }
 
         public Usuarios ObtenerUsuarioLogueado(string nombre, string password)
