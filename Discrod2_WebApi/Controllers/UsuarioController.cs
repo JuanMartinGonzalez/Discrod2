@@ -103,6 +103,32 @@ namespace Discrod_2.WebApi.Controllers
             }
         }
 
+        // GET api/usuarios/listar
+        [HttpGet("listar")]
+        public IActionResult ListarUsuarios()
+        {
+            BEUsuario beUsuario = new();
+            try
+            {
+                var lista = beUsuario.ObtenerUsuarios();
+                                                         
+                var listaDTO = lista.Select(u => new
+                {
+                    u.UsuarioId,
+                    u.Nombre,
+                    u.Color,
+                    Imagen = u.Imagen != null ? Convert.ToBase64String(u.Imagen) : null
+                }).ToList();
+
+                return Ok(listaDTO);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { mensaje = "Error al obtener usuarios", error = ex.Message });
+            }
+        }
+
+
         // DTOs internos
         public class UsuarioRegistroDTO
         {

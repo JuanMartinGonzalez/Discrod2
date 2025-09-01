@@ -9,6 +9,7 @@ namespace Proyecto_Discrod_2.BE
 {
     public class BEMensaje
     {
+        public string Error { get; set; }
         public int AgregarMensaje(Mensajes mensaje)
         {
             DAL.MensajeDal mensajeDAL = new DAL.MensajeDal();

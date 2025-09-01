@@ -1,0 +1,104 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.header {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.chat-container {
+    display: flex;
+    gap: 20px;
+}
+
+#listaUsuarios {
+    list-style: none;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+    #listaUsuarios li {
+        cursor: pointer;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+        transition: background 0.2s;
+    }
+
+        #listaUsuarios li:hover {
+            background-color: #f0f0f0;
+        }
+
+        #listaUsuarios li img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+
+.chat-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#mensajes {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-panel {
+    display: flex;
+    gap: 10px;
+}
+
+    .input-panel input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .input-panel button {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+    }
+
+        .input-panel button:hover {
+            background-color: #45a049;
+        }
+
+.burbuja {
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+.mio {
+    background-color: #aee1f9;
+    align-self: flex-end;
+}
+
+.otro {
+    background-color: #e2e2e2;
+    align-self: flex-start;
+}

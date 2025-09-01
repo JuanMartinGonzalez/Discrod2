@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="../css/chat.css">
+</head>
+<body>
+    <div class="header">
+        <button id="btnHome">Inicio</button>
+        <button id="btnConfig">Configuración</button>
+        <button id="btnCerrar">Cerrar sesión</button>
+    </div>
+    <div class="chat-container">
+        <ul id="listaUsuarios"></ul>
+        <div class="chat-panel">
+            <div id="mensajes"></div>
+            <div class="input-panel">
+                <input type="text" id="textoMensaje" placeholder="Escribí un mensaje">
+                <button id="btnEnviar">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/chat.js"></script>
+    <script>
+        $("#btnHome").click(function () {
+            window.location.href = "home.html";
+        });
+    </script>
+</body>
+</html>

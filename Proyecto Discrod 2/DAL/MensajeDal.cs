@@ -12,6 +12,28 @@ namespace Proyecto_Discrod_2.DAL
     {
         public string Error { get; set; }
 
+        private SqlConnection _conexionManual;
+
+        public MensajeDal()
+        {
+            _conexionManual = null;
+        }
+
+        // Constructor con conexión → para la API
+        public MensajeDal(SqlConnection conexionExterna)
+        {
+            _conexionManual = conexionExterna;
+        }
+
+        // Método central para obtener la conexión
+        private SqlConnection ObtenerConexion()
+        {
+            if (_conexionManual != null)
+                return _conexionManual;
+
+            return FormPadre.ObtenerConexion();
+        }
+
         public int AgregarMensaje(Mensajes mensaje)
         {
             try
@@ -20,7 +42,7 @@ namespace Proyecto_Discrod_2.DAL
                                  VALUES (@Mensaje, @FechaEnvio, @FechaLectura, @OrigenId, @DestinoId);
                                  SELECT SCOPE_IDENTITY();";
 
-                using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
+                using (SqlCommand command = new SqlCommand(query, ObtenerConexion()))
                 {
                     //añado los parámetros necesarios para la consulta 
                     command.Parameters.AddWithValue("@Mensaje", mensaje.Texto);
@@ -44,7 +66,7 @@ namespace Proyecto_Discrod_2.DAL
             try
             {
                 string query = "SELECT COUNT(*) FROM Mensajes WHERE MensajeId = @MensajeId";
-                using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
+                using (SqlCommand command = new SqlCommand(query, ObtenerConexion()))
                 {
                     command.Parameters.AddWithValue("@MensajeId", mensajeId);
                     int cantidad = Convert.ToInt32(command.ExecuteScalar());
@@ -65,7 +87,7 @@ namespace Proyecto_Discrod_2.DAL
                          SET Mensaje = @Mensaje
                          WHERE MensajeId = @MensajeId";
 
-                using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
+                using (SqlCommand command = new SqlCommand(query, ObtenerConexion()))
                 {
                     command.Parameters.AddWithValue("@Mensaje", mensaje.Texto);
                     command.Parameters.AddWithValue("@MensajeId", mensajeId);
@@ -87,7 +109,7 @@ namespace Proyecto_Discrod_2.DAL
             try
             {
                 string query = "DELETE FROM Mensajes WHERE MensajeId = @MensajeId";
-                using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
+                using (SqlCommand command = new SqlCommand(query, ObtenerConexion()))
                 {
                     command.Parameters.AddWithValue("@MensajeId", mensajeId);
                     retorna = command.ExecuteNonQuery();
@@ -107,7 +129,7 @@ namespace Proyecto_Discrod_2.DAL
                 // simulo que el mensaje fue "recibido", por ejemplo, al obtenerlo desde base de datos
                 string query = "SELECT MensajeId FROM Mensajes WHERE MensajeId = @MensajeId";
 
-                using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
+                using (SqlCommand command = new SqlCommand(query, ObtenerConexion()))
                 {
                     command.Parameters.AddWithValue("@MensajeId", mensajeId);
 
@@ -148,7 +170,7 @@ namespace Proyecto_Discrod_2.DAL
                      WHERE (UsuarioOrigenId = @UsuarioOrigenId AND UsuarioDestinoId = @UsuarioDestinoId)
                         OR (UsuarioOrigenId = @UsuarioDestinoId AND UsuarioDestinoId = @UsuarioOrigenId)
                      ORDER BY FechaEnvio ASC";
-            using (SqlCommand command = new SqlCommand(query, FormPadre.ObtenerConexion()))
+            using (SqlCommand command = new SqlCommand(query, ObtenerConexion()))
             {
                 command.Parameters.AddWithValue("@UsuarioOrigenId", usuarioOrigenId);
                 command.Parameters.AddWithValue("@UsuarioDestinoId", usuarioDestinoId);
