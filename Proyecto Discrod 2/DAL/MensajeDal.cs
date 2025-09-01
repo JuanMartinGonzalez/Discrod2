@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Proyecto_Discrod_2.BE;
+﻿using Proyecto_Discrod_2.BE;
 using Microsoft.Data.SqlClient;
 
 namespace Proyecto_Discrod_2.DAL
 {
     public class MensajeDal
     {
-        public string Error { get; set; }
+        public string Error { get; set; } = String.Empty;
 
         public int AgregarMensaje(Mensajes mensaje)
         {
@@ -161,10 +156,10 @@ namespace Proyecto_Discrod_2.DAL
                         int idDestino = Convert.ToInt32(reader["UsuarioDestinoId"]);
                         DateTime fechaEnvio = Convert.ToDateTime(reader["FechaEnvio"]);
                         DateTime fechaLectura = Convert.ToDateTime(reader["FechaLectura"]);
-                        string texto = reader["Mensaje"].ToString();
+                        string texto = reader["Mensaje"] == DBNull.Value || reader["Mensaje"] is null ? string.Empty : reader["Mensaje"]!.ToString()!;
 
-                       // Usuarios usuarioOrigen = usuarioDal.ObtenerUsuarioPorId(idOrigen);
-                       // Usuarios usuarioDestino = usuarioDal.ObtenerUsuarioPorId(idDestino);
+                        // Usuarios usuarioOrigen = usuarioDal.ObtenerUsuarioPorId(idOrigen);
+                        // Usuarios usuarioDestino = usuarioDal.ObtenerUsuarioPorId(idDestino);
                         Mensajes mensaje = new Mensajes(texto, fechaEnvio, fechaLectura, idOrigen, idDestino);
                         mensajes.Add(mensaje);
                     }

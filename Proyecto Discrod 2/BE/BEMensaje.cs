@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Proyecto_Discrod_2.DAL;
-
-namespace Proyecto_Discrod_2.BE
+﻿namespace Proyecto_Discrod_2.BE
 {
     public class BEMensaje
     {

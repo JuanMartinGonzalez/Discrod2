@@ -1,13 +1,11 @@
 ﻿using Proyecto_Discrod_2.DAL;
-﻿using Microsoft.Data.SqlClient;
-using Proyecto_Discrod_2.ESTADO;
 using Proyecto_Discrod_2.VAL;
 
 namespace Proyecto_Discrod_2.BE
 {
     public class BEUsuario
     {
-        public string Error { get; set; }  //variable para almacenar errores, comunicar desde capa BA y DAL
+        public string Error { get; set; } = string.Empty; //variable para almacenar errores, comunicar desde capa BA y DAL
         public int AgregarUsuario(Usuarios usuarios)
         {
             DAL.UsuarioDAL usuarioDAL = new UsuarioDAL();
@@ -17,7 +15,7 @@ namespace Proyecto_Discrod_2.BE
             }
             catch (Exception ex)
             {
-                Error = "Error al agregar el usuario." + ex;
+                Error = "Error al agregar el usuario." + ex.Message;
                 return -1; // Return a default value in case of an exception
             }
         }
@@ -81,10 +79,11 @@ namespace Proyecto_Discrod_2.BE
             }
         }
 
-        public Usuarios ObtenerUsuariologueado(string nombre, string password)
+        public Usuarios? ObtenerUsuariologueado(string nombre, string password)
         {
             // Llamá a la DAL para que traiga el usuario completo que coincida con nombre y password
             UsuarioDAL usuarioDAL = new UsuarioDAL();
+            
             return usuarioDAL.ObtenerUsuarioLogueado(nombre, password);
         }
 
@@ -93,7 +92,12 @@ namespace Proyecto_Discrod_2.BE
             UsuarioDAL usuarioDAL = new UsuarioDAL();
             try
             {
-                return usuarioDAL.ActualizarUsuario(usuario);
+                var us =  usuarioDAL.ActualizarUsuario(usuario);
+                if (us == -1)
+                {
+                    throw new Exception("Usuario no encontrado.");
+                }
+                return us;
             }
             catch (Exception ex)
             {
@@ -115,17 +119,21 @@ namespace Proyecto_Discrod_2.BE
             }
         }
 
-        public Usuarios ObtenerUsuarioPorId(int usuarioId)
+        public Usuarios? ObtenerUsuarioPorId(int usuarioId)
         {
             UsuarioDAL usuarioDAL = new UsuarioDAL();
             try
             {
-                return usuarioDAL.ObtenerUsuarioPorId(usuarioId);
+                var usuario = usuarioDAL.ObtenerUsuarioPorId(usuarioId);
+                if (usuario == null)
+                {
+                    throw new Exception("Usuario no encontrado.");
+                }
+                return usuario;
             }
             catch (Exception ex)
             {
-                Error = "Error al obtener el usuario: " + ex.Message;
-                return null;
+                throw new Exception("Error al obtener el usuario: " + ex.Message, ex);
             }
         }
     }

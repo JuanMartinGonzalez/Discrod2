@@ -1,10 +1,5 @@
-using System.Drawing.Text;
-using System;
 using Proyecto_Discrod_2.BE;
-using Proyecto_Discrod_2.Properties;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Drawing.Imaging;
-using System.CodeDom;
 
 namespace Proyecto_Discrod_2.FE
 {
@@ -23,7 +18,7 @@ namespace Proyecto_Discrod_2.FE
             try
             {
                 // Crear instancia del usuario con los datos del formulario
-                Usuarios usuario = new Usuarios(0, string.Empty, string.Empty, 0, null)
+                Usuarios usuario = new Usuarios(0, string.Empty, string.Empty, 0, Array.Empty<byte>())
                 {
                     Nombre = txtNombre.Text.Trim(),
                     Password = ObtenerPassword(),
@@ -64,7 +59,7 @@ namespace Proyecto_Discrod_2.FE
             {
                 MessageBox.Show("Ocurrió un error inesperado:\n" + ex.Message, "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
 
@@ -73,7 +68,11 @@ namespace Proyecto_Discrod_2.FE
         #region Obtener prop
         private byte[] ConvertirImagen()
         {
-            using (MemoryStream ms = new MemoryStream())  //recervar espacio de memoria
+            if (pictureBoxImagen.Image == null)
+            {
+                throw new ArgumentException("Debe seleccionar una imagen");
+            }
+            using (MemoryStream ms = new MemoryStream())  //reservar espacio de memoria
             using (Bitmap bmp = new Bitmap(pictureBoxImagen.Image))   //variable que guarda la imagen seleccionada
             {
                 bmp.Save(ms, ImageFormat.Jpeg);
@@ -87,7 +86,7 @@ namespace Proyecto_Discrod_2.FE
             {
                 throw new ArgumentException("La contraseña no coincide");
             }
-             return txtConfirmar.Text.Trim();
+            return txtConfirmar.Text.Trim();
         }
         #endregion
 
@@ -102,7 +101,7 @@ namespace Proyecto_Discrod_2.FE
                     pictureBoxImagen.Image = Image.FromFile(file.FileName);      //mostramos la imagen seleccionada
                 }
             }
-            catch (Exception ex) 
+            catch (Exception)
             {
                 MessageBox.Show("Error al buscar archivo");
             }
@@ -148,50 +147,57 @@ namespace Proyecto_Discrod_2.FE
         {
             if (txt.Name == "txtNombre")
             {
-                if (txt.PlaceholderText == "U S U A R I O")
-                {
-                    txt.PlaceholderText = string.Empty;
-                }
-                else if (txt.Text == string.Empty)
+                if (txt.Text == string.Empty)
                 {
                     txt.PlaceholderText = "U S U A R I O";
+                }
+                else
+                {
+                    txt.PlaceholderText = string.Empty;
                 }
             }
 
             if (txt.Name == "txtPassword")
             {
-                if (txt.Focused && txt.PlaceholderText == "C O N T R A S E Ñ A")
+                if (txt.Focused)
                 {
                     txt.PlaceholderText = string.Empty;
                     txt.UseSystemPasswordChar = true;
                 }
-                if (!txt.Focused && txt.PlaceholderText == string.Empty)
+                else
                 {
-                    txt.UseSystemPasswordChar = false;
-                    txt.PlaceholderText = "C O N T R A S E Ñ A";
+                    if (txt.Text == string.Empty)
+                    {
+                        txt.PlaceholderText = "C O N T R A S E Ñ A";
+                        txt.UseSystemPasswordChar = false;
+                    }
+                    else
+                    {
+                        txt.PlaceholderText = string.Empty;
+                        txt.UseSystemPasswordChar = true;
+                    }
                 }
-                if ((!string.IsNullOrEmpty(txt.Text) && (txt.Text != "C O N T R A S E Ñ A")) && (!txt.Focused))
-                {
-                    txt.UseSystemPasswordChar = true; // Mantener el uso de caracteres de contraseña si ya se ingresó texto
-                }
-
             }
 
             if (txt.Name == "txtConfirmar")
             {
-                if (txt.Focused && txt.PlaceholderText == "C O N F I R M A R  C O N T R A S E Ñ A")
+                if (txt.Focused)
                 {
                     txt.PlaceholderText = string.Empty;
                     txt.UseSystemPasswordChar = true;
                 }
-                if (!txt.Focused && txt.PlaceholderText == string.Empty)
+                else
                 {
-                    txt.UseSystemPasswordChar = false;
-                    txt.PlaceholderText = "C O N F I R M A R  C O N T R A S E Ñ A";
-                }
-                if ((!string.IsNullOrEmpty(txt.Text) && (txt.Text != "C O N F I R M A R  C O N T R A S E Ñ A")) && (!txt.Focused))
-                {
-                    txt.UseSystemPasswordChar = true; // Mantener el uso de caracteres de contraseña si ya se ingresó texto
+                    if (txt.Text == string.Empty)
+                    {
+                        txt.PlaceholderText = "C O N F I R M A R  C O N T R A S E Ñ A";
+                        txt.UseSystemPasswordChar = false;
+                    }
+                    else
+                    {
+                        txt.PlaceholderText = string.Empty;
+                        txt.UseSystemPasswordChar = true;
+                    }
                 }
             }
 

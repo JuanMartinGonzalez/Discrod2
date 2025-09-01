@@ -7,8 +7,7 @@ namespace Proyecto_Discrod_2.DAL
     public class UsuarioDAL
     {
         public string Error { get; set; }
-        // Metodo Agregar usuario
-        private SqlConnection _conexionManual;
+        private SqlConnection? _conexionManual;
 
         // Constructor sin parámetros → para WinForms
         public UsuarioDAL()
@@ -28,8 +27,12 @@ namespace Proyecto_Discrod_2.DAL
             if (_conexionManual != null)
                 return _conexionManual;
 
-            return FormPadre.ObtenerConexion();
+            var conexion = FormPadre.ObtenerConexion();
+            if (conexion == null)
+                throw new InvalidOperationException("No se pudo obtener una conexión a la base de datos.");
+            return conexion;
         }
+        // Metodo Agregar usuario
         public int AgregarUsuario(BE.Usuarios usuario)
         {
             // Verificar si el usuario ya existe
@@ -84,8 +87,8 @@ namespace Proyecto_Discrod_2.DAL
             catch (Exception ex)
             {
                 // Si ocurre un error, captura la excepción y asigna un mensaje de error
-                Error = "Error en la base de datos.";
-                throw ex;//error; 
+                Error = "Error en la base de datos." + ex.Message;
+                throw;//error; 
             }
         }
         // Este método elimina un usuario de la base de datos según su ID.
@@ -103,15 +106,15 @@ namespace Proyecto_Discrod_2.DAL
                 }
                 return retorna; // Retorna el número de filas afectadas por la eliminación
             }
-            catch (Exception ex)
+            catch (Exception ex )
             {
-                Error = "Error en la base de datos.";
+                Error = "Error en la base de datos." + ex.Message ;
                 throw;//error; 
             }
         }
 
         //este metodo obtine un usuario por id para luego ser mas especifico a la hora de editar usuario
-        public Usuarios ObtenerUsuarioPorId(int usuarioId)
+        public Usuarios? ObtenerUsuarioPorId(int usuarioId)
         {
 
             string query = "SELECT UsuarioId, Nombre, Password, Color, Imagen FROM Usuarios WHERE UsuarioId = @UsuarioId";
@@ -125,8 +128,8 @@ namespace Proyecto_Discrod_2.DAL
                     if (reader.Read())
                     {
                         int id = Convert.ToInt32(reader["UsuarioId"]);
-                        string nombre = reader["Nombre"].ToString();
-                        string password = reader["Password"].ToString();
+                        string nombre = reader["Nombre"]?.ToString() ?? string.Empty;
+                        string password = reader["Password"]?.ToString() ?? string.Empty;
                         int color = Convert.ToInt32(reader["Color"]);
 
                         byte[] imagenBytes = reader["Imagen"] == DBNull.Value
@@ -168,10 +171,10 @@ namespace Proyecto_Discrod_2.DAL
                     {
                         // Obtenemos los datos de cada fila
                         int UsuarioId = Convert.ToInt32(fila["UsuarioId"]);
-                        string nombre = fila["Nombre"].ToString();
-                        string password = fila["Password"].ToString();
+                        string nombre = fila["Nombre"]?.ToString() ?? string.Empty;
+                        string password = fila["Password"]?.ToString() ?? string.Empty;
                         int color = Convert.ToInt32(fila["Color"]);
-                        byte[] imagen = fila["Imagen"] as byte[];
+                        byte[] imagen = fila["Imagen"] as byte[] ?? Array.Empty<byte>();
                             // Creamos un objeto Usuario con los datos
                         Usuarios usuario = new Usuarios(UsuarioId, nombre, password, color, imagen);
                         // Lo agregamos a la lista
@@ -187,7 +190,7 @@ namespace Proyecto_Discrod_2.DAL
                  return LisUsu;
         }
 
-        public Usuarios ObtenerUsuarioLogueado(string nombre, string password)
+        public Usuarios? ObtenerUsuarioLogueado(string nombre, string password)
         {
             string query = "SELECT UsuarioId, Nombre, Password, Color, Imagen FROM Usuarios WHERE Nombre = @Nombre AND Password = @Password";
 
@@ -195,23 +198,29 @@ namespace Proyecto_Discrod_2.DAL
             {
                 cmd.Parameters.AddWithValue("@Nombre", nombre);
                 cmd.Parameters.AddWithValue("@Password", password);
-
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     if (reader.Read())
                     {
+                        int usuarioId = reader.GetInt32(reader.GetOrdinal("UsuarioId"));
+                        string nombreValue = reader.IsDBNull(reader.GetOrdinal("Nombre")) ? string.Empty : reader.GetString(reader.GetOrdinal("Nombre"));
+                        string passwordValue = reader.IsDBNull(reader.GetOrdinal("Password")) ? string.Empty : reader.GetString(reader.GetOrdinal("Password"));
+                        int colorValue = reader.IsDBNull(reader.GetOrdinal("Color")) ? 0 : reader.GetInt32(reader.GetOrdinal("Color"));
+                        byte[] imagenValue = reader.IsDBNull(reader.GetOrdinal("Imagen")) ? Array.Empty<byte>() : (byte[])reader["Imagen"];
+
                         return new Usuarios(
-                            Convert.ToInt32(reader["UsuarioId"]),
-                            reader["Nombre"].ToString(),
-                            reader["Password"].ToString(),
-                            Convert.ToInt32(reader["Color"]),
-                            reader["Imagen"] as byte[]
+                            usuarioId,
+                            nombreValue,
+                            passwordValue,
+                            colorValue,
+                            imagenValue
                         );
                     }
-                }
-            }
 
-            return null;
+                }
+
+                return null;
+            }
         }
         public bool ExisteUsuario(string nombre)
         {

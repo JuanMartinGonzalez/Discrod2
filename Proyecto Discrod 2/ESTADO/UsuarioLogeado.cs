@@ -1,9 +1,4 @@
 ﻿using Proyecto_Discrod_2.BE;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Proyecto_Discrod_2.ESTADO
 {
@@ -12,7 +7,7 @@ namespace Proyecto_Discrod_2.ESTADO
     public static class UsuarioLogueado
     {
         /// Usuario actual logueado. Si no hay sesión, es null.
-        public static Usuarios UsuarioActual { get; private set; }
+        public static Usuarios? UsuarioActual { get; private set; }
 
         /// Indica si hay un usuario logueado en el sistema.
         public static bool EstaLogueado => UsuarioActual != null;

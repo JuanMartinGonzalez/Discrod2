@@ -31,15 +31,21 @@ namespace Proyecto_Discrod_2.FE
                 int resultado = beUsuario.VerificarLoginUsuario(usuario, pasword);
                 if (resultado == 1)
                 {
-                    MessageBox.Show("Ingreso exitoso", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // obtenemos el usuario completo para guardarlo en la sesión
-                    Usuarios usuarioCompleto = beUsuario.ObtenerUsuariologueado(textBoxUsuarioLogin.Text.Trim(), textBoxPasswordLogin.Text.Trim());
+                    Usuarios? usuarioCompleto = beUsuario.ObtenerUsuariologueado(textBoxUsuarioLogin.Text.Trim(), textBoxPasswordLogin.Text.Trim());
 
-                    // Guardamos el usuario completo en la clase estática para sesión
-                    UsuarioLogueado.IniciarSesion(usuarioCompleto);
-                    FormChat formChat = new FormChat();
-                    this.Close();
-                    formChat.ShowDialog();
+                    if (usuarioCompleto != null)
+                    {
+                        // Guardamos el usuario completo en la clase estática para sesión
+                        UsuarioLogueado.IniciarSesion(usuarioCompleto);
+                        FormChat formChat = new FormChat();
+                        this.Close();
+                        formChat.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo obtener el usuario logueado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {

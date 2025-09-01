@@ -1,14 +1,6 @@
 ﻿using Proyecto_Discrod_2.BE;
 using Proyecto_Discrod_2.ESTADO;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Proyecto_Discrod_2.FE
 {
@@ -18,14 +10,13 @@ namespace Proyecto_Discrod_2.FE
         public FormActualizar(Usuarios usuario)
         {
             InitializeComponent();
-            UsuarioActual = usuario;
-            // Aquí puedes usar usuarioActual para cargar datos o personalizar el formulario
+            UsuarioActual = usuario ?? throw new ArgumentNullException(nameof(usuario));
         }
-        private BindingList<Usuarios> listaUsuario; // Declarar como campo del formulario
+        private BindingList<Usuarios>? listaUsuario; // Declarar como campo del formulario
 
         private void FormActualizar_Load(object sender, EventArgs e)
         {
-            if (UsuarioLogueado.EstaLogueado)
+            if (UsuarioLogueado.EstaLogueado && UsuarioLogueado.UsuarioActual != null)
             {
                 // Crear una lista con solo el usuario actual
                 listaUsuario = new BindingList<Usuarios>();
@@ -56,26 +47,30 @@ namespace Proyecto_Discrod_2.FE
 
             // Traigo el usuario original de la BD
             BEUsuario beUsuario = new BEUsuario();
-            Usuarios usuarioOriginal = beUsuario.ObtenerUsuarioPorId(usuarioId);
+            Usuarios? usuarioOriginal = beUsuario.ObtenerUsuarioPorId(usuarioId);
+
+            if (usuarioOriginal == null)
+            {
+                MessageBox.Show("No se encontró el usuario original.");
+                return;
+            }
 
             // Si hay un valor nuevo en la grilla lo uso, si no, dejo el original
-            string nombre = string.IsNullOrEmpty(row.Cells["Nombre"].Value?.ToString())
-                ? usuarioOriginal.Nombre
-                : row.Cells["Nombre"].Value.ToString();
+            string nombre = row.Cells["Nombre"].Value?.ToString() ?? usuarioOriginal.Nombre ;
 
             string password = string.IsNullOrEmpty(row.Cells["Password"].Value?.ToString())
                 ? usuarioOriginal.Password
-                : row.Cells["Password"].Value.ToString();
+                : (row.Cells["Password"].Value?.ToString() ?? usuarioOriginal.Password);
 
             int color;
             if (row.Cells["Color"].Value == null ||
-                !int.TryParse(row.Cells["Color"].Value.ToString(), out color))
+                !int.TryParse((row.Cells["Color"].Value?.ToString() ?? usuarioOriginal.Password), out color))
             {
                 color = usuarioOriginal.Color;
             }
 
             byte[] imagenBytes = usuarioOriginal.Imagen;
-            if (row.Cells["Imagen"].Value is Image img)
+            if (row.Cells["Imagen"].Value is Image img && img != null)
             {
                 using (var ms = new MemoryStream())
                 {
@@ -100,7 +95,6 @@ namespace Proyecto_Discrod_2.FE
             // Verifica si hay una fila seleccionada en el DataGridView
             if (dataGridViewActualizar.CurrentRow == null)
             {
-
                 // Si no hay ninguna fila seleccionada, muestra un mensaje y corta la ejecución
                 MessageBox.Show("Seleccione un usuario para eliminar.");
                 return;
@@ -110,8 +104,13 @@ namespace Proyecto_Discrod_2.FE
             // 2. DataBoundItem → devuelve el objeto real que está vinculado a esa fila (en este caso, un objeto de tipo Usuarios).
             // 3. (Usuarios) → convierte ese objeto al tipo Usuarios mediante un "cast".
             // 4. usuarioSeleccionado → almacena ese objeto para poder trabajar con todos sus datos.
-            Usuarios usuarioSeleccionado = (Usuarios)dataGridViewActualizar.CurrentRow.DataBoundItem;
+            Usuarios? usuarioSeleccionado = dataGridViewActualizar.CurrentRow.DataBoundItem as Usuarios;
 
+            if (usuarioSeleccionado == null)
+            {
+                MessageBox.Show("Error al obtener el usuario seleccionado.");
+                return;
+            }
 
             // Pide confirmación al usuario antes de eliminar
             // Muestra un MessageBox con botones "Sí" y "No" y un icono de advertencia
@@ -134,8 +133,11 @@ namespace Proyecto_Discrod_2.FE
                 // Si el resultado es mayor a 0 significa que se eliminó bien
                 if (resultado > 0)
                 {
-                    // Eliminar de la BindingList actualiza automáticamente la grilla
-                    listaUsuario.Remove(usuarioSeleccionado);
+                    if (listaUsuario != null)
+                    {
+                        // Eliminar de la BindingList actualiza automáticamente la grilla
+                        listaUsuario.Remove(usuarioSeleccionado);
+                    }
                     MessageBox.Show("Usuario eliminado correctamente.");
                 }
                 else

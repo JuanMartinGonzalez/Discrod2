@@ -116,7 +116,7 @@
             // txtPassword
             // 
             txtPassword.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(138, 125);
+            txtPassword.Location = new Point(137, 125);
             txtPassword.MaxLength = 25;
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderText = "C O N T R A S E Ñ A";
@@ -128,7 +128,7 @@
             // txtConfirmar
             // 
             txtConfirmar.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtConfirmar.Location = new Point(138, 176);
+            txtConfirmar.Location = new Point(137, 176);
             txtConfirmar.MaxLength = 15;
             txtConfirmar.Name = "txtConfirmar";
             txtConfirmar.PlaceholderText = "C O N F I R M A R  C O N T R A S E Ñ A";
